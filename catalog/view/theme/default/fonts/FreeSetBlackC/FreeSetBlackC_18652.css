@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'FreeSetBlackC_18652';
+    src: url('fonts/FreeSetBlackC_18652.eot');
+    src: url('fonts/FreeSetBlackC_18652.eot') format('embedded-opentype'),
+         url('fonts/FreeSetBlackC_18652.woff2') format('woff2'),
+         url('fonts/FreeSetBlackC_18652.woff') format('woff'),
+         url('fonts/FreeSetBlackC_18652.ttf') format('truetype'),
+         url('fonts/FreeSetBlackC_18652.svg#FreeSetBlackC_18652') format('svg');
+}

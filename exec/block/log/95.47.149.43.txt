@@ -1,0 +1,12 @@
+2020-02-15 21:02:09 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0
+2020-02-15 21:02:09 - QUERY_STRING = _route_=ua/kak-pochistit-monitor.html
+
+2020-02-15 21:02:09 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0
+2020-02-15 21:02:09 - QUERY_STRING = _route_=ua/kak-pochistit-monitor.html
+
+2020-02-15 21:02:10 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0
+2020-02-15 21:02:10 - QUERY_STRING = _route_=login/&get_login=1&lang=ua
+
+2020-02-15 21:02:12 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0
+2020-02-15 21:02:12 - QUERY_STRING = _route_=ua/popupcart/
+

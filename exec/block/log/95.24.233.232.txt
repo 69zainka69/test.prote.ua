@@ -1,0 +1,12 @@
+2020-02-17 20:11:49 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+2020-02-17 20:11:49 - QUERY_STRING = 
+
+2020-02-17 20:11:51 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+2020-02-17 20:11:51 - QUERY_STRING = 
+
+2020-02-17 20:11:58 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+2020-02-17 20:11:58 - QUERY_STRING = _route_=login/&get_login=1&lang=
+
+2020-02-17 20:12:04 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+2020-02-17 20:12:04 - QUERY_STRING = _route_=popupcart/
+

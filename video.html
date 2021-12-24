@@ -1,0 +1,227 @@
+
+
+<!doctype>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Slide Patronservice</title>
+
+    <link rel="stylesheet" href="owl-tube/vendors/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="owl-tube/vendors/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owl-tube/vendors/owl-carousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="owl-tube/vendors/owl-carousel/assets/owl.theme.green.min.css">
+    
+    <link rel="stylesheet" href="owl-tube/dist/assets/css/main.min.css">
+    
+    
+  </head>
+  <body>
+  <?php //echo $content_top; ?>
+
+    <div class="container1" style="height:100%;">
+
+        <div class="row1">
+          <div class="col-md-81">
+            
+            <div class="owl-carousel owl-theme">
+              
+              <div class="item youtube" data-videosrc="http://vpmdev.com/window.mp4">
+                  <iframe id="" type="text/html" width="720" height="405"
+                  src="https://www.youtube.com/embed/fQONLUopy3E?enablejsapi=1&autoplay=1&modestbranding=1&iv_load_policy=3&controls=1&showinfo=0&rel=0&loop=1"
+                  frameborder="0" autoplay allowfullscreen></iframe>
+              </div>
+              <div class="item image">
+                  <img src='//placehold.it/800x600.png'/>
+              </div>
+              <div class="item youtube">
+                  <iframe id="" type="text/html" width="720" height="405"
+                  src="https://www.youtube.com/embed/G-bH3ALmtws?enablejsapi=1&autoplay=1&modestbranding=1&iv_load_policy=3&controls=1&showinfo=0&rel=0&loop=1
+                  frameborder="0" autoplay allowfullscreen></iframe>
+              </div>
+              
+            </div>    
+          </div>
+        </div>
+      
+    </div>
+
+  </body>
+
+  
+
+  <!--vendors-files-->
+  <script src="owl-tube/vendors/jquery/jquery-3.3.1.min.js"></script>
+  <!-- <script src="owl-tube/vendors/bootstrap/popper.min.js"></script>
+  <script src="owl-tube/vendors/bootstrap/bootstrap.min.js"></script> -->
+  <script src="owl-tube/vendors/owl-carousel/owl.carousel.min.js"></script>
+  <!--owl-tube-file-->
+  <!-- <script src="owl-tube/dist/assets/js/owl-tube.min.js"></script> -->
+<script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflS50iB-/www-widgetapi.js" async=""></script>
+<script src="https://www.youtube.com/player_api"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+
+function loadPlayer() {
+      if (typeof(YT) == 'undefined' || typeof(YT.Player) == 'undefined') {
+          var tag = document.createElement('script');
+          tag.src = "https://www.youtube.com/iframe_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      }
+  }
+    /*function onPlayerReady(event) {
+        event.target.playVideo();
+    }*/
+
+
+    loadPlayer();
+var player;
+var players;
+var tempId;
+var carouselIframes;
+
+var initialized         = false;
+var activeElementIndex  = 0;
+var carouselIframes     = [];
+function init(){
+    //var tempId =  'yt-' + Math.random().toString(36).substr(2, 9);// +new Date();
+    /*var activeFrame = document.querySelector(".owl-item.active iframe");
+    //activeFrame.setAttribute('id', tempId);
+    tempId = $(activeFrame).attr('id');
+    //var player;
+    console.log(activeFrame);
+    console.log(tempId);
+    players = new YT.Player(tempId, {
+        events: {
+            'onReady': function(event){ 
+              event.target.playVideo();
+            },
+            'onStateChange': __onPlayerStateChange
+        }
+   });
+  */  
+    if(initialized) return false;
+    initialized = true;
+
+    var frames = $(".owl-item iframe");
+    
+    $(frames).each(function( index,iframe) {
+      
+      $(this).data('index',index);
+      var tempId =  'yt-' + Math.random().toString(36).substr(2, 9);// +new Date();
+      iframe.setAttribute('id', tempId);
+
+      players = new YT.Player(tempId, {
+          events: {
+              'onReady': function(event){ 
+                event.target.playVideo();
+              },
+              'onStateChange': __onPlayerStateChange
+          }
+     });
+      carouselIframes[tempId] = players;
+      //carouselIframes.push(players);
+    });
+
+}
+
+function __onPlayerStateChange(event) {        
+      if(event.data===0){
+        if(activeElementIndex){
+          carouselIframes[activeElementIndex].stopVideo();
+        }
+        owl.trigger("next.owl.carousel");
+    }
+
+}
+
+
+function toggleOwlVideos(){
+  
+    // set required elements here.
+    var currentSlide = document.querySelector(".owl-item.active");
+    console.log(currentSlide);
+    var playBtn = currentSlide.querySelector(".owl-video-play-icon");
+    var frame = currentSlide.querySelector("iframe");
+    var loading = Boolean(frame);
+
+    // if playBtn found and carousel is not loading the vimeo frame
+    /*if (playBtn && !loading){
+       playBtn.click(); // toggle play state
+    }*/
+
+    if (frame){ // if vimeos frame is ready
+        //frame.contentWindow.postMessage('{"method":"setVolume", "value":0}', '*'); // set value to 0
+        //iframe.videoPlay = true; //init state
+        //iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+        //console.log('muteCurrentYoutubeVideo111');
+        //console.log('init');
+        init();
+    } else {
+       setTimeout(function(){toggleOwlVideos}, 300); // try again in 300ms.
+    } 
+}
+
+var owl = $('.owl-carousel');
+owl.on('initialized.owl.carousel', function(event) {
+  //alert('pok');
+  setTimeout(toggleOwlVideos, 0);
+})
+
+//first = 1;
+//owl.on('changed.owl.carousel', function(event) {
+owl.on('changed.owl.carousel', function(event) {
+  console.log('changed.owl.carousel');
+  if(!initialized) return;
+
+  if(activeElementIndex){
+    carouselIframes[activeElementIndex].stopVideo();
+  }
+
+  //if(!first){
+    var current = event.item.index;
+    var src = $(event.target).find(".owl-item").eq(current).find("img").attr('src');
+    
+    if(src){
+
+      setTimeout(function(){
+        owl.trigger("next.owl.carousel");
+      }, 3000);
+    } else {
+      
+      var tempId = $(event.target).find(".owl-item").eq(current).find("iframe").attr('id');
+      //var index = $(event.target).find(".owl-item").eq(current).find("iframe");
+
+      var index      = event.item.index; 
+      index = index;
+      
+      if(tempId){
+        carouselIframes[tempId].playVideo();
+        activeElementIndex = tempId;
+      }
+    }
+  //}
+  //first = 0;
+     
+})
+//owl.on('initialize.owl.carousel', function(event) {alert('pok1');});
+
+owl.owlCarousel({
+  loop:true,
+  //loop:false,
+  margin:10,
+  nav:false,
+  dots:false,
+  items:1
+});
+ 
+  </script>
+
+
+
+</html>
+
+    
+
+

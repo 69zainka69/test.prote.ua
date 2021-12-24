@@ -1,0 +1,20 @@
+.pagination li{display:inline-block;vertical-align:top;}
+.pagination li a, .pagination li span{
+  font-size:19px;
+  color:#fff;
+  padding:9px 10px;
+  display:block;
+  background:#a7a7a7;
+  margin-right:10px;
+}
+.pagination li.active span{background:#fd9710;}
+.pagination li.next a,.pagination li.prev a{color:#a7a7a7;font-size:13px;background:#f1f1f1;position:relative;}
+.pagination li.prev a{padding-left:30px;}
+.pagination li.next a{padding-right:30px;}
+.pagination li.next a:before,.pagination li.prev a:before{
+position:absolute;top:16px;left:14px;width:8px;height:8px;border-bottom:1px solid #fd9710;border-right:1px solid #fd9710;content:"";
+-webkit-transform:rotate(135deg);-moz-transform:rotate(135deg);-ms-transform:rotate(135deg);-o-transform:rotate(135deg);transform:rotate(135deg);
+-webkit-transition:border-color 0.2s ease;-moz-transition:border-color 0.2s ease;-ms-transition:border-color 0.2s ease;-o-transition:border-color 0.2s ease;transition:border-color 0.2s ease;
+-webkit-transition:all 400ms;-moz-transition:all 400ms;-o-transition:all 400ms;transition:all 400ms;  
+}
+.pagination li.next a:before{right:14px;left:auto;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg);}

@@ -1,0 +1,478 @@
+<style>.fortitlelefts {
+    display: none;
+}
+
+.prod_price {
+    width: 50%;
+    padding-top: 60px;
+}
+
+.qwentiti {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28.2609px;
+    line-height: 19px;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 12px;
+}
+
+@media(max-width: 720px) {
+    .prod_images {
+        position: sticky;
+        text-align: center;
+        width: 100%;
+        padding-top: 100px;
+    }
+    .prod_left {
+        display: block !important;
+    }
+}
+
+.dostavka {
+    width: 100% height: 380px;
+    border: 1px solid #E9E9E9;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.obmin-povern {
+    float: right;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 13px;
+    color: #999999;
+}
+
+.dostcity {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #333333;
+    border-bottom: 1px dotted #FD9710;
+}
+
+.info .col_right {
+    width: 52% !important;
+}
+
+tr,
+td,
+th,
+table {
+    border: none;
+    text-align: left;
+}
+
+.titletable {
+    vertical-align: sub;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 13px;
+    color: #999999;
+}
+
+.texttable tr {
+    vertical-align: sub;
+}
+
+.texttable tr td {
+    vertical-align: sub;
+}
+
+.texttable td {
+    vertical-align: sub;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #333333;
+}
+
+.texttable {
+    padding-left: 24px;
+    vertical-align: sub;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #333333;
+}
+
+.commentdostavka {
+    padding-left: 15px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 13px;
+    color: #999999;
+}
+
+.texttable td svg {
+    vertical-align: sub;
+}
+
+.obmin-povern {
+    padding-top: 8px;
+}
+
+.oplatadost {
+    margin-bottom: 25px;
+    width: 100%;
+    height: 143px;
+    border: 1px solid #E9E9E9;
+    border-radius: 5px;
+}
+
+.oplatadostup {
+    border: 1px solid #E9E9E9;
+}
+
+.oplatadostniz {
+    padding-top: 11px;
+    padding-left: 24px;
+    padding-right: 20px;
+    height: 68px;
+}
+
+.oplatadostniz table tbody tr td {
+    padding-left: 6px;
+    padding-right: 6px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 13px;
+    color: #333333;
+}
+
+.etxtovkaopl {
+    padding-left: 15px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #999999;
+}
+
+.textopl {
+    padding-left: 18px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #333333;
+}
+
+.tabledost {
+    border: 1px solid #E9E9E9;
+}
+
+.wrapps {
+    display: grid;
+    grid-template-columns: 22% 45% 45%;
+}
+
+.dostithead {
+    height: 48px;
+    padding-left: 24px;
+    padding-right: 26px;
+    padding-top: 11px;
+    border: 1px solid #E9E9E9;
+}
+
+.panel-titles {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #333333;
+}
+
+.symlink {
+    color: #00adee;
+    cursor: pointer;
+}
+
+.symlink:hover {
+    color: #f28b1c;
+}
+
+@media (max-width: 1919px) {
+    .oplcart {
+        display: none;
+    }
+    .cartoplata {
+        width: 296px;
+    }
+}
+
+@media (max-width: 1279px) {
+    .oplcart {
+        display: block !important;
+    }
+    .oplcart1 {
+        float: left;
+    }
+    .oplcart2 {
+        float: right;
+    }
+    .cart-oplata {
+        display: none;
+    }
+    .oplatadost {
+        height: 165px;
+    }
+    .oplatadostniz {
+        height: 115px;
+    }
+}
+
+.oplatatext {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #333333;
+    padding-left: 24px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 24px 5% 12% 5% 12% 5% 12% 14% 1% 14% 1% 14%;
+}
+
+.textone {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #999999;
+}
+
+.row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btwo {
+    width: 100%;
+    height: 62px;
+}
+
+.bone {
+    width: 100%;
+    height: 57px;
+}
+
+.blockdost1920 {
+    width: 100%;
+    height: 123px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.btwos {
+    display: none;
+}
+
+.bonefirst {
+    padding-top: 21px;
+    float: left;
+    width: 17%;
+}
+
+.bonesecond {
+    padding-top: 12px;
+    float: right;
+    width: 82%;
+    height: 61px;
+}
+
+.container {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.textoplata {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 13px;
+    color: #333333;
+    padding-top: 18px;
+    padding-left: 3px;
+}
+
+.fones {
+    width: 24px;
+}
+
+.bonethreed {
+    display: none;
+}
+
+@media (max-width: 1919px) {
+    .bonethreed {
+        display: none;
+    }
+    .fives {
+        display: none;
+    }
+    .sixs {
+        display: none;
+    }
+    .textoplata {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 13px;
+        color: #333333;
+        padding-top: 8px;
+        padding-left: 3px;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 17px 6% 9% 6% 10% 15% 1% 15% 1% 15%;
+    }
+}
+
+@media (max-width: 1279px) {
+    .bonefirst {
+        padding-top: 12px;
+    }
+    .oplatatext {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 18px;
+        color: #333333;
+        padding-left: 17px;
+    }
+    .bonesecond {
+        display: none;
+    }
+    .btwo {
+        display: none;
+    }
+    .bone {
+        height: 50px;
+    }
+    .yexyclok {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .wrappers {
+        margin-top: -31px;
+        float: right;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 23px 8% 3% 12% 3% 8% 3% 20% 3% 8% 3% 15%;
+    }
+    .btwos {
+        display: block;
+    }
+    .blockdost1920 {
+        height: 165px;
+    }
+    .cherezservic {
+        padding-left: 14px;
+    }
+    .textminiwidth {
+        padding-left: 14px;
+    }
+    .bonefirst {
+        width: 21%;
+    }
+    .textminiwidth p {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 13px;
+        color: #999999;
+    }
+}
+
+@media (max-width: 995px) {
+    .info .col_right {
+        width: 100% !important;
+    }
+    .bonethreed {
+        display: none;
+    }
+    .bonesecond {
+        display: block;
+    }
+    .info {
+        flex-wrap: nowrap;
+        display: block;
+    }
+    .info .col_left {
+        width: 100% !important;
+    }
+    .prod_left {
+        display: block;
+    }
+    .prod_images {
+        width: 100%;
+    }
+    .prod_price {
+        width: 100%;
+    }
+    .quantity {
+        position: absolute;
+        top: none;
+        left: none;
+    }
+}
+
+@media (max-width: 719px) {
+    .bonesecond {
+        width: 80%;
+    }
+    .bonefirst {
+        width: 19%;
+    }
+    .wrapps {
+        display: grid;
+        grid-template-columns: 29% 39% 39%;
+    }
+    .fortitleleft {
+        display: none;
+    }
+    .fortitlelefts {
+        display: block;
+    }
+    .bonesecond {
+        display: none;
+    }
+    .bonethreed {
+        display: grid;
+    }
+    .wrappers {
+        margin-top: 0px;
+    }
+}
+
+</style>

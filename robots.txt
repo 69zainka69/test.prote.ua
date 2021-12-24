@@ -1,0 +1,89 @@
+User-agent: *
+Disallow: /*limit=
+Disallow: /*search=
+Disallow: /*sort=
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /create-account/
+Disallow: /downloads/
+Disallow: /login/
+Disallow: /mibew/
+Disallow: /my-account/
+Disallow: /search/
+Disallow: /system/
+Disallow: /wishlist/
+Allow: //*route=
+
+User-Agent: YandexBot
+Disallow: /*limit=
+Disallow: /*search=
+Disallow: /*sort=
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /create-account/
+Disallow: /downloads/
+Disallow: /login/
+Disallow: /mibew/
+Disallow: /my-account/
+Disallow: /search/
+Disallow: /system/
+Disallow: /wishlist/
+Allow: //*route=
+
+User-agent: Googlebot
+Disallow: /*limit=
+Disallow: /*search=
+Disallow: /*sort=
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /create-account/
+Disallow: /downloads/
+Disallow: /login/
+Disallow: /mibew/
+Disallow: /my-account/
+Disallow: /search/
+Disallow: /system/
+Disallow: /wishlist/
+Allow: //*route=
+
+Host: https://prote.ua
+Sitemap: https://prote.ua/sitemap.xml
+
+User-agent: *
+Crawl-delay: 5
+
+User-agent: GoogleBot
+Crawl-delay: 5
+
+User-agent: SemrushBot
+Disallow: /
+Allow: //*route=
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: Riddler
+Disallow: /
+
+User-agent: aiHitBot
+
+Disallow: /
+User-agent:  trovitBot
+
+Disallow: /
+User-agent:  Detectify
+
+Disallow: /
+User-agent:  BLEXBot
+
+Disallow: /
+User-agent:  LinkpadBot
+
+Disallow: /
+User-agent:  dotbot
+
+Disallow: /
+User-agent:  FlipboardProxy
+

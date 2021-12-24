@@ -1,0 +1,20 @@
+2020-02-09 7:03:18 - HTTP_USER_AGENT Mozilla/5.0 (Linux; Android 6.0.1; Redmi 3S Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 YaBrowser/18.10.0.1012.00 Mobile Safari/537.36
+2020-02-09 7:03:18 - QUERY_STRING = _route_=mfu-canon-i-sensys-mf411dw-041526.html
+
+2020-02-09 7:03:19 - HTTP_USER_AGENT Mozilla/5.0 (Linux; Android 6.0.1; Redmi 3S Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 YaBrowser/18.10.0.1012.00 Mobile Safari/537.36
+2020-02-09 7:03:19 - QUERY_STRING = route=product/product/review&product_id=51124&lang=
+
+2020-02-09 7:03:19 - HTTP_USER_AGENT Mozilla/5.0 (Linux; Android 6.0.1; Redmi 3S Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 YaBrowser/18.10.0.1012.00 Mobile Safari/537.36
+2020-02-09 7:03:19 - QUERY_STRING = route=product/getajax/getProductCompabilityList&product_id=51124&category_id=88
+
+2020-02-09 7:03:20 - HTTP_USER_AGENT Mozilla/5.0 (Linux; Android 6.0.1; Redmi 3S Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 YaBrowser/18.10.0.1012.00 Mobile Safari/537.36
+2020-02-09 7:03:20 - QUERY_STRING = 
+
+2020-02-09 7:03:20 - HTTP_USER_AGENT Mozilla/5.0 (Linux; Android 6.0.1; Redmi 3S Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 YaBrowser/18.10.0.1012.00 Mobile Safari/537.36
+2020-02-09 7:03:20 - QUERY_STRING = _route_=login/&get_login=1&lang=
+
+2020-02-09 7:03:20 - HTTP_USER_AGENT Mozilla/5.0 (Linux; Android 6.0.1; Redmi 3S Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 YaBrowser/18.10.0.1012.00 Mobile Safari/537.36
+2020-02-09 7:03:20 - QUERY_STRING = _route_=popupcart/
+
+2020-02-09 7:03:20 - BLOCK 
+

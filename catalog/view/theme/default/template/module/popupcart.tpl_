@@ -1,0 +1,278 @@
+<svg style="display:none;height:0;width:0;">
+<style>
+<?php $askid=0; echo file_get_contents(DIR_APPLICATION.'/view/js/popupcart.css');?>
+</style>
+</svg>
+<?php if(!isset($voucher))$voucher=false; ?>
+<?php if(!isset($vouchers))$vouchers=false; ?>
+<?php if(!isset($coupon))$coupon=false; ?>
+<?php if(!isset($reward))$reward=false; ?>
+<div id="popupcart_extended" class="modal modal-form modal-cart">
+	<div>
+	<div class="body">
+	  <div class="modal-overlay"></div>
+	  <div class="modal-body">
+	    <div class="modal-close" onclick="$('#popupcart_extended').popup('hide')"><?php if ($products || $vouchers) { ?><?php echo $button_shopping; ?><?php } ?></div>
+	    <div class="form">
+
+	<div class="modal__title"><a href="<?php echo $langurl; ?>/cart/"><div class="svg"><?php echo  file_get_contents(DIR_IMAGE.'/ico/04-cart.svg'); ?></div><?php echo $head; ?></a></div>
+	<?php if ($products || $vouchers) { ?>
+		<div class="popupcart_info">
+			<table>
+
+<?php
+/*
+$time_start = microtime(true);
+ini_set("memory_limit","512M");
+ini_set('max_execution_time', 600003);
+require_once('/var/www/prote/data/www/test.prote.ua/config.php');
+$dbcnx = new \mysqli(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
+if ($dbcnx->connect_error) {
+  trigger_error('Error: Could not make a database link (' . $dbcnx->connect_errno . ') ' . $dbcnx->connect_error);
+  exit();
+}
+$dbcnx->set_charset("utf8");
+$dbcnx->query("SET SQL_MODE = ''");
+$sql = "SELECT * FROM `oc_profitable_offer` ORDER BY `id_product`";
+$result = $dbcnx->query($sql);
+$ase = 0;
+foreach($result as $ids){
+$idsfors[$ase] = $ids['id_product'];
+$idproduction[$ids['id_product']]= "true";
+$ase++;
+}
+
+$ases=0;
+
+
+
+foreach ($products as $key => $product){
+	$tovs[$ases]=$product['id'];
+	$ases++;
+	$tovs_prod[$product['key']] = $product['id'];
+	$numb_tovs[$product['id']] = $product['key'];
+
+$full_data_tovs[$product['id']] = array(
+	"id" => $product['id'],
+	"key" => $product['key'],
+	"total" => $product['total'],
+	"quantity" => $product['quantity'],
+);
+
+}
+$count_prod_cart = count($tovs);
+
+for($i=0; $i!=$count_prod_cart; $i++){
+$a = $tovs[$i];
+if ($idproduction[$a] == "true") {
+ $element = $a;
+$num_key = $numb_tovs[$element];
+
+$prev_key = $num_key-1;
+$next_key = $num_key+1;
+}}
+$sql = "SELECT * FROM `oc_profitable_offer` WHERE `id_product` = $element ORDER BY `id` ASC";
+$resultin = $dbcnx->query($sql);
+$asept = 0;
+foreach($resultin as $childers){
+$a = $childers['id_child_product'];
+if($a == $tovs_prod[$next_key]){
+$key_act = $a;
+}
+if ($a == $tovs_prod[$prev_key]){
+$key_act = $a;
+}}
+
+$sql = "SELECT * FROM `oc_product` WHERE `product_id` = $key_act";
+$childer_model = $dbcnx->query($sql);
+foreach($childer_model as $models){
+$childmode = $models['mpn'];
+$chilpprice = $models['price'];
+}
+$sql = "SELECT * FROM `oc_product_price_list` WHERE `model` LIKE '$childmode' AND `PriceGroupId` LIKE 'Опт-1' ORDER BY `PriceGroupId` DESC";
+$childer_prise = $dbcnx->query($sql);
+foreach($childer_prise as $prices){
+$pricese = $prices['PriceUa'];
+}
+
+
+$skidka = $chilpprice - $pricese;
+$total_act = $full_data_tovs[$key_act]['total'];
+$total_glav = $full_data_tovs[$element]['total'];
+$qty_act = $full_data_tovs[$key_act]['quantity'];
+$qty_glav = $full_data_tovs[$element]['quantity'];
+$raznica = $qty_glav-$qty_act;
+if($raznica == 0){
+$skidka = $skidka*$qty_glav;
+}
+if($raznica > 0){
+$skidka = $skidka*$qty_act;
+}
+if($raznica < 0){
+$skidka = $skidka*$qty_glav;
+}
+*/
+?>
+
+
+
+
+
+
+
+
+
+
+				<?php foreach ($products as $key => $product) { ?>
+					<tr class="row_<?php echo $key; ?>_<?php echo $product['id']; ?>" id="pr_id_<?php echo $product['id']; ?>">
+						<td class="image">
+							<?php if ($product['thumb']) { ?>
+								<img src="<?php echo $product['thumb']; ?>" onclick="location='<?php echo $product['href']; ?>'" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" />
+							<?php } ?>
+						</td>
+						<td class="name">
+							<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
+							<div class="model">Артикул: <?php echo $product['model']; ?></div>
+							<div>
+								<?php foreach ($product['option'] as $option) { ?>
+									- <small><?php echo $option['name']; ?> <?php echo $option['value']; ?></small><br />
+								<?php } ?>
+							</div>
+							<?php if (!$product['stock']) { ?>
+								<?php if ($product['quantity'] >= $product['maximum']) { ?>
+									<span><?php echo $in_stock; ?> <?php echo ($product['maximum'] > 1) ? $left : $left1; ?> <?php echo $just; ?> <?php echo $product['maximum']; ?> <?php echo $pcs; ?></span>
+								<?php } ?>
+							<?php } ?>
+						</td>
+						<td class="quantity">
+							<span onclick="updateCart('<?php echo $product['id']; ?>', '<?php echo $product['key']; ?>', '-')">-</span>
+							<input type="text" name="<?php echo $product['key']; ?>" size="2" value="<?php echo $product['quantity']; ?>" onkeyup="updateCart('<?php echo $product['id']; ?>', '<?php echo $product['key']; ?>')" />
+							<?php if (!$product['stock']) { ?>
+								<?php if ($product['quantity'] < $product['maximum']) { ?>
+									<span onclick="updateCart('<?php echo $product['id']; ?>', '<?php echo $product['key']; ?>', '+')">+</span>
+								<?php } else { ?>
+									<span style="opacity:0.5;">+</span>
+								<?php } ?>
+							<?php } else { ?>
+								<span onclick="updateCart('<?php echo $product['id']; ?>', '<?php echo $product['key']; ?>', '+')">+</span>
+							<?php } ?>
+
+						</td>
+
+						<td class="price">
+						<?php
+						if(isset($product['skidka'])){
+$askid = $askid+$product['skidka'];
+echo '<span style="text-decoration-line: line-through;">'.$product['totals'].'</span>
+
+<br><span style="font-size: 11px;"> скидка - '.$product['skidka'].' грн.</span>';
+
+echo '<br><span>'.$product['total'].'<span>';
+						
+						}
+
+						
+						
+						
+						else{
+						echo $product['total']; 
+						}
+
+						?>
+						
+						</td>
+
+						<td class="remove"><div class="del" onclick="$(this).parent().prev().prev().find('input').val(''); updateCart('<?php echo $product['id']; ?>', '<?php echo $product['key']; ?>')" ></div></td>
+					</tr>
+				<?php } ?>
+
+			</table>
+		</div>
+		<div class="total">
+			<?php if ($coupon || $voucher || $reward) { ?>
+			<div class="coupon">
+				<input type="text" name="promocod" value="" placeholder="Введіть промокод">
+				<button type="button" class="button orage" onclick=""><?php echo $button_checkout; ?></button>
+
+			      <?php echo $coupon; ?><?php echo $voucher; ?><?php echo $reward; ?>
+
+		    </div>
+		    <?php } ?>
+			<div class="popupcart_total">
+				<table>
+					<?php foreach($totals as $total) { ?>
+
+						<tr class="code_<?php echo $total['code']; ?>">
+							<td class="name"><?php echo $total['title']; 	?></td> 
+							
+							<td><?php 
+							$strWithoutChars = preg_replace('/[^0-9]/', '', $total['text']);
+
+							$prisss = $strWithoutChars - $askid." грн.";
+
+							$total['text'] = $prisss;
+
+							echo $total['text']; 
+							
+							?></td>
+
+
+
+						</tr>
+					<?php } ?>
+
+
+				</table>
+			</div>
+
+		</div>
+		<style type="text/css">
+							.upFreeDelivSum{
+								color: #00aeef;
+							    font-size: 14px;
+							    font-weight: normal;
+							    padding-bottom: 15px;
+							    display: inline-block;
+							    width: 50%;
+							    float: right;
+							}
+							.upFreeDelivSum span{
+								color: #fd9710;
+							}
+						</style>
+						<div class="upFreeDelivSum"	>
+							<?= $upFreeDelivSum;?>
+						</div>
+
+		<div class="popupcart_buttons">
+			<button type="button" class="button orage" onclick="location='<?php echo $cart; ?>'"><?php echo $button_checkout; ?></button>
+		</div>
+	<?php } else { ?>
+		<div class="empty"><?php echo $text_empty; ?></div>
+	<?php } ?>
+	<input type="hidden" name="addtocart_logic" value="<?php if(isset($addtocart_logic)) echo $addtocart_logic; ?>" />
+	<input type="hidden" name="click_on_cart" value="<?php if(isset($click_on_cart))echo $click_on_cart; ?>" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+	$('#popupcart_extended').popup({transition: 'all 0.3s',	scrolllock: true});
+	<? /*$('#cart').on('click',function(){
+		$('#popupcart_extended').popup('show');
+	});*/ ?>
+
+});
+<?
+/*function p_array() {
+	<?php foreach ($products as $product) { ?>
+		<?php if($product['option']) { ?>
+			replace_button('<?php echo $product['id']; ?>', 1);
+		<?php } else { ?>
+			replace_button('<?php echo $product['id']; ?>', 0);
+		<?php } ?>
+	<?php } ?>
+}*/ ?>
+</script>

@@ -1,0 +1,20 @@
+2020-02-15 8:43:30 - HTTP_USER_AGENT Mozilla/5.0 (iPhone; CPU iPhone OS 13_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Mobile/15E148 Safari/604.1
+2020-02-15 8:43:30 - QUERY_STRING = _route_=gubka-dlya-suhostiraemih-dosok-s-magnitom-buromax-058339.html&gclid=CjwKCAiAp5nyBRABEiwApTwjXuNu-_ZI2INBeiSXzDW6osKfYJgilLpbpxQ9kAg6cqqi9HnuOyYxyhoCTvAQAvD_BwE
+
+2020-02-15 8:43:30 - HTTP_USER_AGENT Mozilla/5.0 (iPhone; CPU iPhone OS 13_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Mobile/15E148 Safari/604.1
+2020-02-15 8:43:30 - QUERY_STRING = 
+
+2020-02-15 8:43:30 - HTTP_USER_AGENT Mozilla/5.0 (iPhone; CPU iPhone OS 13_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Mobile/15E148 Safari/604.1
+2020-02-15 8:43:30 - QUERY_STRING = route=product/product/review&product_id=30692&lang=
+
+2020-02-15 8:43:30 - HTTP_USER_AGENT Mozilla/5.0 (iPhone; CPU iPhone OS 13_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Mobile/15E148 Safari/604.1
+2020-02-15 8:43:30 - QUERY_STRING = route=product/getajax/getProductCompabilityList&product_id=30692&category_id=204
+
+2020-02-15 8:43:30 - HTTP_USER_AGENT Mozilla/5.0 (iPhone; CPU iPhone OS 13_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Mobile/15E148 Safari/604.1
+2020-02-15 8:43:30 - QUERY_STRING = _route_=login/&get_login=1&lang=
+
+2020-02-15 8:43:31 - HTTP_USER_AGENT Mozilla/5.0 (iPhone; CPU iPhone OS 13_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Mobile/15E148 Safari/604.1
+2020-02-15 8:43:31 - QUERY_STRING = _route_=popupcart/
+
+2020-02-15 8:43:31 - BLOCK 
+

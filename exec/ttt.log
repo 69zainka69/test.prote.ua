@@ -1,0 +1,899 @@
+/*
+  /usr/bin/php /var/www/prote.com.ua/exec/import all /var/www/prote.com.ua/exec/logs/ALL-`date +%Y%m%d`.log
+
+
+
+*/
+
+
+#Параметры записи:15873/012815
+              UPDATE `oc_product`
+              SET 
+                `model`='012815',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='389.00',
+                `image`='img/article/158/73_main.jpg', 
+                `mpn`='CISS-PN-C-CAN-IP2700',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2465'
+Обновление oc_product012815#2465
+
+oc_product_description #2465:U(1) U(2) U(3) 
+Обработка oc_product_image #2465:U(158/73/3948952_main.jpg)U(158/73/3948953_main.jpg)U(158/73/3948954_main.jpg)U(158/73/3948955_main.jpg)U(158/73/3948956_main.jpg)U(158/73/3948957_main.jpg)U(158/73/3948958_main.jpg)U(158/73/3948959_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15874/012625
+              UPDATE `oc_product`
+              SET 
+                `model`='012625',
+                `status`='0',
+                `shipping`='1',
+                `quantity`='0',
+                `price`='0',
+                `image`='img/article/158/74_main.jpg', 
+                `mpn`='CISS-PN-C-CAN-IP4500',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2466'
+Обновление oc_product012625#2466
+
+oc_product_description #2466:U(1) U(2) U(3) 
+Обработка oc_product_image #2466:U(158/74/3948964_main.jpg)U(158/74/3948965_main.jpg)U(158/74/3948966_main.jpg)U(158/74/3948967_main.jpg)U(158/74/3948968_main.jpg)U(158/74/3948969_main.jpg)U(158/74/3948970_main.jpg)U(158/74/3948971_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15875/012626
+              UPDATE `oc_product`
+              SET 
+                `model`='012626',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='729.00',
+                `image`='img/article/158/75_main.jpg', 
+                `mpn`='CISS-PN-C-CAN-IP4600',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2467'
+Обновление oc_product012626#2467
+
+oc_product_description #2467:U(1) U(2) U(3) 
+Обработка oc_product_image #2467:U(158/75/3948972_main.jpg)U(158/75/3948973_main.jpg)U(158/75/3960856_main.jpg)U(158/75/3960857_main.jpg)U(158/75/3960858_main.jpg)U(158/75/3960859_main.jpg)U(158/75/3960860_main.jpg)U(158/75/3960861_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15876/016880
+              UPDATE `oc_product`
+              SET 
+                `model`='016880',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='781.00',
+                `image`='img/article/158/76_main.jpg', 
+                `mpn`='CISS-PN-C-CAN-IP4940',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2468'
+Обновление oc_product016880#2468
+
+oc_product_description #2468:U(1) U(2) U(3) 
+Обработка oc_product_image #2468:U(158/76/3948974_main.jpg)U(158/76/3948975_main.jpg)U(158/76/3948976_main.jpg)U(158/76/3948977_main.jpg)U(158/76/3948978_main.jpg)U(158/76/3948979_main.jpg)U(158/76/3948980_main.jpg)U(158/76/3948981_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15877/016838
+              UPDATE `oc_product`
+              SET 
+                `model`='016838',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='389.00',
+                `image`='img/article/158/77_main.jpg', 
+                `mpn`='CISS-PN-C-CAN-MG2140',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2469'
+Обновление oc_product016838#2469
+
+oc_product_description #2469:U(1) U(2) U(3) 
+Обработка oc_product_image #2469:U(158/77/3948982_main.jpg)U(158/77/3948983_main.jpg)U(158/77/3948984_main.jpg)U(158/77/3948985_main.jpg)U(158/77/3948986_main.jpg)U(158/77/3948987_main.jpg)U(158/77/3948988_main.jpg)U(158/77/3948989_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15878/012816
+              UPDATE `oc_product`
+              SET 
+                `model`='012816',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='404.00',
+                `image`='img/article/158/78_main.jpg', 
+                `mpn`='CISS-PN-C-CAN-MG5140',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2470'
+Обновление oc_product012816#2470
+
+oc_product_description #2470:U(1) U(2) U(3) 
+Обработка oc_product_image #2470:U(158/78/3948997_main.jpg)U(158/78/3948998_main.jpg)U(158/78/3948999_main.jpg)U(158/78/3949000_main.jpg)U(158/78/3949001_main.jpg)U(158/78/3949002_main.jpg)U(158/78/3949003_main.jpg)U(158/78/3949004_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15879/019528
+              UPDATE `oc_product`
+              SET 
+                `model`='019528',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='389.00',
+                `image`='img/article/158/79_main.jpg', 
+                `mpn`='CISS-PN-C-CAN-MP230',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2471'
+Обновление oc_product019528#2471
+
+oc_product_description #2471:U(1) U(2) U(3) 
+Обработка oc_product_image #2471:U(158/79/3949005_main.jpg)U(158/79/3949006_main.jpg)U(158/79/3949007_main.jpg)U(158/79/3949008_main.jpg)U(158/79/3949009_main.jpg)U(158/79/3949010_main.jpg)U(158/79/3949011_main.jpg)U(158/79/3949012_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15880/012629
+              UPDATE `oc_product`
+              SET 
+                `model`='012629',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='331.00',
+                `image`='img/article/158/80_main.jpg', 
+                `mpn`='CISS-PN-C-CAN-MP250',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2472'
+Обновление oc_product012629#2472
+
+oc_product_description #2472:U(1) U(2) U(3) 
+Обработка oc_product_image #2472:U(158/80/3949013_main.jpg)U(158/80/3949014_main.jpg)U(158/80/3949015_main.jpg)U(158/80/3949016_main.jpg)U(158/80/3949017_main.jpg)U(158/80/3949018_main.jpg)U(158/80/3949019_main.jpg)U(158/80/3949020_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15881/012817
+              UPDATE `oc_product`
+              SET 
+                `model`='012817',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='370.00',
+                `image`='img/article/158/81_main.jpg', 
+                `mpn`='CISS-PN-C-HP-2000',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2473'
+Обновление oc_product012817#2473
+
+oc_product_description #2473:U(1) U(2) U(3) 
+Обработка oc_product_image #2473:U(158/81/3949021_main.jpg)U(158/81/3949022_main.jpg)U(158/81/3949023_main.jpg)U(158/81/3949024_main.jpg)U(158/81/3949025_main.jpg)U(158/81/3949026_main.jpg)U(158/81/3949027_main.jpg)U(158/81/3949028_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15882/012631
+              UPDATE `oc_product`
+              SET 
+                `model`='012631',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='370.00',
+                `image`='img/article/158/82_main.jpg', 
+                `mpn`='CISS-PN-C-HP-2050',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2474'
+Обновление oc_product012631#2474
+
+oc_product_description #2474:U(1) U(2) U(3) 
+Обработка oc_product_image #2474:U(158/82/3949029_main.jpg)U(158/82/3949030_main.jpg)U(158/82/3949031_main.jpg)U(158/82/3949032_main.jpg)U(158/82/3949033_main.jpg)U(158/82/3949034_main.jpg)U(158/82/3949035_main.jpg)U(158/82/3949036_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15883/016837
+              UPDATE `oc_product`
+              SET 
+                `model`='016837',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='370.00',
+                `image`='img/article/158/83_main.jpg', 
+                `mpn`='CISS-PN-C-HP-3070',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2475'
+Обновление oc_product016837#2475
+
+oc_product_description #2475:U(1) U(2) U(3) 
+Обработка oc_product_image #2475:U(158/83/3949037_main.jpg)U(158/83/3949038_main.jpg)U(158/83/3949039_main.jpg)U(158/83/3949040_main.jpg)U(158/83/3949041_main.jpg)U(158/83/3949042_main.jpg)U(158/83/3949043_main.jpg)U(158/83/3949044_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15884/012627
+              UPDATE `oc_product`
+              SET 
+                `model`='012627',
+                `status`='0',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='0',
+                `image`='img/article/158/84_main.jpg', 
+                `mpn`='CISS-PN-C-HP-D7263',               
+                `date_modified`=now()  
+              WHERE `product_id`= '11143'
+Обновление oc_product012627#11143
+
+oc_product_description #11143:U(1) U(2) U(3) 
+Обработка oc_product_image #11143:U(158/84/3949070_main.jpg)U(158/84/3949071_main.jpg)U(158/84/3949072_main.jpg)U(158/84/3949073_main.jpg)U(158/84/3949074_main.jpg)U(158/84/3949075_main.jpg)U(158/84/3949076_main.jpg)U(158/84/3949077_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15885/012662
+              UPDATE `oc_product`
+              SET 
+                `model`='012662',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='0',
+                `price`='370.00',
+                `image`='img/article/158/85_main.jpg', 
+                `mpn`='CISS-PN-C-HP-F2483',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2476'
+Обновление oc_product012662#2476
+
+oc_product_description #2476:U(1) U(2) U(3) 
+Обработка oc_product_image #2476:U(158/85/3949078_main.jpg)U(158/85/3949079_main.jpg)U(158/85/3949080_main.jpg)U(158/85/3949081_main.jpg)U(158/85/3949082_main.jpg)U(158/85/3949083_main.jpg)U(158/85/3949084_main.jpg)U(158/85/3949085_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15886/018095
+              UPDATE `oc_product`
+              SET 
+                `model`='018095',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='430.00',
+                `image`='img/article/158/86_main.jpg', 
+                `mpn`='CISS-PN-D-EPS-K101',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2477'
+Обновление oc_product018095#2477
+
+oc_product_description #2477:U(1) U(2) U(3) 
+Обработка oc_product_image #2477:U(158/86/3949086_main.jpg)U(158/86/3949087_main.jpg)U(158/86/3949088_main.jpg)U(158/86/3949089_main.jpg)U(158/86/3949090_main.jpg)U(158/86/3949091_main.jpg)U(158/86/3949092_main.jpg)U(158/86/3949093_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15887/012633
+              UPDATE `oc_product`
+              SET 
+                `model`='012633',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='482.00',
+                `image`='img/article/158/87_main.jpg', 
+                `mpn`='CISS-PN-D-EPS-S22',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2478'
+Обновление oc_product012633#2478
+
+oc_product_description #2478:U(1) U(2) U(3) 
+Обработка oc_product_image #2478:U(158/87/3949094_main.jpg)U(158/87/3949095_main.jpg)U(158/87/3949096_main.jpg)U(158/87/3949097_main.jpg)U(158/87/3949098_main.jpg)U(158/87/3949099_main.jpg)U(158/87/3949100_main.jpg)U(158/87/3949101_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15888/018097
+              UPDATE `oc_product`
+              SET 
+                `model`='018097',
+                `status`='0',
+                `shipping`='1',
+                `quantity`='0',
+                `price`='0',
+                `image`='img/article/158/88_main.jpg', 
+                `mpn`='CISS-PN-D-EPS-SP1410',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2479'
+Обновление oc_product018097#2479
+
+oc_product_description #2479:U(1) U(2) U(3) 
+Обработка oc_product_image #2479:U(158/88/3949102_main.jpg)U(158/88/3949103_main.jpg)U(158/88/3949104_main.jpg)U(158/88/3949105_main.jpg)U(158/88/3949106_main.jpg)U(158/88/3949107_main.jpg)U(158/88/3949108_main.jpg)U(158/88/3949109_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15889/019660
+              UPDATE `oc_product`
+              SET 
+                `model`='019660',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='534.00',
+                `image`='img/article/158/89_main.jpg', 
+                `mpn`='CISS-PN-D-EPS-SPP50',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2480'
+Обновление oc_product019660#2480
+
+oc_product_description #2480:U(1) U(2) U(3) 
+Обработка oc_product_image #2480:U(158/89/3949110_main.jpg)U(158/89/3949111_main.jpg)U(158/89/3949112_main.jpg)U(158/89/3949113_main.jpg)U(158/89/3949114_main.jpg)U(158/89/3949115_main.jpg)U(158/89/3949116_main.jpg)U(158/89/3949117_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15890/012818
+              UPDATE `oc_product`
+              SET 
+                `model`='012818',
+                `status`='0',
+                `shipping`='1',
+                `quantity`='0',
+                `price`='0',
+                `image`='img/article/158/90_main.jpg', 
+                `mpn`='CISS-PN-D-EPS-SX125',               
+                `date_modified`=now()  
+              WHERE `product_id`= '11144'
+Обновление oc_product012818#11144
+
+oc_product_description #11144:U(1) U(2) U(3) 
+Обработка oc_product_image #11144:U(158/90/3949118_main.jpg)U(158/90/3949119_main.jpg)U(158/90/3949120_main.jpg)U(158/90/3949121_main.jpg)U(158/90/3949122_main.jpg)U(158/90/3949123_main.jpg)U(158/90/3949124_main.jpg)U(158/90/3949125_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15891/016832
+              UPDATE `oc_product`
+              SET 
+                `model`='016832',
+                `status`='0',
+                `shipping`='1',
+                `quantity`='0',
+                `price`='0',
+                `image`='img/article/158/91_main.jpg', 
+                `mpn`='CISS-PN-D-EPS-SX230',               
+                `date_modified`=now()  
+              WHERE `product_id`= '11145'
+Обновление oc_product016832#11145
+
+oc_product_description #11145:U(1) U(2) U(3) 
+Обработка oc_product_image #11145:U(158/91/3949126_main.jpg)U(158/91/3949127_main.jpg)U(158/91/3949128_main.jpg)U(158/91/3949129_main.jpg)U(158/91/3949130_main.jpg)U(158/91/3949131_main.jpg)U(158/91/3949132_main.jpg)U(158/91/3949133_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15892/016727
+              UPDATE `oc_product`
+              SET 
+                `model`='016727',
+                `status`='0',
+                `shipping`='1',
+                `quantity`='0',
+                `price`='0',
+                `image`='img/article/158/92_main.jpg', 
+                `mpn`='CISS-PN-D-EPS-SX420',               
+                `date_modified`=now()  
+              WHERE `product_id`= '11146'
+Обновление oc_product016727#11146
+
+oc_product_description #11146:U(1) U(2) U(3) 
+Обработка oc_product_image #11146:U(158/92/3949134_main.jpg)U(158/92/3949135_main.jpg)U(158/92/3949136_main.jpg)U(158/92/3949137_main.jpg)U(158/92/3949138_main.jpg)U(158/92/3949139_main.jpg)U(158/92/3949140_main.jpg)U(158/92/3949141_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15893/016833
+              UPDATE `oc_product`
+              SET 
+                `model`='016833',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='521.00',
+                `image`='img/article/158/93_main.jpg', 
+                `mpn`='CISS-PN-D-EPS-SX535W',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2481'
+Обновление oc_product016833#2481
+
+oc_product_description #2481:U(1) U(2) U(3) 
+Обработка oc_product_image #2481:U(158/93/3949142_main.jpg)U(158/93/3949143_main.jpg)U(158/93/3949144_main.jpg)U(158/93/3949145_main.jpg)U(158/93/3949146_main.jpg)U(158/93/3949147_main.jpg)U(158/93/3949148_main.jpg)U(158/93/3949149_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15894/012663
+              UPDATE `oc_product`
+              SET 
+                `model`='012663',
+                `status`='0',
+                `shipping`='1',
+                `quantity`='0',
+                `price`='0',
+                `image`='img/article/158/94_main.jpg', 
+                `mpn`='CISS-PN-D-EPS-TX-117',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2482'
+Обновление oc_product012663#2482
+
+oc_product_description #2482:U(1) U(2) U(3) 
+Обработка oc_product_image #2482:U(158/94/3949150_main.jpg)U(158/94/3949151_main.jpg)U(158/94/3949152_main.jpg)U(158/94/3949153_main.jpg)U(158/94/3949154_main.jpg)U(158/94/3949155_main.jpg)U(158/94/3949156_main.jpg)U(158/94/3949157_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15895/012634
+              UPDATE `oc_product`
+              SET 
+                `model`='012634',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='521.00',
+                `image`='img/article/158/95_main.jpg', 
+                `mpn`='CISS-PN-D-EPS-TX210',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2483'
+Обновление oc_product012634#2483
+
+oc_product_description #2483:U(1) U(2) U(3) 
+Обработка oc_product_image #2483:U(158/95/3949158_main.jpg)U(158/95/3949159_main.jpg)U(158/95/3949160_main.jpg)U(158/95/3949161_main.jpg)U(158/95/3949162_main.jpg)U(158/95/3949163_main.jpg)U(158/95/3949164_main.jpg)U(158/95/3949165_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15896/017048
+              UPDATE `oc_product`
+              SET 
+                `model`='017048',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='560.00',
+                `image`='img/article/158/96_main.jpg', 
+                `mpn`='CISS-PN-EPS-SPP50',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2484'
+Обновление oc_product017048#2484
+
+oc_product_description #2484:U(1) U(2) U(3) 
+Обработка oc_product_image #2484:U(158/96/3949198_main.jpg)U(158/96/3949199_main.jpg)U(158/96/3949200_main.jpg)U(158/96/3949201_main.jpg)U(158/96/3949202_main.jpg)U(158/96/3949203_main.jpg)U(158/96/3949204_main.jpg)U(158/96/3949205_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:15897/110150
+              UPDATE `oc_product`
+              SET 
+                `model`='110150',
+                `status`='0',
+                `shipping`='1',
+                `quantity`='0',
+                `price`='0',
+                `image`='img/article/158/97_main.jpg', 
+                `mpn`='CISS-PN-EPS-SPT50',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2485'
+Обновление oc_product110150#2485
+
+oc_product_description #2485:U(1) U(2) U(3) 
+Обработка oc_product_image #2485:U(158/97/3949206_main.jpg)U(158/97/3949207_main.jpg)U(158/97/3949208_main.jpg)U(158/97/3949209_main.jpg)U(158/97/3949210_main.jpg)U(158/97/3949211_main.jpg)U(158/97/3949212_main.jpg)U(158/97/3949213_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:23824/018939
+              UPDATE `oc_product`
+              SET 
+                `model`='018939',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='521.00',
+                `image`='img/article/238/24_main.jpg', 
+                `mpn`='CISS-PN-D-EPS-XP-103',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2486'
+Обновление oc_product018939#2486
+
+oc_product_description #2486:U(1) U(2) U(3) 
+Обработка oc_product_image #2486:U(238/24/3949166_main.jpg)U(238/24/3949167_main.jpg)U(238/24/3949168_main.jpg)U(238/24/3949169_main.jpg)U(238/24/3949170_main.jpg)U(238/24/3949171_main.jpg)U(238/24/3949172_main.jpg)U(238/24/3949173_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:23825/023588
+              UPDATE `oc_product`
+              SET 
+                `model`='023588',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='521.00',
+                `image`='img/article/238/25_main.jpg', 
+                `mpn`='CISS-PN-D-EPS-XP-203',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2487'
+Обновление oc_product023588#2487
+
+oc_product_description #2487:U(1) U(2) U(3) 
+Обработка oc_product_image #2487:U(238/25/3949174_main.jpg)U(238/25/3949175_main.jpg)U(238/25/3949176_main.jpg)U(238/25/3949177_main.jpg)U(238/25/3949178_main.jpg)U(238/25/3949179_main.jpg)U(238/25/3949180_main.jpg)U(238/25/3949181_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:23826/018938
+              UPDATE `oc_product`
+              SET 
+                `model`='018938',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='521.00',
+                `image`='img/article/238/26_main.jpg', 
+                `mpn`='CISS-PN-D-EPS-XP-33',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2488'
+Обновление oc_product018938#2488
+
+oc_product_description #2488:U(1) U(2) U(3) 
+Обработка oc_product_image #2488:U(238/26/3949190_main.jpg)U(238/26/3949191_main.jpg)U(238/26/3949192_main.jpg)U(238/26/3949193_main.jpg)U(238/26/3949194_main.jpg)U(238/26/3949195_main.jpg)U(238/26/3949196_main.jpg)U(238/26/3949197_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:35828/018479
+              UPDATE `oc_product`
+              SET 
+                `model`='018479',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='370.00',
+                `image`='img/article/358/28_main.jpg', 
+                `mpn`='CISS-PN-C-HP-ADV2515',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2489'
+Обновление oc_product018479#2489
+
+oc_product_description #2489:U(1) U(2) U(3) 
+Обработка oc_product_image #2489:U(358/28/3949054_main.jpg)U(358/28/3949055_main.jpg)U(358/28/3949056_main.jpg)U(358/28/3949057_main.jpg)U(358/28/3949058_main.jpg)U(358/28/3949059_main.jpg)U(358/28/3949060_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:38880/018478
+              UPDATE `oc_product`
+              SET 
+                `model`='018478',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='1196.00',
+                `image`='img/article/388/80_main.jpg', 
+                `mpn`='CISS-PN-C-HP-ADV3525',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2490'
+Обновление oc_product018478#2490
+
+oc_product_description #2490:U(1) U(2) U(3) 
+Обработка oc_product_image #2490:U(388/80/3949062_main.jpg)U(388/80/3949063_main.jpg)U(388/80/3949064_main.jpg)U(388/80/3949065_main.jpg)U(388/80/3949066_main.jpg)U(388/80/3949067_main.jpg)U(388/80/3949068_main.jpg)U(388/80/3949069_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:42787/026242
+              UPDATE `oc_product`
+              SET 
+                `model`='026242',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='389.00',
+                `image`='img/article/427/87_main.jpg', 
+                `mpn`='CISS-PN-C-CAN-MG2440',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2491'
+Обновление oc_product026242#2491
+
+oc_product_description #2491:U(1) U(2) U(3) 
+Обработка oc_product_image #2491:U(427/87/3948990_main.jpg)U(427/87/3948991_main.jpg)U(427/87/3948992_main.jpg)U(427/87/3948993_main.jpg)U(427/87/3948994_main.jpg)U(427/87/3948995_main.jpg)U(427/87/3948996_main.jpg)U(427/87/3960360_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:45180/026966
+              UPDATE `oc_product`
+              SET 
+                `model`='026966',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='370.00',
+                `image`='img/article/451/80_main.jpg', 
+                `mpn`='CISS-PN-C-HP-ADV1515',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2492'
+Обновление oc_product026966#2492
+
+oc_product_description #2492:U(1) U(2) U(3) 
+Обработка oc_product_image #2492:U(451/80/3949045_main.jpg)U(451/80/3949046_main.jpg)U(451/80/3949047_main.jpg)U(451/80/3949048_main.jpg)U(451/80/3949049_main.jpg)U(451/80/3949050_main.jpg)U(451/80/3949051_main.jpg)U(451/80/3949052_main.jpg)U(451/80/3949053_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:45611/027158
+              UPDATE `oc_product`
+              SET 
+                `model`='027158',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='579.00',
+                `image`='img/article/456/11_main.jpg', 
+                `mpn`='CISS-PN-D-EPS-XP-313',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2493'
+Обновление oc_product027158#2493
+
+oc_product_description #2493:U(1) U(2) U(3) 
+Обработка oc_product_image #2493:U(456/11/3949182_main.jpg)U(456/11/3949183_main.jpg)U(456/11/3949184_main.jpg)U(456/11/3949185_main.jpg)U(456/11/3949186_main.jpg)U(456/11/3949187_main.jpg)U(456/11/3949188_main.jpg)U(456/11/3949189_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:59650/029118
+              UPDATE `oc_product`
+              SET 
+                `model`='029118',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='389.00',
+                `image`='img/article/596/50_main.jpg', 
+                `mpn`='CISS-PN-C-CAN-IP2840',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2494'
+Обновление oc_product029118#2494
+
+oc_product_description #2494:U(1) U(2) U(3) 
+Обработка oc_product_image #2494:U(596/50/3948960_main.jpg)U(596/50/3948961_main.jpg)U(596/50/3948962_main.jpg)U(596/50/3948963_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:60055/018944
+              UPDATE `oc_product`
+              SET 
+                `model`='018944',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='560.00',
+                `image`='img/article/600/55_main.jpg', 
+                `mpn`='CISS-PN-C-EPS-XP-600',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2495'
+Обновление oc_product018944#2495
+
+oc_product_description #2495:U(1) U(2) U(3) 
+Обработка oc_product_image #2495:U(600/55/3955870_main.jpg)U(600/55/3955871_main.jpg)U(600/55/3955872_main.jpg)U(600/55/3955873_main.jpg)U(600/55/3955874_main.jpg)U(600/55/3955875_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:60341/029517
+              UPDATE `oc_product`
+              SET 
+                `model`='029517',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='310.00',
+                `image`='img/article/603/41_main.jpg', 
+                `mpn`='CISS-PNEC-CAN-IP2700',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2496'
+Обновление oc_product029517#2496
+
+oc_product_description #2496:U(1) U(2) U(3) 
+Обработка oc_product_image #2496:U(603/41/3955898_main.jpg)U(603/41/3955899_main.jpg)U(603/41/3955900_main.jpg)U(603/41/3955901_main.jpg)U(603/41/3955902_main.jpg)
+Аттрибуты установлены
+Фильтры  установленыПараметры записи:60342/029527
+              UPDATE `oc_product`
+              SET 
+                `model`='029527',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='310.00',
+                `image`='img/article/603/42_main.jpg', 
+                `mpn`='CISS-PNEC-CAN-IP2840',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2497'
+Обновление oc_product029527#2497
+
+oc_product_description #2497:U(1) U(2) U(3) 
+Обработка oc_product_image #2497:U(603/42/3955903_main.jpg)U(603/42/3955904_main.jpg)U(603/42/3955905_main.jpg)U(603/42/3955906_main.jpg)U(603/42/3955907_main.jpg)
+Аттрибуты установлены
+Фильтры  установленыПараметры записи:60343/029518
+              UPDATE `oc_product`
+              SET 
+                `model`='029518',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='310.00',
+                `image`='img/article/603/43_main.jpg', 
+                `mpn`='CISS-PNEC-CAN-MG2140',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2498'
+Обновление oc_product029518#2498
+
+oc_product_description #2498:U(1) U(2) U(3) 
+Обработка oc_product_image #2498:U(603/43/3955908_main.jpg)U(603/43/3955909_main.jpg)U(603/43/3955910_main.jpg)U(603/43/3955911_main.jpg)U(603/43/3955912_main.jpg)U(603/43/3960849_main.jpg)
+Аттрибуты установлены
+Фильтры  установленыПараметры записи:60344/029520
+              UPDATE `oc_product`
+              SET 
+                `model`='029520',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='310.00',
+                `image`='img/article/603/44_main.jpg', 
+                `mpn`='CISS-PNEC-CAN-MG2440',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2499'
+Обновление oc_product029520#2499
+
+oc_product_description #2499:U(1) U(2) U(3) 
+Обработка oc_product_image #2499:U(603/44/3955913_main.jpg)U(603/44/3955914_main.jpg)U(603/44/3955915_main.jpg)U(603/44/3955916_main.jpg)U(603/44/3955917_main.jpg)U(603/44/3960850_main.jpg)
+Аттрибуты установлены
+Фильтры  установленыПараметры записи:60345/029522
+              UPDATE `oc_product`
+              SET 
+                `model`='029522',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='310.00',
+                `image`='img/article/603/45_main.jpg', 
+                `mpn`='CISS-PNEC-CAN-MP230',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2500'
+Обновление oc_product029522#2500
+
+oc_product_description #2500:U(1) U(2) U(3) 
+Обработка oc_product_image #2500:U(603/45/3955918_main.jpg)U(603/45/3955919_main.jpg)U(603/45/3955920_main.jpg)U(603/45/3955921_main.jpg)U(603/45/3955922_main.jpg)U(603/45/3960851_main.jpg)
+Аттрибуты установлены
+Фильтры  установленыПараметры записи:60346/029523
+              UPDATE `oc_product`
+              SET 
+                `model`='029523',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='310.00',
+                `image`='img/article/603/46_main.jpg', 
+                `mpn`='CISS-PNEC-CAN-MP250',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2501'
+Обновление oc_product029523#2501
+
+oc_product_description #2501:U(1) U(2) U(3) 
+Обработка oc_product_image #2501:U(603/46/3955888_main.jpg)U(603/46/3955889_main.jpg)U(603/46/3955890_main.jpg)U(603/46/3955891_main.jpg)U(603/46/3955892_main.jpg)U(603/46/3960852_main.jpg)
+Аттрибуты установлены
+Фильтры  установленыПараметры записи:60347/029533
+              UPDATE `oc_product`
+              SET 
+                `model`='029533',
+                `status`='0',
+                `shipping`='1',
+                `quantity`='0',
+                `price`='0',
+                `image`='img/article/603/47_main.jpg', 
+                `mpn`='CISS-PNEC-EPS-XP-600',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2502'
+Обновление oc_product029533#2502
+
+oc_product_description #2502:U(1) U(2) U(3) 
+Обработка oc_product_image #2502:U(603/47/3955923_main.jpg)U(603/47/3955924_main.jpg)U(603/47/3955925_main.jpg)U(603/47/3955926_main.jpg)U(603/47/3955927_main.jpg)
+Аттрибуты установлены
+Фильтры  установленыПараметры записи:60348/029525
+              UPDATE `oc_product`
+              SET 
+                `model`='029525',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='391.00',
+                `image`='img/article/603/48_main.jpg', 
+                `mpn`='CISS-PNEC-HP-2050',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2503'
+Обновление oc_product029525#2503
+
+oc_product_description #2503:U(1) U(2) U(3) 
+Обработка oc_product_image #2503:U(603/48/3955928_main.jpg)U(603/48/3955929_main.jpg)U(603/48/3955930_main.jpg)U(603/48/3955931_main.jpg)U(603/48/3955932_main.jpg)
+Аттрибуты установлены
+Фильтры  установленыПараметры записи:60349/029530
+              UPDATE `oc_product`
+              SET 
+                `model`='029530',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='547.00',
+                `image`='img/article/603/49_main.jpg', 
+                `mpn`='CISS-PNED-EPS-K101',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2504'
+Обновление oc_product029530#2504
+
+oc_product_description #2504:U(1) U(2) U(3) 
+Обработка oc_product_image #2504:U(603/49/3955933_main.jpg)U(603/49/3955934_main.jpg)U(603/49/3955935_main.jpg)U(603/49/3955936_main.jpg)U(603/49/3955937_main.jpg)U(603/49/3960854_main.jpg)
+Аттрибуты установлены
+Фильтры  установленыПараметры записи:60350/029531
+              UPDATE `oc_product`
+              SET 
+                `model`='029531',
+                `status`='0',
+                `shipping`='1',
+                `quantity`='0',
+                `price`='0',
+                `image`='img/article/603/50_main.jpg', 
+                `mpn`='CISS-PNED-EPS-SP1410',               
+                `date_modified`=now()  
+              WHERE `product_id`= '11147'
+Обновление oc_product029531#11147
+
+oc_product_description #11147:U(1) U(2) U(3) 
+Обработка oc_product_image #11147:U(603/50/3955938_main.jpg)U(603/50/3955939_main.jpg)U(603/50/3955940_main.jpg)U(603/50/3955941_main.jpg)U(603/50/3955942_main.jpg)
+Аттрибуты установлены
+Фильтры  установленыПараметры записи:60351/029532
+              UPDATE `oc_product`
+              SET 
+                `model`='029532',
+                `status`='0',
+                `shipping`='1',
+                `quantity`='0',
+                `price`='0',
+                `image`='img/article/603/51_main.jpg', 
+                `mpn`='CISS-PNED-EPS-SPP50',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2505'
+Обновление oc_product029532#2505
+
+oc_product_description #2505:U(1) U(2) U(3) 
+Обработка oc_product_image #2505:U(603/51/3955943_main.jpg)U(603/51/3955944_main.jpg)U(603/51/3955945_main.jpg)U(603/51/3955946_main.jpg)U(603/51/3955947_main.jpg)
+Аттрибуты установлены
+Фильтры  установленыПараметры записи:60352/029529
+              UPDATE `oc_product`
+              SET 
+                `model`='029529',
+                `status`='0',
+                `shipping`='1',
+                `quantity`='0',
+                `price`='0',
+                `image`='img/article/603/52_main.jpg', 
+                `mpn`='CISS-PNED-EPS-XP-313',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2506'
+Обновление oc_product029529#2506
+
+oc_product_description #2506:U(1) U(2) U(3) 
+Обработка oc_product_image #2506:U(603/52/3955893_main.jpg)U(603/52/3955894_main.jpg)U(603/52/3955895_main.jpg)U(603/52/3955896_main.jpg)U(603/52/3955897_main.jpg)U(603/52/3960855_main.jpg)
+Аттрибуты установлены
+Фильтры  установленыПараметры записи:60353/029534
+              UPDATE `oc_product`
+              SET 
+                `model`='029534',
+                `status`='0',
+                `shipping`='1',
+                `quantity`='0',
+                `price`='0',
+                `image`='', 
+                `mpn`='CISS-PNE-EPS-SPT50',               
+                `date_modified`=now()  
+              WHERE `product_id`= '11148'
+Обновление oc_product029534#11148
+
+oc_product_description #11148:U(1) U(2) U(3) 
+Обработка oc_product_image #11148:
+Аттрибуты установлены
+Фильтры  установленыПараметры записи:60805/030498
+              UPDATE `oc_product`
+              SET 
+                `model`='030498',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='370.00',
+                `image`='img/article/608/5_main.jpg', 
+                `mpn`='CISS-PN-C-HP-4500',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2507'
+Обновление oc_product030498#2507
+
+oc_product_description #2507:U(1) U(2) U(3) 
+Обработка oc_product_image #2507:U(608/5/3956157_main.jpg)U(608/5/3956158_main.jpg)U(608/5/3956159_main.jpg)U(608/5/3956160_main.jpg)U(608/5/3956161_main.jpg)U(608/5/3956162_main.jpg)U(608/5/3956163_main.jpg)U(608/5/3956164_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:60846/030754
+              UPDATE `oc_product`
+              SET 
+                `model`='030754',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='389.00',
+                `image`='img/article/608/46_main.jpg', 
+                `mpn`='CISS-PN-C-CAN-E404',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2508'
+Обновление oc_product030754#2508
+
+oc_product_description #2508:U(1) U(2) U(3) 
+Обработка oc_product_image #2508:U(608/46/3956275_main.jpg)U(608/46/3956276_main.jpg)U(608/46/3956277_main.jpg)U(608/46/3956278_main.jpg)U(608/46/3956279_main.jpg)U(608/46/3956280_main.jpg)U(608/46/3956281_main.jpg)U(608/46/3956282_main.jpg)
+Аттрибуты установленыf
+Фильтры  установленыПараметры записи:61914/032034
+              UPDATE `oc_product`
+              SET 
+                `model`='032034',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='310.00',
+                `image`='img/article/619/14_main.jpg', 
+                `mpn`='CISS-PNEC-CAN-E404',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2509'
+Обновление oc_product032034#2509
+
+oc_product_description #2509:U(1) U(2) U(3) 
+Обработка oc_product_image #2509:U(619/14/3960848_main.jpg)U(619/14/3960864_main.jpg)U(619/14/3960865_main.jpg)U(619/14/3960866_main.jpg)U(619/14/3960867_main.jpg)U(619/14/3960868_main.jpg)U(619/14/3960869_main.jpg)U(619/14/3960870_main.jpg)
+Аттрибуты установлены
+Фильтры  установленыПараметры записи:62491/033474
+              UPDATE `oc_product`
+              SET 
+                `model`='033474',
+                `status`='1',
+                `shipping`='1',
+                `quantity`='100',
+                `price`='260.00',
+                `image`='img/article/624/91_main.jpg', 
+                `mpn`='CISS-PNECO-CAN-E404',               
+                `date_modified`=now()  
+              WHERE `product_id`= '2510'
+Обновление oc_product033474#2510
+
+oc_product_description #2510:U(1) U(2) U(3) 
+Обработка oc_product_image #2510:U(624/91/3959076_main.jpg)U(624/91/3959077_main.jpg)U(624/91/3959078_main.jpg)U(624/91/3960853_main.jpg)
+Аттрибуты установлены
+Фильтры  установлены
+В категорию СНПЧ 
+Добавлено: 0 записей
+Обновлено: 52 записей
+Количество исключений0
+
+**************

@@ -1,0 +1,18 @@
+2020-02-16 20:09:48 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+2020-02-16 20:09:48 - QUERY_STRING = _route_=ua/pochemu-printer-ne-pechataet.html
+
+2020-02-16 20:09:49 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+2020-02-16 20:09:49 - QUERY_STRING = _route_=login/&get_login=1&lang=ua
+
+2020-02-16 20:09:50 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+2020-02-16 20:09:50 - QUERY_STRING = _route_=ua/popupcart/
+
+2020-02-16 20:26:45 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+2020-02-16 20:26:45 - QUERY_STRING = _route_=ua/pochemu-printer-ne-pechataet.html
+
+2020-02-16 20:26:47 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+2020-02-16 20:26:47 - QUERY_STRING = _route_=login/&get_login=1&lang=ua
+
+2020-02-16 20:26:47 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36
+2020-02-16 20:26:47 - QUERY_STRING = _route_=ua/popupcart/
+

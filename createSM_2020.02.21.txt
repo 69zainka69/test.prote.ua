@@ -1,0 +1,93 @@
+#!/bin/bash
+
+wget https://prote.ua/index.php?route=feed/google_sitemap --no-check-certificate -O /var/www/prote.com.ua/sitemapc.xml.draft
+file=/var/www/prote.com.ua/sitemapc.xml.draft
+minimumsize=50
+actualsize=$(du -k "$file" | cut -f 1)
+if [ $actualsize -ge $minimumsize ]; then
+    cp -f /var/www/prote.com.ua/sitemapc.xml.draft /var/www/prote.com.ua/sitemapc.xml
+else
+    echo size is under $minimumsize kilobytes
+fi
+
+#file=/var/www/prote.com.ua/sitemapi.xml.draft
+#minimumsize=90
+#actualsize=$(du -k "$file" | cut -f 1)
+#if [ $actualsize -ge $minimumsize ]; then
+#    cp -f /var/www/prote.com.ua/sitemapi.xml.draft /var/www/prote.com.ua/sitemapi.xml
+#else
+#    echo size is under $minimumsize kilobytes
+#fi
+
+### sitemapi.xml
+php /var/www/prote.com.ua/exec/te.php
+
+### sitemapp.xml
+php /var/www/prote.com.ua/exec/tee.php
+
+
+wget https://prote.ua/index.php?route=feed/google_sitemap/brands --no-check-certificate -O /var/www/prote.com.ua/sitemapb.xml.draft
+file=/var/www/prote.com.ua/sitemapb.xml.draft
+minimumsize=90
+actualsize=$(du -k "$file" | cut -f 1)
+if [ $actualsize -ge $minimumsize ]; then
+    cp -f /var/www/prote.com.ua/sitemapb.xml.draft /var/www/prote.com.ua/sitemapb.xml
+else
+    echo size is under $minimumsize kilobytes
+fi
+
+wget https://prote.ua/index.php?route=feed/google_sitemap/other --no-check-certificate -O /var/www/prote.com.ua/sitemapo.xml.draft
+file=/var/www/prote.com.ua/sitemapo.xml.draft
+minimumsize=1
+actualsize=$(du -k "$file" | cut -f 1)
+if [ $actualsize -ge $minimumsize ]; then
+    cp -f /var/www/prote.com.ua/sitemapo.xml.draft /var/www/prote.com.ua/sitemapo.xml
+else
+    echo size is under $minimumsize kilobytes
+fi
+
+wget https://prote.ua/index.php?route=feed/google_sitemap/filters\&part=0 --no-check-certificate -O /var/www/prote.com.ua/sitemapf0.xml.draft
+file=/var/www/prote.com.ua/sitemapf0.xml.draft
+minimumsize=90
+actualsize=$(du -k "$file" | cut -f 1)
+if [ $actualsize -ge $minimumsize ]; then
+    cp -f /var/www/prote.com.ua/sitemapf0.xml.draft /var/www/prote.com.ua/sitemapf0.xml
+else
+    echo size is under $minimumsize kilobytes
+fi
+
+
+wget https://prote.ua/index.php?route=feed/google_sitemap/filters\&part=1 --no-check-certificate -O /var/www/prote.com.ua/sitemapf1.xml.draft
+file=/var/www/prote.com.ua/sitemapf1.xml.draft
+minimumsize=90
+actualsize=$(du -k "$file" | cut -f 1)
+if [ $actualsize -ge $minimumsize ]; then
+    cp -f /var/www/prote.com.ua/sitemapf1.xml.draft /var/www/prote.com.ua/sitemapf1.xml
+else
+    echo size is under $minimumsize kilobytes
+fi
+
+
+wget https://prote.ua/index.php?route=feed/google_sitemap/filters\&part=2 --no-check-certificate -O /var/www/prote.com.ua/sitemapf2.xml.draft
+file=/var/www/prote.com.ua/sitemapf2.xml.draft
+minimumsize=90
+actualsize=$(du -k "$file" | cut -f 1)
+if [ $actualsize -ge $minimumsize ]; then
+    cp -f /var/www/prote.com.ua/sitemapf2.xml.draft /var/www/prote.com.ua/sitemapf2.xml
+else
+    echo size is under $minimumsize kilobytes
+fi
+
+
+wget https://prote.ua/index.php?route=feed/google_sitemap/filters\&part=3 --no-check-certificate -O /var/www/prote.com.ua/sitemapf3.xml.draft
+file=/var/www/prote.com.ua/sitemapf3.xml.draft
+minimumsize=90
+actualsize=$(du -k "$file" | cut -f 1)
+if [ $actualsize -ge $minimumsize ]; then
+    cp -f /var/www/prote.com.ua/sitemapf3.xml.draft /var/www/prote.com.ua/sitemapf3.xml
+else
+    echo size is under $minimumsize kilobytes
+fi
+
+
+wget https://prote.ua/index.php?route=feed/google_sitemap/mapindex --no-check-certificate -O /var/www/prote.com.ua/sitemap.xml

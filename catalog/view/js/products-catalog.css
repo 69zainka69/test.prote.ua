@@ -1,0 +1,104 @@
+@media only screen and (min-width: 320px) and (max-width: 1279px)  {
+    #maincontent {max-width: calc(100% - 12px);}
+    #content {max-width: 100%;}
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px !important;
+    }
+    .product {margin-left: 0px !important;}
+}
+@media (min-width: 1280px)  {
+    .product:hover {border:none; box-shadow: -7px 0px 7px 2px rgba(0, 0, 0, 0.05), 7px 0px 7px 2px rgba(0, 0, 0, 0.05), 0px -3px 7px 2px rgba(0, 0, 0, 0.05), 0px 7px 7px 2px rgba(51, 51, 51, 0.05);}
+    .product:hover .product__attributes-content {border:none; box-shadow: -7px 0px 7px 2px rgba(0, 0, 0, 0.05), 7px 0px 7px 2px rgba(0, 0, 0, 0.05), 0px -3px 7px 2px rgba(0, 0, 0, 0.05), 0px 7px 7px 2px rgba(51, 51, 51, 0.05);}
+    .product:hover .product__counter,
+     .product:hover .product__attributes,
+     .product:hover .product__attributes-content {display: flex;}
+    .product__price {width: 200px !important;}
+    .product:hover .product__absolute {padding-top: 16px;}
+    .product:hover .product__block-buttons {margin: 19px 0px 0px 0px !important;}
+}
+@media (min-width: 1920px) {
+    .products {
+        margin-top: 69px !important;
+        padding-left: 34px !important;
+    }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1919px) {
+    .products {
+        margin-top: 14px !important;
+    }
+}
+@media only screen and (min-width: 996px) and (max-width: 1279px)  {
+    .product__price {width: 200px !important;}
+}
+@media only screen and (min-width: 720px) and (max-width: 995px)  {
+    .products > div {
+        width: 235px !important;
+    }
+    .products {margin-top: -4px !important;}
+    .product__price {width: 200px !important;}
+}
+@media only screen and (min-width: 540px) and (max-width: 719px)  {
+    .product {width: 262px !important;}
+    .products {margin-top: -16px !important;}
+    .product__lable {right: 15px;}
+    .product__price {width: 200px !important;}
+}
+@media only screen and (min-width: 320px) and (max-width: 539px)  {
+    .products {margin-top: -16px !important;}
+    .product__text-delivery, .product__text-dar, .product__text-bestseller {font-size: 7px;}
+    .product {width: 152px !important;}
+    .product__lable {right: 15px;right: -1px !important; width: 50px; height: 50px;}
+    .product__lable img{width: 50px; height: 50px;}
+    .product .product__text-dar {top: -17px !important; font-size: 9px}
+    .product .buttons {width: 132px; left: 10px;}
+    .product .buttons a.oneclick {display: none !important;}
+    .product .name {width: 132px;height: 64px;margin: 0 auto;line-height: 15px !important;font-size: 11px!important;}
+    .product__price {font-size: 16px !important;width: 130px !important;margin: 0 auto;margin-top: 30px;}
+    .product .price p {font-size:16px;width: auto !important;}
+    .product .price {font-size: 17px !important;}
+    .product .ndesc {height: 64px;}
+    .product__text-bestseller {top: 18px;}
+    .product__text-delivery, .product__text-dar, .product__text-bestseller {font-size: 7px !important;}
+    .product .product__text-dar {top: -17px !important; font-size: 9px !important;}
+}
+img[src="image/ico/favicon_prote_16x16.svg"] {margin-top: 40px;}
+.product__block-buttons {margin: 13px 0px 0px 0px !important;}
+ .product__price {position: relative;z-index: 2;background: #fff;width: 100%;}
+ .product__lable {z-index: inherit !important;}
+ .products>div{width:246px;text-align: center;font-family:'Trebuchet MS';}
+.products>div:hover a{color:#00aff2;}
+.products {margin-top: 74px;padding-left: 15px;}
+.product:nth-child(1) {margin-left: 0px;}
+.product{position:relative; margin-left: 5px;}
+.product.non{-webkit-filter: grayscale(1);filter: grayscale(1);}
+.product{font-family:'Trebuchet MS'; padding-bottom: 90px !important;}
+.product__absolute {padding-top: 0px;}
+.product .img-responsive {max-height: 130px;}
+.product .image {width: 130px;height: 130px;padding: 0px;margin: 0 auto;margin-top: 44px;}
+.product .image a{display: block;height: 100%;width: 100%;}
+.product .ifexist,.product .ifwait{text-transform: lowercase;line-height: 28px;font-size: 12px;color: #999;position: relative;align-items: center;display: flex;margin: 0 auto;width: 130px;justify-content: center;}
+.product .ifexist:before{content:'';position: relative;width:21px;height:21px;margin-right: 12px;}
+.product .ifexist.ico0:before{background: url('/image/ico/00-v-nayavnosti.svg');}
+.product .ifexist.ico3:before{background: url('/image/ico/00-nema-v-nayavnosti.svg');}
+.product .ifexist.ico3:before{background: url('/image/ico/00-nema-v-nayavnosti.svg');}
+.product .ndesc{text-align:left;height: 60px;max-width: 200px;margin: 0 auto;}
+.product .name{display:block;line-height:20px;font-size:13px;height:60px;overflow:hidden;}
+.product .price{color:#333;font-size:20px;text-align: left;width: auto;margin: 0 auto;}
+.price-new{color:#fd9710;}
+.product .price-old{color:#d9d9d9;text-decoration: line-through;font-size:17px;}
+.product .buttons{}
+.product .buttons a {}
+.product .buttons .button-row{display:flex;flex: 8 13 auto;}
+.product .buttons a.oneclick{display: flex;align-items: center;justify-content: center;height: 40px;width: 80px;text-decoration: none;background:#bee9f9;color:#484848;font-size:13px; width:81px;background:#bee9f9;color:#484848;font-size:13px; width:37%;margin-right:5px;}
+.product .buttons a.oneclick:hover{background:#dbdbdb;}
+.product .buttons a.tobasket{display: flex;align-items: center;justify-content: center;width: 130px;height: 40px;position:relative;background:#fd9710;font-size:16px; max-width:132px;width:100%;color:#fff;text-decoration: none;}
+.product .buttons a.tobasket:before{content:'';position:relative;width:30px;height:28px;background: url('/image/ico/04-cart-buy.svg')no-repeat;}
+.product .buttons a.tobasket:hover{background:#da7e05;}
+.product__empty-attr {width: 100%;height: 10px;}
+
+.product_min{display:none;position: absolute;top:12px;left:12px;height: 24px;padding-left:35px;background:url('image/ico/min-order.svg')0 0 no-repeat;width:130px;color:#fd9710;font-family:'Trebuchet MS';font-size:13px;line-height:13px;text-align:left;}
+.products>div:hover .product_min{display:block;}
+.on.select__gap,.on.select__gap2, .select__gap:hover, .select__gap2:hover{color:#00adee;}

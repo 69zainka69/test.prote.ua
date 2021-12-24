@@ -1,0 +1,142 @@
+ >>  MySQLTuner 1.7.13 - Major Hayden <major@mhtx.net>
+ >>  Bug reports, feature requests, and downloads at http://mysqltuner.com/
+ >>  Run with '--help' for additional options and output filtering
+
+[--] Skipped version check for MySQLTuner script
+[OK] Currently running supported MySQL version 5.5.64-MariaDB
+[OK] Operating on 64-bit architecture
+
+-------- Log file Recommendations ------------------------------------------------------------------
+[--] Log file: /var/log/mariadb/mariadb.log(201K)
+[OK] Log file /var/log/mariadb/mariadb.log exists
+[OK] Log file /var/log/mariadb/mariadb.log is readable.
+[OK] Log file /var/log/mariadb/mariadb.log is not empty
+[OK] Log file /var/log/mariadb/mariadb.log is smaller than 32 Mb
+[!!] /var/log/mariadb/mariadb.log contains 473 warning(s).
+[!!] /var/log/mariadb/mariadb.log contains 74 error(s).
+[--] 85 start(s) detected in /var/log/mariadb/mariadb.log
+[--] 1) 200227 15:09:51 [Note] /usr/libexec/mysqld: ready for connections.
+[--] 2) 200227 15:09:30 [Note] /usr/libexec/mysqld: ready for connections.
+[--] 3) 200227 12:55:18 [Note] /usr/libexec/mysqld: ready for connections.
+[--] 4) 200227 12:40:27 [Note] /usr/libexec/mysqld: ready for connections.
+[--] 5) 200227 12:26:36 [Note] /usr/libexec/mysqld: ready for connections.
+[--] 6) 200227 10:47:59 [Note] /usr/libexec/mysqld: ready for connections.
+[--] 7) 200224 15:28:32 [Note] /usr/libexec/mysqld: ready for connections.
+[--] 8) 200224 15:26:31 [Note] /usr/libexec/mysqld: ready for connections.
+[--] 9) 200224 15:22:39 [Note] /usr/libexec/mysqld: ready for connections.
+[--] 10) 200224 15:16:03 [Note] /usr/libexec/mysqld: ready for connections.
+[--] 79 shutdown(s) detected in /var/log/mariadb/mariadb.log
+[--] 1) 200227 15:09:49 [Note] /usr/libexec/mysqld: Shutdown complete
+[--] 2) 200227 15:07:22 [Note] /usr/libexec/mysqld: Shutdown complete
+[--] 3) 200227 15:05:19 [Note] /usr/libexec/mysqld: Shutdown complete
+[--] 4) 200227 15:04:16 [Note] /usr/libexec/mysqld: Shutdown complete
+[--] 5) 200227 12:57:29 [Note] /usr/libexec/mysqld: Shutdown complete
+[--] 6) 200227 12:57:28 [Note] /usr/libexec/mysqld: Shutdown complete
+[--] 7) 200227 12:55:16 [Note] /usr/libexec/mysqld: Shutdown complete
+[--] 8) 200227 12:40:25 [Note] /usr/libexec/mysqld: Shutdown complete
+[--] 9) 200227 12:26:33 [Note] /usr/libexec/mysqld: Shutdown complete
+[--] 10) 200227 10:47:57 [Note] /usr/libexec/mysqld: Shutdown complete
+
+-------- Storage Engine Statistics -----------------------------------------------------------------
+[--] Status: +ARCHIVE +Aria +BLACKHOLE +CSV +FEDERATED +InnoDB +MEMORY +MRG_MYISAM +MyISAM +PERFORMANCE_SCHEMA
+[--] Data in InnoDB tables: 480.0K (Tables: 14)
+[OK] Total fragmented tables: 0
+
+-------- Analysis Performance Metrics --------------------------------------------------------------
+[--] innodb_stats_on_metadata: OFF
+[OK] No stat updates during querying INFORMATION_SCHEMA.
+
+-------- Security Recommendations ------------------------------------------------------------------
+[OK] There are no anonymous accounts for any database users
+[OK] All database users have passwords assigned
+[!!] There is no basic password file list!
+
+-------- CVE Security Recommendations --------------------------------------------------------------
+[--] Skipped due to --cvefile option undefined
+
+-------- Performance Metrics -----------------------------------------------------------------------
+[--] Up for: 3d 20h 8m 6s (92 q [0.000 qps], 90 conn, TX: 114K, RX: 6K)
+[--] Reads / Writes: 100% / 0%
+[--] Binary logging is disabled
+[--] Physical Memory     : 15.5G
+[--] Max MySQL memory    : 3.9G
+[--] Other process memory: 621.2M
+[--] Total buffers: 1.5G global + 12.5M per thread (192 max threads)
+[--] P_S Max memory usage: 0B
+[--] Galera GCache Max memory usage: 0B
+[OK] Maximum reached memory usage: 1.5G (9.88% of installed RAM)
+[OK] Maximum possible memory usage: 3.9G (24.96% of installed RAM)
+[OK] Overall possible memory usage with other process is compatible with memory available
+[OK] Slow queries: 0% (0/92)
+[OK] Highest usage of available connections: 0% (1/192)
+[!!] Aborted connections: 63.33%  (57/90)
+[!!] name resolution is active : a reverse name resolution is made for each new connection and can reduce performance
+[OK] Query cache is disabled by default due to mutex contention on multiprocessor machines.
+[OK] Sorts requiring temporary tables: 0% (0 temp sorts / 2 sorts)
+[OK] No joins without indexes
+[OK] Temporary tables created on disk: 0% (0 on disk / 21 total)
+[OK] Thread cache hit rate: 98% (1 created / 90 connections)
+[OK] Table cache hit rate: 189% (55 open / 29 opened)
+[OK] Open file limit used: 0% (51/16K)
+[OK] Table locks acquired immediately: 100% (40 immediate / 40 locks)
+
+-------- Performance schema ------------------------------------------------------------------------
+[--] Performance schema is disabled.
+[--] Memory used by P_S: 0B
+[--] Sys schema isn't installed.
+
+-------- ThreadPool Metrics ------------------------------------------------------------------------
+[--] ThreadPool stat is enabled.
+[--] Thread Pool Size: 16 thread(s).
+[--] Using default value is good enough for your version (5.5.64-MariaDB)
+
+-------- MyISAM Metrics ----------------------------------------------------------------------------
+[!!] Key buffer used: 18.3% (191M used / 1B cache)
+[OK] Key buffer size / total MyISAM indexes: 1000.0M/108.0K
+[!!] Read Key buffer hit rate: 80.0% (10 cached / 2 reads)
+
+-------- InnoDB Metrics ----------------------------------------------------------------------------
+[--] InnoDB is enabled.
+[--] InnoDB Thread Concurrency: 0
+[OK] InnoDB File per table is activated
+[OK] InnoDB buffer pool / data size: 256.0M/480.0K
+[!!] Ratio InnoDB log file size / InnoDB Buffer pool size (3.90625 %): 5.0M * 2/256.0M should be equal 25%
+[OK] InnoDB buffer pool instances: 1
+[--] InnoDB Buffer Pool Chunk Size not used or defined in your version
+[!!] InnoDB Read buffer efficiency: 86.46% (2279 hits/ 2636 total)
+[!!] InnoDB Write Log efficiency: 0% (1 hits/ 0 total)
+[OK] InnoDB log waits: 0.00% (0 waits / 1 writes)
+
+-------- AriaDB Metrics ----------------------------------------------------------------------------
+[--] AriaDB is enabled.
+[OK] Aria pagecache size / total Aria indexes: 128.0M/1B
+
+-------- TokuDB Metrics ----------------------------------------------------------------------------
+[--] TokuDB is disabled.
+
+-------- XtraDB Metrics ----------------------------------------------------------------------------
+[--] XtraDB is disabled.
+
+-------- Galera Metrics ----------------------------------------------------------------------------
+[--] Galera is disabled.
+
+-------- Replication Metrics -----------------------------------------------------------------------
+[--] Galera Synchronous replication: NO
+[--] No replication slave(s) for this server.
+[--] Binlog format: STATEMENT
+[--] XA support enabled: ON
+[--] Semi synchronous replication Master: Not Activated
+[--] Semi synchronous replication Slave: Not Activated
+[--] This is a standalone server
+
+-------- Recommendations ---------------------------------------------------------------------------
+General recommendations:
+    Control warning line(s) into /var/log/mariadb/mariadb.log file
+    Control error line(s) into /var/log/mariadb/mariadb.log file
+    Enable the slow query log to troubleshoot bad queries
+    Reduce or eliminate unclosed connections and network issues
+    Configure your accounts with ip or subnets only, then update your configuration with skip-name-resolve=1
+    Consider installing Sys schema from https://github.com/mysql/mysql-sys
+    Before changing innodb_log_file_size and/or innodb_log_files_in_group read this: https://bit.ly/2TcGgtU
+Variables to adjust:
+    innodb_log_file_size should be (=32M) if possible, so InnoDB total log files size equals to 25% of buffer pool size.

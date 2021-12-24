@@ -1,0 +1,33 @@
+{
+  "name": "prote.ua",
+  "version": "1.0.0",
+  "description": "Prote.ua web application",
+  "main": "sw.js",
+  "dependencies": {
+    "gulp-autoprefixer": "^7.0.1",
+    "node-sass": "^5.0.0",
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-util": "^3.0.8",
+    "node-sass": "^5.0.0"
+  },
+  "scripts": {
+    "gulp": "./node_modules/.bin/gulp",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -watch /catalog/view/theme/default/stylesheet -o /catalog/view/theme/default/stylesheet"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.webbylab.com/vm/prote/prote.ua.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

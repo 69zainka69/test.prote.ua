@@ -1,0 +1,1370 @@
+.catalog-header-group
+    display: flex
+    flex-direction: row
+    width: 100%
+.catalog-filter
+    z-index: 3
+.modal-filter
+    position: absolute
+    left: -6px
+    display: block !important
+    z-index: 10
+    background: #fff
+    top: -114px
+    width: 320px !important
+    padding: 22px 0px 0px 22px !important
+    &__close
+        display: block
+        position: absolute
+        background: url(/catalog/view/theme/default/image/icons/close_filter.svg) no-repeat
+        cursor: pointer
+        width: 18px
+        height: 18px
+        left: 262px
+        top: -6px
+        display: none
+    .filter_close
+        display: none !important
+    &__content
+        opacity: 1 !important
+        height: auto !important
+        width: 226px
+.product
+    &:hover
+        z-index: 2
+    &__counter
+        width: 145px
+        margin: 0 auto
+        margin-top: 0px
+        display: none
+    &__minus, &__plus,&__count-input
+        font-family: Trebuchet MS
+        font-style: normal
+        font-weight: bold
+        font-size: 25px
+        line-height: 16px
+        color: #FD9710
+        background: transparent
+        display: flex
+    &__minus
+         margin-right: auto
+    &__plus
+         margin-left: auto
+    &__attributes
+        font-family: Trebuchet MS
+        font-style: normal
+        font-weight: normal
+        font-size: 13px
+        line-height: 17px
+        color: #999999
+        text-align: left
+        width: 266px
+        left: 0px
+        z-index: 1
+        position: absolute
+        overflow-y: hidden
+        padding: 0 10px 10px 10px
+        margin: 0 -10px
+        display: none
+        z-index: 2
+        height: 136px
+        bottom: -136px
+    &__attributes-content
+        display: flex
+        flex-direction: column
+        box-shadow: -7px 0px 7px 2px rgba(0, 0, 0, 0.05), 7px 0px 7px 2px rgba(0, 0, 0, 0.05), 0px -3px 7px 2px rgba(0, 0, 0, 0.05), 0px 7px 7px 2px rgba(51, 51, 51, 0.05)
+        padding-left: 15px
+        padding-right: 34px
+        display: none
+        height: 107px
+        background: #fff
+        overflow: hidden
+        height: 100%
+    &__wrap
+        margin-top: 20px
+    &__absolute
+        position: absolute
+        width: 100%
+        padding-top: 12px
+        z-index: 1
+        background: #fff
+    &__block-buttons
+        position: relative
+        left: 15px
+.megaprod
+    width: 226px !important
+.catalog__more-select
+    position: relative
+    top: 12px
+.catalog-recommendation
+    &__h1-block
+        width: 226px
+        display: flex
+        justify-content: left
+        align-items: center
+    &__card
+        padding-left: 10px
+        &:first-child
+            padding-left: 0px !important
+    &__title
+        margin-left: 0px
+    &__img
+        width: 100px
+        height: 100px
+        margin-left: 8px
+        margin-right: 15px
+.description
+    p
+        font-family: Trebuchet MS
+        font-style: normal
+        font-weight: normal
+        font-size: 13px
+        line-height: 16px
+        color: #000000
+.modal-selbyprinter
+    position: fixed
+    left: 0px
+    top: 0px
+    width: 320px
+    background: #fff
+    padding: 24px 35px
+    z-index: 1
+    max-height: 670px
+    height: 100%
+    z-index: 3
+    display: none
+    &__title
+        font-family: Trebuchet MS
+        font-style: normal
+        font-weight: bold
+        font-size: 20px
+        line-height: 23px
+        color: #FD9710
+        position: relative
+        left: 9px
+        top: -3px
+    &__select
+        background: #FFFFFF
+        border: 2px solid #e1e1e1
+        border-radius: 3px
+        height: 40px
+        font-family: Open Sans
+        font-style: normal
+        font-weight: normal
+        font-size: 15px
+        line-height: 20px
+        color: #C4C4C4
+        margin-bottom: 12px !important
+        -webkit-appearance: none
+        &::-ms-expand 
+            display: none !important            
+    &__close
+        display: block
+        position: absolute
+        background: url('/catalog/view/theme/default/image/icons/close_filter.svg') no-repeat
+        cursor: pointer
+        width: 18px
+        height: 18px
+        left: 284px
+        top: 21px
+    &__send
+        background: #FD9710 !important
+        border-radius: 3px
+        font-family: Trebuchet MS
+        font-style: normal
+        font-weight: normal
+        font-size: 18px !important
+        line-height: 21px !important
+        text-align: center
+        color: #FFFFFF
+        height: 40px
+        transition-duration: 0s !important
+        margin-top: -9px !important
+        &:hover
+            border: 1px solid #FD9710
+            box-sizing: border-box
+            border-radius: 3px
+            background: #fff !important
+            color: #FD9710 !important
+    .box-heading
+        background: #fff !important
+        position: relative
+        left: -17px
+        top: -7px
+    .box-heading .txt
+        line-height: 23px
+.catalog-header
+    &__btn-print
+        visibility: hidden
+@media only (min-width: 320px) and (max-width: 1279px)
+    .megaprod
+        display: none
+    #column-left, #res_filter2, .catalog-recommendation
+        display: none
+@media only (min-width: 320px) and (max-width: 539px)
+    .megaprod
+        display: none
+    .bf-btn-reset1
+        top: 5px
+    .bf-panel-wrapper
+        opacity: 0
+        height: 0
+    .catalog-header-group
+        flex-direction: column
+    .catalog-header
+        display: flex
+        flex-direction: column
+        border-bottom: none !important
+        &__title
+            padding: 0px
+            padding-left: 21px
+            margin-bottom: 32px
+            display: flex
+            margin-top: 8px
+            h1
+                margin-left: 18px
+                padding-top: 5px
+                width: 175px
+                line-height: 24px
+            svg
+                width: 40px
+                height: auto
+                display: flex
+        &__print-filter-block
+            display: flex
+            flex-direction: column
+            align-self: center
+            margin-bottom: 29px
+        &__btn-filter
+            font-size: 22px !important
+        &__btn-print, &__btn-filter
+            width: 278px
+            height: 60px
+            background: #FFFFFF
+            border: 2px solid #999
+            display: flex
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: bold
+            font-size: 17px
+            line-height: 19px
+            color: #333333
+            align-items: center
+            margin-left: 10px
+            margin: 0 auto
+            svg
+                width: 35px
+                height: 35px
+                display: flex
+                margin-left: 10px
+                margin-right: 10px
+            span
+                width: calc(100% - 20px)
+        &__btn-print
+            text-align: left
+            &:hover
+                border: 2px solid #00AFF2
+                color: #00AFF2
+                svg
+                    path
+                        fill: #00AFF2  
+        &__btn-filter
+            justify-content: center
+            margin-top: 14px
+            &:hover
+                color: #FD9710
+                border: 2px solid #FD9710
+    .catalog__more-select
+        top: 2px
+    .catalog-filter
+        display: flex
+        width: 100%
+        position: relative
+        &__line
+            height: 1px
+            width: 100%
+            background: #00AFF2
+            width: calc(100% - 14px)
+            display: flex
+            align-self: center
+            margin-top: 15px
+        &__select
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 16px
+            color: #999999
+        .select__gap
+            padding: 12px 0px 12px 6px !important
+            &:before
+                right: -22px !important
+        &__sort
+            width: 134px
+            margin-left: 19px        
+        &__btn-reset
+            font-size: 14px !important
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            white-space: inherit !important
+            width: 86px
+            display: flex
+            margin: 0px !important
+            margin-left: auto !important
+            line-height: 16px
+            align-items: center
+            padding: 0px !important
+            height: 46px
+            &::before
+                left: -32px !important
+                top: 14px !important
+            &::after
+                left: -31px !important
+                top: 26px !important
+        &__boxtitle
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            font-size: 14px !important
+            line-height: 16px !important
+            color: #999999 !important
+            margin-top: 20px !important
+            margin-bottom: 6px !important
+        &__res
+            padding: 0px !important
+            align-self: center
+            width: calc(100% - 14px)
+            .bf-btn-reset1
+                display: none !important
+            .sel_filers .value
+                height: 22px
+                margin: 0px
+                padding: 0px 14px 0px 14px
+                min-width: 78px
+                padding-left: 14px
+                padding-right: 14px
+            .sel_filers
+                display: flex
+                flex-wrap: wrap
+                margin: 0px
+            .sel_filers span
+                margin-right: 15px
+    .catalog-selbyprinter
+        display: none
+@media only (min-width: 540px) and (max-width: 719px)
+    .megaprod
+        display: none
+    .bf-panel-wrapper
+        opacity: 0
+        height: 0
+    .catalog-header-group
+        flex-direction: column
+    .catalog-header
+        display: flex
+        flex-direction: column
+        border-bottom: none !important
+        &__title
+            padding: 0px
+            padding-left: 0px
+            padding-left: 20px
+            margin-bottom: 32px
+            top: 11px
+            position: relative
+            display: flex
+            h1
+                margin-left: 18px
+                padding-top: 5px
+                width: 175px
+                line-height: 24px
+            svg
+                width: 40px
+                height: auto
+                display: flex
+        &__print-filter-block
+            display: flex
+            flex-direction: column
+            align-self: center
+            flex-direction: row
+            margin-bottom: 12px
+        &__btn-print
+            width: 320px !important
+            margin-right: 10px !important
+            text-align: left
+            display: flex !important
+        &__btn-filter
+            width: 165px !important
+            margin: 0px !important
+            font-size: 22px !important
+        &__btn-print, &__btn-filter
+            width: 278px
+            height: 60px
+            background: #FFFFFF
+            border: 2px solid #999
+            display: flex
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: bold
+            font-size: 17px
+            line-height: 19px
+            color: #333333
+            align-items: center
+            margin-left: 20px
+            margin: 0 auto
+            &:hover
+                border: 2px solid #00AFF2
+                color: #00AFF2
+                svg
+                    path
+                        fill: #00AFF2               
+            svg
+                width: 40px
+                height: auto
+                display: flex
+                margin-left: 20px
+                margin-right: 20px
+            span
+                width: calc(100% - 45px)
+        &__btn-print
+             &:hover
+                border: 2px solid #00AFF2
+                color: #00AFF2
+                svg
+                    path
+                        fill: #00AFF2  
+        &__btn-filter
+            justify-content: center
+            margin-top: 14px
+            &:hover
+                color: #FD9710
+                border: 2px solid #FD9710
+    .bf-btn-reset1
+        right: 18px
+    .megaprod
+        display: none
+    .catalog-filter
+        display: flex
+        width: 100%
+        position: relative
+        &__line
+            height: 1px
+            width: 100%
+            background: #00AFF2
+            width: calc(100% - 14px)
+            display: flex
+            align-self: center
+        &__select
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 16px
+            color: #999999
+        .select__gap
+            padding: 12px 0px 12px 6px !important
+            margin: 0px !important
+            &:before
+                right: -24px !important
+        &__sort
+            width: 134px
+            position: relative
+            bottom: 10px
+            left: 18px
+        &__btn-reset
+            font-size: 14px !important
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            white-space: inherit !important
+            display: flex
+            margin: 0px !important
+            margin-left: auto !important
+            line-height: 16px
+            align-items: center
+            padding: 0px !important
+            width: auto !important
+            height: 46px
+            &::before
+                left: -32px !important
+                top: 9px !important
+            &::after
+                left: -30px !important
+                top: 20px !important
+        &__boxtitle
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            font-size: 14px !important
+            line-height: 16px !important
+            color: #999999 !important
+            margin-top: 20px !important
+            margin-bottom: 6px !important
+        &__res
+            padding: 0px !important
+            align-self: center
+            width: calc(100% - 14px)
+            .bf-btn-reset1
+                display: none !important
+            .sel_filers .value
+                height: 22px
+                margin: 0px
+                padding: 0px 14px 0px 14px
+                min-width: 78px
+                padding-left: 14px
+                padding-right: 14px
+            .sel_filers
+                display: flex
+                flex-wrap: wrap
+                margin: 0px
+            .sel_filers span
+                margin-right: 15px
+    .catalog-selbyprinter
+        display: none
+@media only (min-width: 720px) and (max-width: 995px)
+    .megaprod
+        display: none
+    .bf-panel-wrapper
+        opacity: 0
+        height: 0
+    .catalog-header-group
+        flex-direction: row
+        margin-bottom: 10px
+        margin-top: 6px
+    .catalog-header
+        display: flex
+        flex-direction: column
+        border-bottom: none !important
+        &__title
+            padding: 0px
+            padding-left: 25px
+            margin-bottom: 28px
+            display: flex
+            margin: 0px
+            h1
+                margin-left: 18px
+                padding-top: 5px
+                width: 175px
+                line-height: 24px
+                font-size: 22px !important
+            svg
+                width: 40px
+                height: auto
+                display: flex
+        &__print-filter-block
+            display: flex
+            flex-direction: column
+            align-self: center
+            flex-direction: row
+            margin-bottom: 12px
+            margin: 0 auto
+            margin-right: 0px
+        &__btn-print
+            width: 240px !important
+            margin-right: 10px !important
+            text-align: left
+        &__btn-filter
+            font-size: 22px
+        &__btn-filter
+            width: 174px !important
+            margin: 0px !important
+        &__btn-print, &__btn-filter
+            width: 278px
+            height: 60px
+            background: #FFFFFF
+            border: 2px solid #999
+            display: flex
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: bold
+            font-size: 14px
+            line-height: 15px
+            color: #333333
+            align-items: center
+            margin-left: 20px
+            margin: 0 auto
+            &:hover
+                border: 2px solid #00AFF2
+                color: #00AFF2
+                svg
+                    path
+                        fill: #00AFF2               
+            svg
+                width: 40px
+                height: auto
+                display: flex
+                margin-left: 15px
+                margin-right: 15px
+            span
+                width: calc(100% - 30px)
+        &__btn-print
+             &:hover
+                border: 2px solid #00AFF2
+                color: #00AFF2
+                svg
+                    path
+                        fill: #00AFF2  
+        &__btn-filter
+            justify-content: center
+            margin-top: 14px
+            font-size: 22px
+            line-height: 16px
+            &:hover
+                color: #FD9710
+                border: 2px solid #FD9710
+    .catalog-filter
+        display: flex
+        width: 100%
+        position: relative
+        &__line
+            height: 1px
+            width: 100%
+            background: #00AFF2
+            width: calc(100% - 14px)
+            display: flex
+            align-self: center
+        &__select
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 16px
+            color: #999999
+        .select__gap
+            padding: 12px 0px 12px 6px !important
+            margin: 0px !important
+            left: 20px
+            bottom: 8px
+            &:before
+                right: -24px !important
+        &__sort
+            width: 134px
+        &__btn-reset
+            font-size: 14px !important
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            white-space: inherit !important
+            display: flex
+            margin: 0px !important
+            margin-left: auto !important
+            line-height: 16px
+            align-items: center
+            padding: 0px !important
+            width: auto !important
+            height: 46px
+            &::before
+                left: -32px !important
+                top: 7px !important
+            &::after
+                left: -31px !important
+                top: 20px !important
+        &__boxtitle
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            font-size: 14px !important
+            line-height: 16px !important
+            color: #999999 !important
+            margin-top: 20px !important
+            margin-bottom: 6px !important
+        &__res
+            padding: 0px !important
+            align-self: center
+            width: calc(100% - 14px)
+            .bf-btn-reset1
+                display: none !important
+            .sel_filers .value
+                height: 22px
+                margin: 0px
+                padding: 0px 14px 0px 14px
+                min-width: 78px
+                padding-left: 14px
+                padding-right: 14px
+            .sel_filers
+                display: flex
+                flex-wrap: wrap
+                margin: 0px
+            .sel_filers span
+                margin-right: 15px
+    .catalog-selbyprinter
+        display: none
+@media only (min-width: 996px) and (max-width: 1279px)
+    .catalog__more-select 
+        position: relative
+        right: 55px
+        top: 0px
+    .bf-panel-wrapper
+        opacity: 0
+        height: 0
+    .catalog-header-group
+        flex-direction: row
+        margin-bottom: 10px
+    .catalog-header
+        display: flex
+        flex-direction: column
+        border-bottom: none !important
+        margin: 0px !important
+        position: relative
+        &__title
+            padding: 0px
+            padding-left: 0px
+            padding-left: 12px
+            margin-bottom: 28px
+            display: flex
+            margin: 0px
+            h1
+                margin-left: 18px
+                padding-top: 5px
+                width: auto !important
+                line-height: 24px
+                align-items: center
+                display: flex
+            svg
+                width: 40px
+                height: auto
+                display: flex
+        &__print-filter-block
+            display: flex
+            flex-direction: column
+            align-self: center
+            flex-direction: row
+            margin-bottom: 12px
+            margin-right: 0px
+            margin-left: auto
+            top: 8px
+            position: relative
+        &__btn-print
+            width: 292px !important
+            margin-right: 10px !important
+            text-align: left
+        &__btn-filter
+            width: 200px !important
+            margin: 0px !important
+        &__btn-print, &__btn-filter
+            width: 278px
+            height: 60px
+            background: #FFFFFF
+            border: 2px solid #999
+            display: flex
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: bold
+            font-size: 14px
+            line-height: 15px
+            color: #333333
+            align-items: center
+            margin-left: 20px
+            margin: 0 auto
+            &:hover
+                border: 2px solid #00AFF2
+                color: #00AFF2
+                svg
+                    path
+                        fill: #00AFF2               
+            svg
+                width: 40px
+                height: auto
+                display: flex
+                margin-left: 15px
+                margin-right: 15px
+            span
+                width: calc(100% - 30px)
+        &__btn-print
+             &:hover
+                border: 2px solid #00AFF2
+                color: #00AFF2
+                svg
+                    path
+                        fill: #00AFF2  
+        &__btn-filter
+            justify-content: center
+            margin-top: 14px
+            font-size: 22px
+            line-height: 16px
+            &:hover
+                color: #FD9710
+                border: 2px solid #FD9710
+    .catalog-filter
+        display: flex
+        width: 100%
+        position: relative
+        &__line
+            display: none
+        &__line2
+            height: 1px
+            width: 100%
+            background: #00AFF2
+            display: flex
+            align-self: center
+        &__select
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 16px
+            color: #999999
+        .select__gap
+            padding: 12px 0px 12px 6px !important
+            margin: 0px !important
+            &:before
+                right: -24px !important
+        &__sort
+            width: 134px
+            margin-left: auto
+        &__btn-reset
+            font-size: 14px !important
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            white-space: inherit !important
+            display: flex
+            margin: 0px !important
+            margin-left: 30px !important
+            line-height: 16px
+            align-items: center
+            padding: 0px !important
+            width: auto !important
+            height: 46px
+            &::before
+                left: -32px !important
+                top: 7px !important
+            &::after
+                left: -31px !important
+                top: 20px !important
+        &__boxtitle
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            font-size: 14px !important
+            line-height: 16px !important
+            color: #999999 !important
+            margin-top: 20px !important
+            margin-bottom: 6px !important
+        &__res
+            padding: 0px !important
+            align-self: center
+            width: calc(100% - 14px)
+            margin: 0px !important
+            position: absolute
+            top: 80px
+            .bf-btn-reset1
+                display: none !important
+            .sel_filers .value
+                height: 22px
+                margin: 0px
+                padding: 0px 14px 0px 14px
+                min-width: 78px
+                padding-left: 14px
+                padding-right: 14px
+            .sel_filers
+                display: flex
+                flex-wrap: wrap
+                margin: 0px
+            .sel_filers span
+                margin-right: 15px
+    .catalog-selbyprinter
+        display: none
+@media only (min-width: 1280px)
+    .modal-selbyprinter
+        display: none !important
+    .catalog-filter
+        margin-top: -44px
+        margin-bottom: 20px
+    .catalog-filter
+        &__res
+            display: none
+@media only (min-width: 1280px) and (max-width: 1919px)
+    .catalog__more-select
+        top: 7px
+    .catalog-recommendation
+        display: flex
+        width: 100%
+        flex-direction: column
+        align-items: center
+        &__h1-block
+            align-self: flex-start
+        &__h1
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 16px
+            color: #999999
+            width: 115px
+            margin-right: 111px
+            margin: 0px
+            margin-top: 6px
+            margin-right: 0px
+            margin-top: 5px
+            margin-left: 31px
+            align-self: self-start
+            width: auto
+        &__content
+            display: flex
+            flex-wrap: nowrap
+            width: 100%
+            flex-direction: row
+            justify-content: right
+            margin-top: 26px
+        &__card
+            width: 240px
+            display: flex
+            &:nth-child(1)
+                &::before
+                    display: none
+            &::before
+                content: ''
+                height: 120px
+                width: 1px
+                position: relative
+                background: #E8E8E8
+                transform: rotate(180deg)
+                right: 15px
+            &:first-child
+                &::before
+                    content: ''
+                    border: none
+        &__title
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            font-size: 12px
+            line-height: 14px
+            color: #00AFF2
+            width: 104px
+            margin-top: 40px
+            margin-left: 6px
+        &__img
+            width: 100px
+            height: 100px
+            margin-right: -2px !important
+    .bf-panel-wrapper
+        opacity: 1 !important
+    .catalog-header-group
+        flex-direction: row
+        margin-bottom: 10px
+    .catalog-header
+        display: flex
+        flex-direction: column
+        border-bottom: none !important
+        position: relative
+        margin-left: -19px !important
+        height: 105px !important
+        margin-bottom: 0px !important
+        &__title
+            padding: 0px
+            padding-left: 0px
+            padding-left: 12px
+            margin-bottom: 28px
+            display: flex
+            margin: 0px
+            h1
+                margin-left: 18px
+                padding-top: 5px
+                width: auto !important
+                line-height: 24px
+                align-items: center
+                display: flex
+            svg
+                width: 40px
+                height: auto
+                display: flex
+        &__print-filter-block
+            display: flex
+            flex-direction: column
+            align-self: center
+            flex-direction: row
+            margin-bottom: 12px
+            margin-right: 0px
+            margin-left: auto
+            visibility: hidden
+        &__btn-print
+            width: 292px !important
+            margin-right: 10px !important
+            text-align: left
+        &__btn-filter
+            width: 200px !important
+            margin: 0px !important
+        &__btn-print, &__btn-filter
+            width: 278px
+            height: 60px
+            background: #FFFFFF
+            border: 2px solid #999
+            display: flex
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: bold
+            font-size: 14px
+            line-height: 15px
+            color: #333333
+            align-items: center
+            margin-left: 20px
+            margin: 0 auto
+            &:hover
+                border: 2px solid #00AFF2
+                color: #00AFF2
+                svg
+                    path
+                        fill: #00AFF2               
+            svg
+                width: 40px
+                height: auto
+                display: flex
+                margin-left: 15px
+                margin-right: 15px
+            span
+                width: calc(100% - 30px)
+        &__btn-print
+             &:hover
+                border: 2px solid #00AFF2
+                color: #00AFF2
+                svg
+                    path
+                        fill: #00AFF2  
+        &__btn-filter
+            justify-content: center
+            margin-top: 14px
+            font-size: 22px
+            line-height: 16px
+            &:hover
+                color: #FD9710
+                border: 2px solid #FD9710
+    .catalog-filter
+        display: flex
+        width: 100%
+        position: relative
+        &__line
+            height: 1px
+            width: 100%
+            background: #00AFF2
+            display: flex
+            align-self: center
+            position: relative
+            top: -18px
+        &__line2
+           display: none
+        &__select
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 16px
+            color: #999999
+        .select__gap
+            padding: 12px 0px 12px 6px !important
+            margin: 0px !important
+            &:before
+                right: -24px !important
+        &__sort
+            width: auto
+            margin-left: auto
+            position: relative
+            z-index: 1
+            margin-right: 20px
+        .rowh1  &__btn-reset
+            display: none
+        &__btn-reset
+            font-size: 14px !important
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            white-space: inherit !important
+            display: flex
+            margin: 0px !important
+            margin-left: 30px !important
+            line-height: 16px
+            align-items: center
+            padding: 0px !important
+            width: auto !important
+            height: 46px                
+            &::before
+                left: -32px !important
+                top: 7px !important
+            &::after
+                left: -31px !important
+                top: 20px !important
+        &__boxtitle
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            font-size: 14px !important
+            line-height: 16px !important
+            color: #999999 !important
+            margin-top: 56px !important
+            margin-bottom: 6px !important
+            padding-left: 30px
+        &__filter-result
+            padding-left: 16px
+        &__bf-btn-reset1
+            position: relative
+            bottom: 20px
+        &__res
+            padding: 0px !important
+            align-self: center
+            width: calc(100% - 14px)
+            margin: 0px !important
+            position: absolute
+            top: 80px
+            .bf-btn-reset1
+                display: none !important
+            .sel_filers .value
+                height: 22px
+                margin: 0px
+                padding: 0px 14px 0px 14px
+                min-width: 78px
+                padding-left: 14px
+                padding-right: 14px
+            .sel_filers
+                display: flex
+                flex-wrap: wrap
+                margin: 0px
+            .sel_filers span
+                margin-right: 15px
+    .catalog-selbyprinter
+        display: block
+@media only (min-width: 1920px)
+    .catalog-recommendation
+        display: flex
+        width: 100%
+        flex-direction: row
+        align-items: center
+        &__h1
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 16px
+            color: #999999
+            width: 115px
+            margin-top: 36px
+            margin-left: 39px
+        &__h1-block
+            width: 235px
+        &__content
+            display: flex
+            flex-wrap: nowrap
+            width: calc(100% - 235px)
+            flex-direction: row
+            justify-content: left
+        &__card
+            width: 256px
+            display: flex
+            &:nth-child(1)
+                &::before
+                    display: none
+            &::before
+                content: ''
+                transform: rotate(180deg)
+                position: relative
+                top: 8px
+                height: 120px
+                width: 1px
+                background: #E8E8E8
+                right: 0px
+            &:first-child
+                &::before
+                    content: ''
+                    border: none
+        &__title
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            font-size: 12px
+            line-height: 14px
+            color: #00AFF2
+            width: 104px
+            margin-top: 58px
+        &__img
+            width: 100px
+            height: 100px
+            margin-top: 24px
+    .bf-panel-wrapper
+        opacity: 1 !important
+    .catalog-header-group
+        flex-direction: row
+        margin-bottom: -10px
+    .catalog-header
+        display: flex
+        flex-direction: column
+        border-bottom: none !important
+        margin: 0px !important
+        margin-bottom: 20px !important
+        position: relative
+        &__title
+            padding: 0px
+            padding-left: 0px
+            margin-bottom: 28px
+            display: flex
+            margin: 0px
+            h1
+                margin-left: 18px
+                padding-top: 5px
+                width: auto !important
+                line-height: 24px
+                align-items: center
+                display: flex
+            svg
+                width: 40px
+                height: auto
+                display: flex
+        &__print-filter-block
+            display: flex
+            flex-direction: column
+            align-self: center
+            flex-direction: row
+            margin-bottom: 12px
+            margin-right: 0px
+            margin-left: auto
+            visibility: hidden
+        &__btn-print
+            width: 292px !important
+            margin-right: 10px !important
+            text-align: left
+        &__btn-filter
+            width: 200px !important
+            margin: 0px !important
+        &__btn-print, &__btn-filter
+            width: 278px
+            height: 60px
+            background: #FFFFFF
+            border: 2px solid #999
+            display: flex
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: bold
+            font-size: 14px
+            line-height: 15px
+            color: #333333
+            align-items: center
+            margin-left: 20px
+            margin: 0 auto
+            &:hover
+                border: 2px solid #00AFF2
+                color: #00AFF2
+                svg
+                    path
+                        fill: #00AFF2               
+            svg
+                width: 40px
+                height: auto
+                display: flex
+                margin-left: 15px
+                margin-right: 15px
+            span
+                width: calc(100% - 30px)
+        &__btn-print
+             &:hover
+                border: 2px solid #00AFF2
+                color: #00AFF2
+                svg
+                    path
+                        fill: #00AFF2  
+        &__btn-filter
+            justify-content: center
+            margin-top: 14px
+            font-size: 22px
+            line-height: 16px
+            &:hover
+                color: #FD9710
+                border: 2px solid #FD9710
+    .catalog-filter
+        display: flex
+        width: 100%
+        position: relative
+        margin-bottom: 0px
+        position: relative
+        top: -8px
+        left: 12px
+        margin-top: -24px
+        &__line
+            height: 1px
+            width: 100%
+            background: #00AFF2
+            display: flex
+            align-self: center
+        &__line2
+           display: none
+        &__select
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 16px
+            color: #999999
+        .select__gap
+            padding: 12px 0px 12px 6px !important
+            margin: 0px !important
+            &:before
+                right: -24px !important
+        &__sort
+            width: auto
+            margin-left: auto
+            position: relative
+            z-index: 1
+            margin-right: 20px
+        &__bf-btn-reset1
+            position: relative
+            top: -26px
+            right: 28px
+        .rowh1  &__btn-reset
+            display: none
+        &__btn-reset
+            font-size: 14px !important
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            white-space: inherit !important
+            display: flex
+            margin: 0px !important
+            margin-left: 30px !important
+            line-height: 16px
+            align-items: center
+            padding: 0px !important
+            width: auto !important
+            height: 46px                
+            &::before
+                left: -32px !important
+                top: 7px !important
+            &::after
+                left: -31px !important
+                top: 20px !important
+        &__boxtitle
+            font-family: Trebuchet MS
+            font-style: normal
+            font-weight: normal
+            font-size: 14px !important
+            line-height: 16px !important
+            color: #999999 !important
+            margin-bottom: 6px !important
+            margin-top: 50px !important
+            position: relative
+            top: 19px
+            left: 38px
+        &__filter-result
+            position: relative
+            top: 21px
+            left: 24px
+        &__res
+            padding: 0px !important
+            align-self: center
+            width: calc(100% - 14px)
+            margin: 0px !important
+            position: absolute
+            top: 80px
+            .bf-btn-reset1
+                display: none !important
+            .sel_filers .value
+                height: 22px
+                margin: 0px
+                padding: 0px 14px 0px 14px
+                min-width: 78px
+                padding-left: 14px
+                padding-right: 14px
+            .sel_filers
+                display: flex
+                flex-wrap: wrap
+                margin: 0px
+            .sel_filers span
+                margin-right: 15px
+    .catalog-selbyprinter
+        display: block

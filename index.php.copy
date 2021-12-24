@@ -1,0 +1,495 @@
+<?php
+
+//$start = microtime(true);
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+//echo microtime(true)-$start.'-10<br>';
+
+
+
+/*if (preg_match('/apple|baidu|bingbot|facebookexternalhit|googlebot|-google|ia_archiver|msnbot|naverbot|pingdom|seznambot|slurp|teoma|twitter|yandex|yeti/i', $_SERVER['HTTP_USER_AGENT'])) {
+    //$bot = false;
+} else if (preg_match('/bot|crawl|curl|dataprovider|search|get|spider|find|java|majesticsEO|google|yahoo|teoma|contaxe|yandex|libwww-perl|facebookexternalhit/i', $_SERVER['HTTP_USER_AGENT'])) {
+    exit;
+}*/
+
+/*function _bot_detected() {
+
+  return (
+    isset($_SERVER['HTTP_USER_AGENT'])
+    && preg_match('/bot|crawl|slurp|spider|mediapartners/i', $_SERVER['HTTP_USER_AGENT'])
+  );
+}*/
+
+if (isset($_SERVER['HTTP_USER_AGENT'])) {
+    //$res = preg_match('/bot|crawl|slurp|spider|mediapartners/i', $_SERVER['HTTP_USER_AGENT']);
+    //$res = preg_match('/bot|crawl|slurp|spider|mediapartners/i', $_SERVER['HTTP_USER_AGENT']);
+    $res = preg_match('/bingbot|AdBot|search.com.ua|Cliqzbot|Applebot|crawl|slurp|Mail.RU|mail.ru|Miralinks|spider|mediapartners|SemrushBot|FatBot|MJ12bot|AhrefsBot|Riddler|aiHitBot|trovitBot|Detectify|BLEXBot|LinkpadBot|dotbot|FlipboardProxy|email|PycURL/i', $_SERVER['HTTP_USER_AGENT']);
+    //wget|
+
+    if ($res) {
+
+        $handle = fopen('/var/www/prote/data/www/prote.ua/HTTP_USER_AGENT_block_log.txt', 'a');
+        fwrite($handle, date('Y-m-d G:i:s') . "\n");
+        fwrite($handle, date('Y-m-d G:i:s') . ' - HTTP_USER_AGENT ' . print_r($_SERVER['HTTP_USER_AGENT'], true) . "\n");
+        fwrite($handle, date('Y-m-d G:i:s') . ' - REMOTE_ADDR = ' . print_r($_SERVER['REMOTE_ADDR'], true) . "\n");
+        if (isset($_SERVER['HTTP_REFERER'])) {
+            fwrite($handle, ' - HTTP_REFERER = ' . print_r($_SERVER['HTTP_REFERER'], true) . "\n");
+        }
+        fwrite($handle, date('Y-m-d G:i:s') . ' - QUERY_STRING = ' . print_r($_SERVER['QUERY_STRING'], true) . "\n\n");
+        fclose($handle);
+
+
+        //header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
+        exit;
+    } else {
+        /*$handle = fopen('/var/www/prote/data/www/prote.ua/HTTP_USER_AGENT_log.txt', 'a');
+        fwrite($handle, date('Y-m-d G:i:s') . "\n");
+        fwrite($handle, date('Y-m-d G:i:s') .' - HTTP_USER_AGENT ' . print_r($_SERVER['HTTP_USER_AGENT'], true) . "\n");
+        fwrite($handle, date('Y-m-d G:i:s') .' - REMOTE_ADDR = ' . print_r($_SERVER['REMOTE_ADDR'], true) . "\n");
+        if(isset($_SERVER['HTTP_REFERER'])) {
+        fwrite($handle, ' - HTTP_REFERER = ' . print_r($_SERVER['HTTP_REFERER'], true) . "\n");
+        }
+        fwrite($handle, date('Y-m-d G:i:s') .' - QUERY_STRING = ' . print_r($_SERVER['QUERY_STRING'], true) . "\n\n");
+        fclose($handle);*/
+    }
+}
+//if(isset($_SERVER['HTTP_USER_AGENT'])){
+//$res = preg_match('/YandexBot|Googlebot/i', $_SERVER['HTTP_USER_AGENT']);
+//wget|
+
+//if(!$res) {
+/*if (isset($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR'] = '37.229.104.77') {
+    include '/var/www/prote.com.ua/block/TBlockIp.php';
+}*/
+/*$handle = fopen('/var/www/prote.com.ua/HTTP_USER_AGENT_log.txt', 'a');
+//fwrite($handle, date('Y-m-d G:i:s') . "\n");
+fwrite($handle, date('Y-m-d G:i:s') .' - HTTP_USER_AGENT ' . print_r($_SERVER['HTTP_USER_AGENT'], true) . "\n");
+fwrite($handle, date('Y-m-d G:i:s') .' - REMOTE_ADDR = ' . print_r($_SERVER['REMOTE_ADDR'], true) . "\n");
+if(isset($_SERVER['HTTP_REFERER'])) {
+//fwrite($handle, ' - HTTP_REFERER = ' . print_r($_SERVER['HTTP_REFERER'], true) . "\n");
+}
+fwrite($handle, date('Y-m-d G:i:s') .' - QUERY_STRING = ' . print_r($_SERVER['QUERY_STRING'], true) . "\n\n");
+fclose($handle);*/
+
+//if (isset($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR'] = '37.229.104.77') {
+//include '/var/www/prote.com.ua/block/TBlockIp.php';
+//}
+//}
+//}
+
+/*$bot_regex = '/BotLink|bingbot|AhrefsBot|ahoy|AlkalineBOT|anthill|appie|arale|araneo|AraybOt|ariadne|arks|ATN_Worldwide|Atomz|bbot|Bjaaland|Ukonline|borg\-bot\/0\.9|boxseabot|bspider|calif|christcrawler|CMC\/0\.01|combine|confuzzledbot|CoolBot|cosmos|Internet Cruiser Robot|cusco|cyberspyder|cydralspider|desertrealm, desert realm|digger|DIIbot|grabber|downloadexpress|DragonBot|dwcp|ecollector|ebiness|elfinbot|esculapio|esther|fastcrawler|FDSE|FELIX IDE|ESI|fido|H�m�h�kki|KIT\-Fireball|fouineur|Freecrawl|gammaSpider|gazz|gcreep|golem|googlebot|griffon|Gromit|gulliver|gulper|hambot|havIndex|hotwired|htdig|iajabot|INGRID\/0\.1|Informant|InfoSpiders|inspectorwww|irobot|Iron33|JBot|jcrawler|Teoma|Jeeves|jobo|image\.kapsi\.net|KDD\-Explorer|ko_yappo_robot|label\-grabber|larbin|legs|Linkidator|linkwalker|Lockon|logo_gif_crawler|marvin|mattie|mediafox|MerzScope|NEC\-MeshExplorer|MindCrawler|udmsearch|moget|Motor|msnbot|muncher|muninn|MuscatFerret|MwdSearch|sharp\-info\-agent|WebMechanic|NetScoop|newscan\-online|ObjectsSearch|Occam|Orbsearch\/1\.0|packrat|pageboy|ParaSite|patric|pegasus|perlcrawler|phpdig|piltdownman|Pimptrain|pjspider|PlumtreeWebAccessor|PortalBSpider|psbot|Getterrobo\-Plus|Raven|RHCS|RixBot|roadrunner|Robbie|robi|RoboCrawl|robofox|Scooter|Search\-AU|searchprocess|Senrigan|Shagseeker|sift|SimBot|Site Valet|skymob|SLCrawler\/2\.0|slurp|ESI|snooper|solbot|speedy|spider_monkey|SpiderBot\/1\.0|spiderline|nil|suke|http:\/\/www\.sygol\.com|tach_bw|TechBOT|templeton|titin|topiclink|UdmSearch|urlck|Valkyrie libwww\-perl|verticrawl|Victoria|void\-bot|Voyager|VWbot_K|crawlpaper|wapspider|WebBandit\/1\.0|webcatcher|T\-H\-U\-N\-D\-E\-R\-S\-T\-O\-N\-E|WebMoose|webquest|webreaper|webs|webspider|WebWalker|wget|winona|whowhere|wlm|WOLP|WWWC|none|XGET|Nederland\.zoek|AISearchBot|woriobot|NetSeer|Nutch|YandexBot|YandexMobileBot|SemrushBot|FatBot|MJ12bot|DotBot|AddThis|baiduspider|SeznamBot|mod_pagespeed|CCBot|openstat.ru\/Bot|m2e/i';
+    $userAgent = empty($_SERVER['HTTP_USER_AGENT']) ? FALSE : $_SERVER['HTTP_USER_AGENT'];
+    $isBot = !$userAgent || preg_match($bot_regex, $userAgent);
+
+*/
+
+
+// Version
+define('VERSION', '2.1.0.2');
+if ($_SERVER['HTTP_HOST'] == 'barva.ua' || $_SERVER['HTTP_HOST'] == 'patron.ua') {
+    header("Location: http://" . $_SERVER['HTTP_HOST'], true, 301);
+    die();
+}
+
+// Configuration
+if (is_file('config.php')) {
+    require_once('config.php');
+}
+
+//require_once('/var/www/www-root/data/www/prote-centos.vm.net/PhpConsole/__autoload.php');
+//require_once('PhpConsole/__autoload.php');
+
+// Call debug from PhpConsole\Handler
+//$handler = PhpConsole\Handler::getInstance();
+//$handler->start();
+//$handler->debug('called from handler debug', 'some.three.tags');
+
+// Call debug from PhpConsole\Connector (if you don't use PhpConsole\Handler in your project)
+//PhpConsole\Connector::getInstance()->getDebugDispatcher()->dispatchDebug('called from debug dispatcher without tags');
+
+// Call debug from global PC class-helper (most short & easy way)
+//PhpConsole\Helper::register(); // required to register PC class in global namespace, must be called only once
+//PC::debug('called from PC::debug()', 'db');
+//PC::db('called from PC::__callStatic()'); // means "db" will be handled as debug tag
+// Install
+/*
+if (!defined('DIR_APPLICATION')) {
+	header('Location: install/index.php');
+	exit;
+}
+*/
+// file_put_contents('/var/www/prote.com.ua/tmp_log.log', 'index-start-'.(microtime(true)-$start)."\n", FILE_APPEND);
+//
+// Startup
+require_once(DIR_SYSTEM . 'startup.php');
+
+// Registry
+$registry = new Registry();
+
+// Loader
+$loader = new Loader($registry);
+$registry->set('load', $loader);
+
+// Config
+$config = new Config();
+$registry->set('config', $config);
+
+// Database
+$db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
+$registry->set('db', $db);
+
+// Store
+if (isset($_SERVER['HTTPS']) && (($_SERVER['HTTPS'] == 'on') || ($_SERVER['HTTPS'] == '1'))) {
+    $store_query = $db->query("SELECT * FROM " . DB_PREFIX . "store WHERE REPLACE(`ssl`, 'www.', '') = '" . $db->escape('https://' . str_replace('www.', '', $_SERVER['HTTP_HOST']) . rtrim(dirname($_SERVER['PHP_SELF']), '/.\\') . '/') . "'");
+} else {
+    $store_query = $db->query("SELECT * FROM " . DB_PREFIX . "store WHERE REPLACE(`url`, 'www.', '') = '" . $db->escape('http://' . str_replace('www.', '', $_SERVER['HTTP_HOST']) . rtrim(dirname($_SERVER['PHP_SELF']), '/.\\') . '/') . "'");
+}
+
+if ($store_query->num_rows) {
+    $config->set('config_store_id', $store_query->row['store_id']);
+} else {
+    $config->set('config_store_id', 0);
+}
+
+// Переадресация устаревших УРЛ
+// if ($_SERVER['REQUEST_URI']=='/kartridzh-canon-pg-510cl-511-multipack-blackcolour-029471.html') {
+//    header( 'Location: /kartridzh-canon-pg-510-2970b0012970b007-blackka-042692.html', true, 301 );
+// }
+
+// Settings
+$query = $db->query("SELECT * FROM `" . DB_PREFIX . "setting` WHERE store_id = '0' OR store_id = '" . (int)$config->get('config_store_id') . "' ORDER BY store_id ASC");
+
+foreach ($query->rows as $result) {
+    if (!$result['serialized']) {
+        $config->set($result['key'], $result['value']);
+    } else {
+        $config->set($result['key'], json_decode($result['value'], true));
+    }
+}
+
+// print_r($config);
+
+if (!$store_query->num_rows) {
+    $config->set('config_url', HTTP_SERVER);
+    $config->set('config_ssl', HTTPS_SERVER);
+}
+
+// Url
+$url = new Url($config->get('config_url'), $config->get('config_secure') ? $config->get('config_ssl') : $config->get('config_url'));
+$registry->set('url', $url);
+
+// Log
+$log = new Log($config->get('config_error_filename'));
+$registry->set('log', $log);
+
+function error_handler($code, $message, $file, $line)
+{
+    global $log, $config;
+
+    // error suppressed with @
+    if (error_reporting() === 0) {
+        return false;
+    }
+
+    switch ($code) {
+        case E_NOTICE:
+        case E_USER_NOTICE:
+            $error = 'Notice';
+            break;
+        case E_WARNING:
+        case E_USER_WARNING:
+            $error = 'Warning';
+            break;
+        case E_ERROR:
+        case E_USER_ERROR:
+            $error = 'Fatal Error';
+            break;
+        default:
+            $error = 'Unknown';
+            break;
+    }
+
+    if ($config->get('config_error_display')) {
+        echo '<b>' . $error . '</b>: ' . $message . ' in <b>' . $file . '</b> on line <b>' . $line . '</b>';
+    }
+
+    if ($config->get('config_error_log')) {
+        $log->write('PHP ' . $error . ':  ' . $message . ' in ' . $file . ' on line ' . $line);
+        //global $log;
+        /*$log->write('get');
+        $log->write($_GET);
+        $log->write('post');
+        $log->write($_POST);*/
+    }
+
+    return true;
+}
+
+// Error Handler
+set_error_handler('error_handler');
+
+// Request
+$request = new Request();
+$registry->set('request', $request);
+
+// Response
+$response = new Response();
+$response->addHeader('Content-Type: text/html; charset=utf-8');
+$response->setCompression($config->get('config_compression'));
+$registry->set('response', $response);
+
+// Cache
+$cache = new Cache();
+$registry->set('cache', $cache);
+
+// Session
+if (isset($request->get['token']) && isset($request->get['route']) && substr($request->get['route'], 0, 4) == 'api/') {
+    $db->query("DELETE FROM `" . DB_PREFIX . "api_session` WHERE TIMESTAMPADD(HOUR, 1, date_modified) < NOW()");
+
+    $query = $db->query("SELECT DISTINCT * FROM `" . DB_PREFIX . "api` `a` LEFT JOIN `" . DB_PREFIX . "api_session` `as` ON (a.api_id = as.api_id) LEFT JOIN " . DB_PREFIX . "api_ip `ai` ON (as.api_id = ai.api_id) WHERE a.status = '1' AND as.token = '" . $db->escape($request->get['token']) . "' AND ai.ip = '" . $db->escape($request->server['REMOTE_ADDR']) . "'");
+
+    if ($query->num_rows) {
+        // Does not seem PHP is able to handle sessions as objects properly so so wrote my own class
+        $session = new Session($query->row['session_id'], $query->row['session_name']);
+        $registry->set('session', $session);
+
+        // keep the session alive
+        $db->query("UPDATE `" . DB_PREFIX . "api_session` SET date_modified = NOW() WHERE api_session_id = '" . $query->row['api_session_id'] . "'");
+    }
+} else {
+    $session = new Session();
+    $registry->set('session', $session);
+}
+// die(2);
+// Language Detection
+$languages = array();
+$query = $db->query("SELECT * FROM `" . DB_PREFIX . "language` WHERE status = '1'");
+
+foreach ($query->rows as $result) {
+    $languages[$result['code']] = $result;
+}
+
+
+// Определение языка из УРЛ
+if (isset($request->get['lang'])) {
+    $dataLanguage = $request->get['lang'];
+} elseif (empty($request->cookie['language'])) {
+    $dataLanguage = 'ua';
+} else {
+    $urlLanguage = '';
+    $urlArray = explode("/", $request->server['REQUEST_URI']);
+    foreach ($urlArray as $value) {
+        if (array_key_exists($value, $languages)) {
+            $urlLanguage = $value;
+        }
+    }
+    if (!empty($urlLanguage)) {
+        $dataLanguage = $urlLanguage;
+    }
+}
+
+if (!empty($dataLanguage)) {
+    $session->data['language'] = $dataLanguage;
+}
+
+// скидки на черную пятницу
+/*if(isset($request->get['pjatnica'])){
+
+	$session->data['pjatnica'] = 1;
+	setcookie('pjatnica', '1', time() + 60 * 60 * 24 * 5, '/', $request->server['HTTP_HOST']);
+}
+
+if (isset($request->cookie['pjatnica']) || isset($session->data['pjatnica'])) {
+	$products_pjatnica = array(
+		'27569'	=>	'6734.1', //MFD-OKI-MB492DN 6734,1 054376 27569
+		'34925'	=>	'9702',	//LSR-OKI-B731DNW 9702 038100 34925
+		'13204'	=>	'4914', //PC-PTR-P030-G3930 4914 044558 13204
+		'12960'	=>	'239.4',  //MOU-LOG-M171-WIRL-R 239,4 042106 12960
+		'10500'	=>	'147.6', //BAT-CU-V8-GR 147,6 037207 10500
+		'34683'	=>	'28.5'	//POF-PN-PU0032-A4-250 28,5 061683 34683
+	);
+	$session->data['products_pjatnica'] = $products_pjatnica;
+
+}*/
+
+
+//if (isset($session->data['language']) && array_key_exists($session->data['language'], $languages)) {
+//    $code = $session->data['language'];
+//} elseif (isset($request->cookie['language']) && array_key_exists($request->cookie['language'], $languages)) {
+//    $code = $request->cookie['language'];
+//} else {
+//    $detect = '';
+//
+//    if (isset($request->server['HTTP_ACCEPT_LANGUAGE']) && $request->server['HTTP_ACCEPT_LANGUAGE']) {
+//        $browser_languages = explode(',', $request->server['HTTP_ACCEPT_LANGUAGE']);
+//        foreach ($browser_languages as $browser_language) {
+//            foreach ($languages as $key => $value) {
+//                if ($value['status']) {
+//                    $locale = explode(',', $value['locale']);
+//                    if (in_array($browser_language, $locale)) {
+//                        $detect = $key;
+//                        break 2;
+//                    }
+//                }
+//            }
+//        }
+//    }
+//    $language_from_url = explode("/", $request->server['REQUEST_URI']);
+//
+//    foreach ($language_from_url as $lang) {
+//        if (array_key_exists($lang, $languages)) {
+//            $language_from_url = $lang;
+//            break;
+//        }
+//    }
+//
+//    if (is_array($language_from_url)) {
+//        $language_from_url = false;
+//    }
+//
+//    if (!$detect && ($language_from_url && array_key_exists($language_from_url, $languages) && $languages[$language_from_url]['status'])) {
+//        $detect = $language_from_url;
+//    }
+//
+//    $code = $detect ? $detect : $config->get('config_language');
+//}
+if (isset($session->data['language']) && array_key_exists($session->data['language'], $languages)) {
+    $code = $session->data['language'];
+} elseif (isset($request->cookie['language']) && array_key_exists($request->cookie['language'], $languages)) {
+    $code = $request->cookie['language'];
+} else {
+    $code = $session->data['language'] = 'ru';
+}
+
+if (!empty($code) && $request->cookie['language'] != $code) {
+    setcookie('language', $code, time() + 60 * 60 * 24 * 30, '/', $request->server['HTTP_HOST']);
+    $_COOKIE['language'] = $code;
+}
+
+$config->set('config_language_id', $languages[$code]['language_id']);
+$config->set('config_language', $languages[$code]['code']);
+
+// Language
+$language = new Language($languages[$code]['directory']);
+$language->load($languages[$code]['directory']);
+$registry->set('language', $language);
+
+// Document
+$registry->set('document', new Document());
+
+// Customer
+$customer = new Customer($registry);
+$registry->set('customer', $customer);
+
+// Customer Group
+if ($customer->isLogged()) {
+    $config->set('config_customer_group_id', $customer->getGroupId());
+} elseif (isset($session->data['customer']) && isset($session->data['customer']['customer_group_id'])) {
+    // For API calls
+    $config->set('config_customer_group_id', $session->data['customer']['customer_group_id']);
+} elseif (isset($session->data['guest']) && isset($session->data['guest']['customer_group_id'])) {
+    $config->set('config_customer_group_id', $session->data['guest']['customer_group_id']);
+}
+
+// Tracking Code
+if (isset($request->get['tracking'])) {
+    setcookie('tracking', $request->get['tracking'], time() + 3600 * 24 * 1000, '/');
+
+    $db->query("UPDATE `" . DB_PREFIX . "marketing` SET clicks = (clicks + 1) WHERE code = '" . $db->escape($request->get['tracking']) . "'");
+}
+
+// Affiliate
+$registry->set('affiliate', new Affiliate($registry));
+
+// Currency
+$registry->set('currency', new Currency($registry));
+
+// Tax
+$registry->set('tax', new Tax($registry));
+
+// Weight
+$registry->set('weight', new Weight($registry));
+
+// Length
+$registry->set('length', new Length($registry));
+
+// Cart
+$registry->set('cart', new Cart($registry));
+
+// Encryption
+$registry->set('encryption', new Encryption($config->get('config_encryption')));
+
+// OpenBay Pro
+$registry->set('openbay', new Openbay($registry));
+
+// Event
+$event = new Event($registry);
+$registry->set('event', $event);
+
+$query = $db->query("SELECT * FROM " . DB_PREFIX . "event");
+
+foreach ($query->rows as $result) {
+    $event->register($result['trigger'], $result['action']);
+}
+
+// Front Controller
+$controller = new Front($registry);
+
+// Maintenance Mode
+//$controller->addPreAction(new Action('common/maintenance'));
+
+// SEO URL's
+if (!$seo_type = $config->get('config_seo_url_type')) {
+    $seo_type = 'seo_url';
+}
+
+$user = new User($registry);
+
+if ($user->isLogged() && $user->getUserName() == 'Manis') {
+    ini_set('error_reporting', E_ALL);
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    include_once DIR_ROOT . 'function.php';
+    define('ISADMIN', 'true');
+} else {
+    function vdump()
+    {
+    }
+
+    define('ISADMIN', 'false');
+}
+//echo microtime(true)-$start.'-8<br>';
+$controller->addPreAction(new Action('common/' . $seo_type));
+
+// Router
+if (isset($request->get['route'])) {
+    $action = new Action($request->get['route']);
+} else {
+    $action = new Action('common/home');
+}
+
+//echo microtime(true)-$start.'-9<br>';
+
+// file_put_contents('/var/www/vm.ua/dirs.log', '>'. print_r($session->data['language'], 1), FILE_APPEND);
+
+// file_put_contents('/var/www/prote.com.ua/tmp_log.log', 'index-'.(microtime(true)-$start)."\n", FILE_APPEND);
+// Dispatch
+$controller->dispatch($action, new Action('error/not_found'));
+// file_put_contents('/var/www/prote.com.ua/tmp_log.log', 'index-'.print_r($action,1).(microtime(true)-$start)."\n", FILE_APPEND);
+
+//vdump(microtime(true)-$start);
+//echo microtime(true)-$start;
+
+//$res =  microtime(true)-$start.'-10<br>';
+//vdump($res);
+
+// Output
+$response->output();
+
+//echo microtime(true)-$start.'-11<br>';
+//vdump($res);
+require_once('system/debug_after_index.php');
+//$res =  microtime(true)-$start.'-10<br>';
+//vdump($res);
+//echo microtime(true)-$start.'-12<br>';

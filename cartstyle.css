@@ -1,0 +1,182 @@
+<style type="text/css">.minus {
+    margin-bottom: 6px;
+}
+
+.popupcart_info .quantity span {
+    border: none !important;
+}
+
+.delete:hover.koshik {
+    fill: #FD9710;
+}
+
+.delete:hover svg {
+    fill: #FD9710;
+}
+
+.delete svg:hover .koshik {
+    fill: #FD9710;
+}
+
+.koshik:hover {
+    fill: #FD9710;
+}
+
+.popupcart_info .quantity input {
+    border: 1px solid #333333 !important;
+    color: #333333 !important;
+}
+
+.popupcart_info .quantity input:focus {
+    color: #fd9710 !important;
+    border: 1px solid #fd9710 !important;
+}
+
+.name_tovs:hover {
+    color: #FD9710 !important;
+    text-decoration: underline;
+}
+
+.modal-cart .code_total {
+    font-size: 29px !important;
+}
+
+.button.orages {
+    font-family: Trebuchet MS;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 21px;
+    color: #333333;
+    background: #ffffff00;
+    border: 1px solid black;
+}
+
+.button.orage {
+    font-family: Trebuchet MS;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+
+.totsum {
+    margin-right: 60px;
+}
+
+.button.orages:hover {
+    color: #fd9710;
+    background: #ffffff;
+}
+
+.totalsymname {
+    float: right;
+    color: #FD9710;
+}
+
+.allprods {
+    text-align: right;
+    background: #FFEFD9;
+    width: 329px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+}
+
+.allprods a:hover {
+    color: #FD9710;
+}
+
+.allprods a {
+    color: black;
+}
+
+.delete {
+    cursor: pointer;
+}
+
+.upFreeDelivSum {
+    height: 21px;
+    color: #333333;
+    font-size: 14px;
+    font-weight: normal;
+    display: inline-block;
+    width: 52%;
+    float: left;
+}
+
+.upFreeDelivSum span {
+    color: #fd9710;
+}
+
+.butgo {
+    margin-top: 30px;
+    width: 43%;
+    float: left;
+    margin-left: 24px;
+}
+
+.butok {
+    margin-top: 30px;
+    width: 43%;
+    float: right;
+    margin-right: 24px;
+}
+
+.popupcart_buttons {
+    height: 155px;
+    background: #ececec;
+    margin-top: -44px;
+}
+
+@media (max-width: 830px) {
+    .remove {
+        position: absolute;
+        right: 15px;
+    }
+    .allprods {
+        width: 100%;
+        text-align: left;
+    }
+    .prices {
+        position: absolute;
+        top: 161px;
+        left: 260px;
+    }
+    .name {
+        width: 280px !important;
+        position: absolute;
+    }
+    .quantity {
+        position: absolute;
+        top: 161px;
+        left: 160px;
+    }
+    .modal-body {
+        width: 480px !important;
+    }
+    .upFreeDelivSum {
+        width: 100%;
+    }
+    .totalsymname {
+        display: none;
+    }
+    .butgo {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .butok {
+        margin-top: 0px;
+        width: 100%;
+        margin-right: 0px;
+    }
+    .popupcart_buttons {
+        height: 213px;
+    }
+}
+
+</style>

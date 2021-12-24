@@ -1,0 +1,43 @@
+{
+  "lang": "ru",
+  "name": "ТОВАРЫ ДЛЯ ПЕЧАТИ В МАГАЗИНЕ PROTE",
+  "short_name": "Prote",
+  "start_url": "/?utm_sourse=homescreen",
+  "display": "standalone",
+  "description": "ТОВАРЫ ДЛЯ ПЕЧАТИ В МАГАЗИНЕ PROTE — ВЫБОР РАСХОДНЫХ МАТЕРИАЛОВ В УКРАИНЕ №1",
+  "background_color": "#ffffff",
+  "theme_color": "#c8effb",
+  "icons": [
+    {
+      "src": "https://mebel-bruno.ru/image/catalog/logo_ukr.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    }, 
+    {
+      "src": "https://mebel-bruno.ru/image/catalog/logo_ukr.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    }, 
+    {
+      "src": "https://mebel-bruno.ru/image/catalog/logo_ukr.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    }, 
+    {
+      "src": "https://mebel-bruno.ru/image/catalog/logo_ukr.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "https://mebel-bruno.ru/image/catalog/logo_ukr.png",
+      "type": "image/png",
+      "sizes": "191x192"
+    }, 
+    {
+      "src": "https://mebel-bruno.ru/image/catalog/logo_ukr.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }       
+  ]
+}
+

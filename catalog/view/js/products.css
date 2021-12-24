@@ -1,0 +1,56 @@
+@media only screen and (min-width: 720px) and (max-width: 995px)  {
+    .products > div {
+        width: 235px !important
+    }
+}
+@media only screen and (min-width: 540px) and (max-width: 719px)  {
+    .product {width: 262px !important;}
+    .product__lable {right: 15px;}
+}
+@media only screen and (min-width: 320px) and (max-width: 539px)  {
+    .product__text-delivery, .product__text-dar, .product__text-bestseller {font-size: 7px;}
+    .product {width: 152px !important;}
+    .product__lable {right: 15px;right: -1px !important; width: 50px; height: 50px;}
+    .product__lable img{width: 50px; height: 50px;}
+    .product .product__text-dar {top: -17px !important; font-size: 9px !important;}
+    .product .buttons {width: 132px;}
+    .product .buttons a.oneclick {display: none !important;}
+    .product .name {width: 132px;height: 64px;margin: 0 auto;line-height: 15px !important;font-size: 11px!important;}
+    .product__price {font-size: 11px!important;width: 130px;margin: 0 auto;margin-top: 30px;}
+    .product .ndesc {height: 64px;}
+    .product__text-bestseller {top: 18px;}
+    .product__text-delivery, .product__text-dar, .product__text-bestseller {font-size: 7px !important;}
+}
+img[src="image/ico/favicon_prote_16x16.svg"] {margin-top: 40px;}
+.products>div{width:246px;text-align: center;border:1px solid #fff;font-family:'Trebuchet MS';}
+.products>div:hover{border:1px solid #e3e3e3;}
+.products>div:hover a{color:#00aff2;}
+.product__block-buttons {left: 0px !important;}
+.product{position:relative;}
+.product.non{-webkit-filter: grayscale(1);filter: grayscale(1);}
+.product{font-family:'Trebuchet MS';}
+.product .img-responsive {max-height: 130px;}
+.product .image {width: 130px;height: 130px;padding: 0px;margin: 0 auto;margin-top: 44px;}
+.product .image a{display: block;height: 100%;width: 100%;}
+.product .ifexist,.product .ifwait{text-transform: lowercase;line-height: 28px;font-size: 12px;color: #999;position: relative;align-items: center;display: flex;margin: 0 auto;width: 130px;justify-content: center;}
+.product .ifexist:before{content:'';position: relative;width:21px;height:21px;margin-right: 12px;}
+.product .ifexist.ico0:before{background: url('/image/ico/00-v-nayavnosti.svg');}
+.product .ifexist.ico3:before{background: url('/image/ico/00-nema-v-nayavnosti.svg');}
+.product .ifexist.ico3:before{background: url('/image/ico/00-nema-v-nayavnosti.svg');}
+.product .ndesc{text-align:left;height: 60px;max-width: 200px;margin: 0 auto;}
+.product .name{display:block;line-height:20px;font-size:13px;height:60px;overflow:hidden;}
+.product .price{color:#333;font-size:20px;text-align: left;}
+.price-new{color:#fd9710;}
+.product .price-old{color:#d9d9d9;text-decoration: line-through;font-size:17px;}
+.product .buttons{}
+.product .buttons a {}
+.product .buttons .button-row{display:flex;flex: 8 13 auto;}
+.product .buttons a.oneclick{display: flex;align-items: center;justify-content: center;height: 40px;width: 80px;text-decoration: none;background:#bee9f9;color:#484848;font-size:13px; width:81px;background:#bee9f9;color:#484848;font-size:13px; width:37%;margin-right:5px;}
+.product .buttons a.oneclick:hover{background:#dbdbdb;}
+.product .buttons a.tobasket{display: flex;align-items: center;justify-content: center;width: 130px;height: 40px;position:relative;background:#fd9710;font-size:16px; max-width:132px;width:100%;color:#fff;text-decoration: none;}
+.product .buttons a.tobasket:before{content:'';position:relative;width:30px;height:28px;background: url('/image/ico/04-cart-buy.svg')no-repeat;}
+.product .buttons a.tobasket:hover{background:#da7e05;}
+
+.product_min{display:none;position: absolute;top:12px;left:12px;height: 24px;padding-left:35px;background:url('image/ico/min-order.svg')0 0 no-repeat;width:130px;color:#fd9710;font-family:'Trebuchet MS';font-size:13px;line-height:13px;text-align:left;}
+.products>div:hover .product_min{display:block;}
+.on.select__gap,.on.select__gap2, .select__gap:hover, .select__gap2:hover{color:#00adee;}

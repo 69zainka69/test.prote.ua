@@ -1,0 +1,291 @@
+
+
+
+
+
+
+<html>
+
+<head>
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>GoIP4</title>
+
+<link rel="stylesheet" type="text/css" href="/style/default.css?0">
+<style type="text/css">
+.visible{
+display:block;
+}
+</style>
+<script lang="javascript" src="/script/dynamic.js"></script>
+<script lang="javascript">
+if (document.getElementById){
+
+	document.write('<style type="text/css">\n');
+	document.write('.invisible{display:none;}\n');
+	document.write('</style>\n');
+}
+</script>
+</head>
+
+<body>
+<table id="mainframe" height="100%" cellSpacing="0" cellPadding="0" width="768" border="0">
+	<tr>
+		<td width="314" class="banner" height="124">
+			<img height="134" src="/images/title.jpg" width="312" border="0">
+		</td>
+		<td class="banner" height="124" valign="bottom" width="454">
+			<table cellSpacing="0" cellPadding="0" width="100%" height="100%"border="0">
+				<tr>
+					<td height="24" width="324">
+					</td>
+					<td width="65">
+						<a href="../zh_CN/status.html"><image height="20" width="60" border="0" src="/images/chs.gif"></a>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" height="100" valign="bottom">
+					
+						<span class="subtitle">GoIP4</span>
+					
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colSpan="2">
+			<table height="100%" cellSpacing="0" cellPadding="0" width="100%" bgColor="#ffffff" border="0">
+				<tr>
+					<td vAlign="top" width="196" class="sidebar">
+<script lang="javascript">
+function confirm_reset()
+{
+	return window.confirm("Are you sure to reset to factory default?");
+}
+function confirm_reboot()
+{
+	return window.confirm("Are you sure to reboot the device?");
+}
+</script>
+<table cellSpacing="0" cellPadding="0" width="100%" border="0">
+	<tr>
+		<td colspan="2" align="left" height="15"></td>
+	</tr>
+	<tr>
+		<td width="20"></td>
+		<td align="left" height="40">
+			<a href="status.html"><div class="title5">Status</div></a></td>
+	</tr>
+	<tr>
+		<td width="20"></td>
+		<td align="left" height="40"><a href="config.html"><div class="title5">Configurations</div></a></td>
+	</tr>
+	<tr>
+		<td width="20"></td>
+		<td height="40"><div class="title4">Tools</div></td>
+	</tr>
+	<tr>
+		<td width="20"></td>
+		<td align="right" valign="top">
+			<table border="0" width="82%" cellspacing="0" cellpadding="0">
+				
+				<tr>
+					<td height="30"><a href="tools.html?type=upgrade"><div class="title3" id="upgrade">Online Upgrade</div></a></td>
+				</tr>
+				
+				<tr>
+					<td height="30"><a href="tools.html?type=password"><div class="title3" id="password">Change Password</div></a></td>
+				</tr>
+				<tr>
+					<td height="30"><a href="tools.html?type=ussd"><div class="title3" id="ussd">Send USSD</div></a></td>
+				</tr>
+				<tr>
+					<td height="30"><a href="tools.html?type=sms"><div class="title3" id="sms">Send SMS</div></a></td>
+				</tr>
+				<tr>
+					<td height="30"><a href="tools.html?type=sms_inbox"><div class="title3" id="sms_inbox">SMS In Box</div></a></td>
+				</tr>
+				<tr>
+					<td height="30"><a href="tools.html?type=channel"><div class="title3" id="channel">GSM Channel Control</div></a></td>
+				</tr>
+
+				
+				
+				<tr>
+					<td height="30"><a href="tools.html?type=config"><div class="title3" id="config">Backup/Restore</div></a></td>
+				</tr>
+				
+				
+
+				<tr>
+					<td height="10"></td>
+				</tr>
+				
+				
+				<tr>
+					<form action="reset_config.html" method="post" onsubmit="return confirm_reset()">
+						<td height="30"><div class="title3"><input type="submit" value="Reset Config" class="savebutton"></div></td>
+					</form>
+				</tr>
+				
+				
+				<tr>
+					<form action="reboot.html" method="post" onsubmit="return confirm_reboot()">
+						<td height="30"><div class="title3"><input type="submit" value="Reboot" class="savebutton"></div></td>
+					</form>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<script lang="javascript">
+	
+		document.getElementById('upgrade').className="title4";
+	
+</script>
+
+					</td>
+					<td width="828" vAlign="top" class="content">
+<script lang="javascript" src="/script/ajaxroutine.js"></script>
+<script lang="javascript" src="/script/progress_bar.js"></script>
+<script lang="javascript">
+
+function getElementText(elem)
+{
+	if(elem.childNodes.length > 0){
+		if(elem.childNodes.length > 1){
+			return elem.childNodes[1].nodeValue
+		}
+		else {
+			return elem.firstChild.nodeValue
+		}
+	}
+	return ""
+}
+
+function sms_return(msg, i, ok_flag)
+{
+	stageobj=document.getElementById("send"+i);
+	if(stageobj){
+		if(!ok_flag) stageobj.innerHTML = " Line "+i+" Send Error: "+msg;
+		else stageobj.innerHTML = " Line "+i+" Return: "+msg;
+	}
+}
+
+var trycount = 0
+var sms_key=""
+
+function processGetPost(){
+        var myajax=ajaxpack.ajaxobj,line_min,line_max,i;
+        if(==9){
+                line_min=1;
+                line_max=4;
+        }
+        else {
+                line_min=;
+                line_max=;
+        }
+	if (myajax.readyState == 4){ //if request of file completed
+		if (myajax.status==200){ 
+			var errors,error,stagetags,stage,keys,key;
+
+			for(i=line_min;i<=line_max;i++){
+				errors=myajax.responseXML.getElementsByTagName("error"+i);
+				if(errors.length){
+					error = getElementText(errors[0])
+				}
+				stagetags=myajax.responseXML.getElementsByTagName("status"+i);
+				if(stagetags.length){
+					stage = getElementText(stagetags[0])
+				}
+				keys=myajax.responseXML.getElementsByTagName("smskey"+i);
+				if(keys.length){
+					key = getElementText(keys[0])
+				}
+				if(sms_key != key){
+					sms_return("ERROR! LINE BUSY!", i);
+				}
+				else if(error != ""){
+					sms_return(error, i);
+				}
+				else if(stage == "DONE"){
+					sms_return("Send successful!", i, 1);
+				}
+			}
+		}
+		trycount++;
+		for(i=line_min;i<=line_max;i++){
+			var stageobj=document.getElementById("send"+i);
+			if(stageobj && stageobj.innerText == "Line "+i+" Sending...") {
+				if(trycount > 10) sms_return("Can not get response from line", i);
+				else break;
+			}
+		}
+		if(i<=line_max) setTimeout('getSmsInfo()', 3000);
+	}
+}
+
+function getSmsInfo()
+{
+	ajaxpack.postAjaxRequest("send_sms_status.xml", "line=", processGetPost, "text/xml")
+}
+setTimeout('getSmsInfo()', 3000);
+
+	</script>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+                <td colspan="2" class="title2" height="25">Send SMS</td>
+        </tr>
+	<tr>
+		<td width="120" height="25" class="title1" align="right">Line</td>
+		<td width="180" class="text"></td>
+	</tr>
+	<tr>
+		<td width="120" height="25" class="title1" align="right">Send Number</td>
+		<td width="180" class="text"></td>
+	</tr>
+	<tr>
+		<td width="120" height="25" class="title1" align="right">Send Content</td>
+		<td width="180" class="text" style="word-break : break-all; "></td>
+	</tr>
+
+</table>
+
+	<table cellSpacing="0" cellPadding="0" width="100%" border="0">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<tr>
+			<td height="30">
+				<input type="button" value="Back" class="button" onclick=javascript:window.location='tools.html?type=sms&line='>
+			</td>
+		</tr>
+	</table>
+
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>
+

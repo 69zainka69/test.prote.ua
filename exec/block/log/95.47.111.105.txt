@@ -1,0 +1,20 @@
+2020-02-12 16:33:21 - HTTP_USER_AGENT Mozilla/5.0 (Linux; Android 4.2.2; IdeaTab S6000-H Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.94 Safari/537.36
+2020-02-12 16:33:21 - QUERY_STRING = _route_=globus-marko-polo-260-mm-fizicheskij-gmp260f-064330.html
+
+2020-02-12 16:33:22 - HTTP_USER_AGENT Mozilla/5.0 (Linux; Android 4.2.2; IdeaTab S6000-H Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.94 Safari/537.36
+2020-02-12 16:33:22 - QUERY_STRING = 
+
+2020-02-12 16:33:25 - HTTP_USER_AGENT Mozilla/5.0 (Linux; Android 4.2.2; IdeaTab S6000-H Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.94 Safari/537.36
+2020-02-12 16:33:25 - QUERY_STRING = route=product/product/review&product_id=38282&lang=
+
+2020-02-12 16:33:25 - HTTP_USER_AGENT Mozilla/5.0 (Linux; Android 4.2.2; IdeaTab S6000-H Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.94 Safari/537.36
+2020-02-12 16:33:25 - QUERY_STRING = route=product/getajax/getProductCompabilityList&product_id=38282&category_id=211
+
+2020-02-12 16:33:26 - HTTP_USER_AGENT Mozilla/5.0 (Linux; Android 4.2.2; IdeaTab S6000-H Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.94 Safari/537.36
+2020-02-12 16:33:26 - QUERY_STRING = 
+
+2020-02-12 16:33:26 - HTTP_USER_AGENT Mozilla/5.0 (Linux; Android 4.2.2; IdeaTab S6000-H Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.94 Safari/537.36
+2020-02-12 16:33:26 - QUERY_STRING = _route_=login/&get_login=1&lang=
+
+2020-02-12 16:33:26 - BLOCK 
+

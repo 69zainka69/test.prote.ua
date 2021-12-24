@@ -1,0 +1,114 @@
+<?
+
+use DB\MySQLi;
+
+
+set_time_limit(0);
+
+if (is_file('/var/www/prote/data/www/test.prote.ua/config.php')) {
+    require_once('/var/www/prote/data/www/test.prote.ua/config.php');
+}
+
+require DIR_ROOT.'/system/library/db/mysqli.php';
+$db = new DB\MySQLi(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
+
+exit;
+include(DIR_HOME.'import/OpenCartAPI/opencart.php');
+$handle = fopen('/var/www/prote/data/www/test.prote.ua/cron/log_axapta.txt', 'a');
+
+$apiKey = API_KEY;
+$username = USERNAME_AXAPTA;
+$url = URL;
+$urlapi = URLAPI;
+
+
+public function getTasks()
+{
+    $sql = "SELECT * FROM " . DB_PREFIX . "axapta_tasks WHERE status = 1";
+    $res = $this->db->query($sql);
+    if ($res->row) return false;
+
+    $sql = "SELECT * FROM " . DB_PREFIX . "axapta_tasks WHERE status = 0";
+    $res = $this->db->query($sql);
+    return $res->rows;
+}
+
+
+//$oc = new OpenCart\OpenCart($url, 'cookiejar');
+$oc = new OpenCart\OpenCart($url, DIR_HOME.'import/cookiejar');
+
+if($oc->login($username,$apiKey)){
+
+  $tasks = $oc->axapta->getTasks();
+  if($tasks){
+  	foreach ($tasks as $key => $value) {
+  		//начало выполнения
+  		$oc->axapta->udateTask($value['task_id'],'1');
+  		
+  		$message = $value['task_type'];
+  		fwrite($handle, date('Y-m-d G:i:s') . ' - ' . print_r($message, true) . "\n");
+  		try {
+  			if($value['task_type']=='full'){
+  				$oc->axapta->updateCategories();
+          fwrite($handle, date('Y-m-d G:i:s') . ' - ' . print_r('updateCategories = 1', true) . "\n");
+          $oc->axapta->updateProducts();
+          fwrite($handle, date('Y-m-d G:i:s') . ' - ' . print_r('updateProducts = 1', true) . "\n");
+  				$oc->axapta->updateImages();
+          fwrite($handle, date('Y-m-d G:i:s') . ' - ' . print_r('updateImages = 1', true) . "\n");
+  				$oc->axapta->updatePriceList();
+          fwrite($handle, date('Y-m-d G:i:s') . ' - ' . print_r('updatePriceList = 1', true) . "\n");
+  				$oc->axapta->updateAttributes();
+          fwrite($handle, date('Y-m-d G:i:s') . ' - ' . print_r('updateAttributes = 1', true) . "\n");
+  				$oc->axapta->updateAvailable();
+          fwrite($handle, date('Y-m-d G:i:s') . ' - ' . print_r('updateAvailable = 1', true) . "\n");
+  				$oc->axapta->updatePromotions();
+          fwrite($handle, date('Y-m-d G:i:s') . ' - ' . print_r('updatePromotions = 1', true) . "\n");
+          $oc->axapta->importCompability();
+          fwrite($handle, date('Y-m-d G:i:s') . ' - ' . print_r('importCompability = 1', true) . "\n");
+          $oc->axapta->updatePriceListContract();
+          fwrite($handle, date('Y-m-d G:i:s') . ' - ' . print_r('updatePriceListContract = 1', true) . "\n");
+  				$oc->axapta->updateNpFromAxapta();
+          fwrite($handle, date('Y-m-d G:i:s') . ' - ' . print_r('updateNpFromAxapta = 1', true) . "\n");
+  				$oc->axapta->udateTask($value['task_id'],'2');
+  			} else {
+  				$res = $oc->axapta->{$value['task_type']}();
+          fwrite($handle, date('Y-m-d G:i:s') . ' - ' . print_r($value['task_type'], true) . "\n");
+          fwrite($handle, date('Y-m-d G:i:s') . ' - ' . print_r($res, true) . "\n");
+  				if($res['success']){
+		  			$oc->axapta->udateTask($value['task_id'],'2');
+		  		} else{
+		  			//ошибка выполнения
+					  $oc->axapta->udateTask($value['task_id'],'3');
+            fwrite($handle, date('Y-m-d G:i:s') . ' - ошибка выполнения 3 ' . print_r($res, true) ."\n");
+		  		}
+  			}
+		  
+		  
+		} catch (Exception $e) {
+		  	//ошибка выполнения
+			$oc->axapta->udateTask($value['task_id'],'3');
+      fwrite($handle, date('Y-m-d G:i:s') . ' - ошибка выполнения 3 ' . "\n");
+		} 
+  		
+  		
+  		
+  	}
+  } else {
+	$message = 'Нет задач';
+  	fwrite($handle, date('Y-m-d G:i:s') . ' - ' . print_r($message, true) . "\n");
+  }
+
+     
+} else {
+	echo "<pre>";
+	print_r($oc->getLastError());
+	echo "</pre>";
+}
+
+fclose($handle);
+
+function flog($array){
+   echo "<pre>";
+   print_r($array);
+   echo "</pre>";
+}

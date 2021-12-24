@@ -1,0 +1,3 @@
+2020-02-13 11:22:45 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko
+2020-02-13 11:22:45 - QUERY_STRING = _route_=ua/prezenter-logitech-presenter-r500-grey-laser-910-u0329515.html
+

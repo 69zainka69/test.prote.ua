@@ -1,0 +1,41 @@
+<?php
+class Rpc {
+	private $structure;
+	private $full_structure;
+	private $data;
+	private $data_xml;
+	private $params;
+	private $error = null;
+	
+	private $xmls;
+	private $method;
+	private $axclass;
+	private $input_params;
+	private $data_list;
+	
+	private $header;
+	private $footer;
+	
+	//private $data_start = 0;
+	//private $data_limit = 50;
+	private $session_data = 50;
+	private $request;
+	
+	public function __construct($method, $input_params=null, $axclass=null,$registry=null) {
+		echo $method;
+	//public function __construct($registry) {
+		$this->method = $method;
+		/*if (!empty($input_params)) {
+			$this->input_params = $input_params; }
+		if (!empty($axclass)) {
+			$this->axclass = $axclass;	}
+		$this->session = false;
+		if($registry){
+			$sessiondata= $registry->get('session');
+			$this->session_data= $sessiondata->data;
+			$this->request= $registry->get('request');
+		}*/
+	}
+	
+}
+?>

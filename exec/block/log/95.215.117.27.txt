@@ -1,0 +1,47 @@
+2020-02-14 19:34:00 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36
+2020-02-14 19:34:00 - QUERY_STRING = _route_=rashod-strujnij-printer-canon-pixma-g2411-064981/inkcartridges/
+
+2020-02-14 19:34:14 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36
+2020-02-14 19:34:14 - QUERY_STRING = _route_=rashod-strujnij-printer-canon-pixma-g2411-064981/inkcartridges/
+
+2020-02-14 19:42:20 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36
+2020-02-14 19:42:20 - QUERY_STRING = _route_=rashod-strujnij-printer-canon-pixma-g2411-064981/inkcartridges/
+
+2020-02-14 19:45:17 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36
+2020-02-14 19:45:17 - QUERY_STRING = _route_=rashod-strujnij-printer-canon-pixma-g2411-064981/inkcartridges/
+
+2020-02-14 19:45:20 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36
+2020-02-14 19:45:20 - QUERY_STRING = _route_=rashod-strujnij-printer-canon-pixma-g2411-064981/inkcartridges/
+
+2020-02-14 19:45:21 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36
+2020-02-14 19:45:21 - QUERY_STRING = 
+
+2020-02-14 19:45:21 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36
+2020-02-14 19:45:21 - QUERY_STRING = _route_=login/&get_login=1&lang=
+
+2020-02-14 19:45:21 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36
+2020-02-14 19:45:21 - QUERY_STRING = _route_=popupcart/
+
+2020-02-14 19:45:25 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36
+2020-02-14 19:45:25 - QUERY_STRING = _route_=rashod-strujnij-printer-canon-pixma-g2411-064981/inkcartridges/
+
+2020-02-14 19:45:25 - BLOCK 
+
+2020-02-14 19:49:36 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36
+2020-02-14 19:49:36 - QUERY_STRING = _route_=rashod-strujnij-printer-canon-pixma-g2411-064981/inkcartridges/
+
+2020-02-14 19:50:17 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36
+2020-02-14 19:50:17 - QUERY_STRING = _route_=rashod-strujnij-printer-canon-pixma-g2411-064981/inkcartridges/
+
+2020-02-14 19:50:44 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36
+2020-02-14 19:50:44 - QUERY_STRING = _route_=rashod-strujnij-printer-canon-pixma-g2411-064981/inkcartridges/
+
+2020-02-14 19:52:02 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36
+2020-02-14 19:52:02 - QUERY_STRING = _route_=rashod-strujnij-printer-canon-pixma-g2411-064981/inkcartridges/
+
+2020-02-14 19:52:20 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36
+2020-02-14 19:52:20 - QUERY_STRING = _route_=rashod-strujnij-printer-canon-pixma-g2411-064981/inkcartridges/
+
+2020-02-14 19:56:41 - HTTP_USER_AGENT Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36
+2020-02-14 19:56:41 - QUERY_STRING = _route_=rashod-strujnij-printer-canon-pixma-g2411-064981/inkcartridges/
+
