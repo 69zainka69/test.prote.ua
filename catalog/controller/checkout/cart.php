@@ -38,6 +38,7 @@ class ControllerCheckoutCart extends Controller {
 			$data['button_shopping'] = $this->language->get('button_shopping');
 			$data['text_total'] = $this->language->get('text_upFreeDelivSum');
 
+
 			if (!$this->cart->hasStock() && (!$this->config->get('config_stock_checkout') || $this->config->get('config_stock_warning'))) {
 				$data['error_warning'] = $this->language->get('error_stock');
 			} elseif (isset($this->session->data['error'])) {
@@ -64,6 +65,8 @@ class ControllerCheckoutCart extends Controller {
 
 			$data['action'] = $this->url->link('checkout/cart/edit', '', true);
 
+
+
 			if ($this->config->get('config_cart_weight')) {
 				$data['weight'] = $this->weight->format($this->cart->getWeight(), $this->config->get('config_weight_class_id'), $this->language->get('decimal_point'), $this->language->get('thousand_point'));
 			} else {
@@ -75,14 +78,17 @@ class ControllerCheckoutCart extends Controller {
 
 			$data['products'] = array();
 
-			$products = $this->cart->getProducts();
+		//	$products = $this->cart->getProducts();
 
-			$this->session->data['products_cart_total'] = $this->cart->getSubTotal();
+
+			
+
+		/*	$this->session->data['products_cart_total'] = $this->cart->getSubTotal();
 			$products_ids = ''; // для Google ремаркетинга
-
-
+*/
+			$products_ids = '';
 			$sessi = $this->session->getId();
-	
+			$sessi = 1;
 		
 			$productse = $this->cache->get($sessi.'_cart_pro_');
 			$products = explode(",", $productse);
@@ -100,10 +106,12 @@ class ControllerCheckoutCart extends Controller {
 				$price = $this->cache->get('_pro_prc'.$product_id);
 				$minimum = $this->cache->get('_pro_min'.$product_id);
 				$model = $this->cache->get('_pro_mod'.$product_id);
-				$this->cache->get('_pro_min'.$product_id);
 				$name = $this->cache->get('_pro_name'.$product_id);
 				$total_int = $price*$quantity;
 				$total = $price*$quantity." грн.";
+
+
+
 				$data['products'][] = array(
 					'cart_id'   => $product_id,
 					'thumb'     => $image,
@@ -126,107 +134,6 @@ class ControllerCheckoutCart extends Controller {
 			}
 		}
 		
-
-			/*
-			foreach ($products as $product) {
-				$products_ids .= ",'".$product['product_id']."'"; // для Google ремаркетинга
-
-				$product_total = 0;
-
-				foreach ($products as $product_2) {
-					if ($product_2['product_id'] == $product['product_id']) {
-						$product_total += $product_2['quantity'];
-					}
-				}
-				if(!isset($product['minimum']))$product['minimum']=1;
-				if ($product['minimum'] > $product_total) {
-					$data['error_warning'] = sprintf($this->language->get('error_minimum'), $product['name'], $product['minimum']);
-				}
-
-				if ($product['image']) {
-					$image = $this->model_tool_image->resize($product['image'], 100,100);
-				} else {
-					$image = '';
-				}
-
-				$option_data = array();
-
-
-				// Display prices
-				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
-					$price = $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')));
-					$price_int = round($product['price'],2);
-				} else {
-					$price = false;
-					$price_int = 0;
-				}
-
-				// Display prices
-				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
-					$total = $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')) * $product['quantity']);
-					$total_int = round($product['price']* $product['quantity'],2);
-				} else {
-					$total = false;
-					$total_int = 0;
-				}
-
-				$recurring = '';
-
-				if ($product['recurring']) {
-					$frequencies = array(
-						'day'        => $this->language->get('text_day'),
-						'week'       => $this->language->get('text_week'),
-						'semi_month' => $this->language->get('text_semi_month'),
-						'month'      => $this->language->get('text_month'),
-						'year'       => $this->language->get('text_year'),
-					);
-
-					if ($product['recurring']['trial']) {
-						$recurring = sprintf($this->language->get('text_trial_description'), $this->currency->format($this->tax->calculate($product['recurring']['trial_price'] * $product['quantity'], $product['tax_class_id'], $this->config->get('config_tax'))), $product['recurring']['trial_cycle'], $frequencies[$product['recurring']['trial_frequency']], $product['recurring']['trial_duration']) . ' ';
-					}
-
-					if ($product['recurring']['duration']) {
-						$recurring .= sprintf($this->language->get('text_payment_description'), $this->currency->format($this->tax->calculate($product['recurring']['price'] * $product['quantity'], $product['tax_class_id'], $this->config->get('config_tax'))), $product['recurring']['cycle'], $frequencies[$product['recurring']['frequency']], $product['recurring']['duration']);
-					} else {
-						$recurring .= sprintf($this->language->get('text_payment_cancel'), $this->currency->format($this->tax->calculate($product['recurring']['price'] * $product['quantity'], $product['tax_class_id'], $this->config->get('config_tax'))), $product['recurring']['cycle'], $frequencies[$product['recurring']['frequency']], $product['recurring']['duration']);
-					}
-				}
-
-				//$action=array();
-				$you_price = 0;
-                if (isset($product['news'])) {
-                	$this->load->model('extension/news');
-                    $newslist=  explode(',', $product['news']);
-                    foreach ($newslist as $news) {
-                    	if($news==28){
-                    		$you_price = 1;
-                    	}
-                      
-                    }
-                }
-
-				$data['products'][] = array(
-					'cart_id'   => $product['cart_id'],
-					'thumb'     => $image,
-					'name'      => $product['name'],
-					'model'     => $product['model'],
-					//'minimum'     => $product['minimum'],
-					'option'    => $option_data,
-					'recurring' => $recurring,
-					'quantity'  => $product['quantity'],
-					'stock'     => $product['stock'] ? true : !(!$this->config->get('config_stock_checkout') || $this->config->get('config_stock_warning')),
-					'reward'    => ($product['reward'] ? sprintf($this->language->get('text_points'), $product['reward']) : ''),
-					'price'     => $price,
-					//'price_int'     => $price_int,
-					'price_int'     => $total_int,
-					'total'     => $total,
-					'href'      => $this->url->link('product/product', 'product_id=' . $product['product_id']),
-					'you_price'      => $you_price
-				);
-			}
-
-*/
-
 
 
 
@@ -322,12 +229,19 @@ class ControllerCheckoutCart extends Controller {
 			$data['header'] = $this->load->controller('common/header');
 
 			//калькулятор к общей сумме на бесплатную доставку свыше 250 грн.
+
 		$deff_upFreeDelivSum=str_replace(' ','',$data['totals'][1]['text']);
 		$deff_upFreeDelivSum = 499-floatval(str_replace(',','.',$deff_upFreeDelivSum));
+
+		$deff_upFreeDelivSum == 998;
+
+
 		if($deff_upFreeDelivSum>0)
 			$data['upFreeDelivSum'] = str_replace("{#upFreeDelivSum#}",$deff_upFreeDelivSum,$data["text_total"]);
 		else
 			$data['upFreeDelivSum']='';
+
+
 
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/cart.tpl')) {
 				$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/checkout/cart.tpl', $data));
@@ -363,9 +277,7 @@ class ControllerCheckoutCart extends Controller {
 
 	public function add() {
 		$this->load->language('checkout/cart');
-
 		$json = array();
-
 		if (isset($this->request->post['product_id'])) {
 			$product_id = (int)$this->request->post['product_id'];
 		} elseif (isset($this->request->post['prod_id'])) {
@@ -373,34 +285,42 @@ class ControllerCheckoutCart extends Controller {
 		} else {
 			$product_id = 0;
 		}
-
+ 
 		$this->load->model('catalog/product');
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
 		
 		$sessi = $this->session->getId();
-	
+		$sessi = 'a_';
 		$this->cache->set($sessi.'last_pr_', $product_id);
 
-		
-
 		$product_cart = $this->cache->get($sessi.'_cart_pro_');
+		if(isset($product_cart) && $product_cart != null){
 		$products = explode(",", $product_cart);
 		$rr = 0;
 		foreach($products as $prod){
 				if($prod == $product_id){
-
 					$rr == 1;
-
 				}
 		}
 
-		if($rr=0){
-		$product_cart = $product_id.",".$product_cart;
-		$this->cache->set($sessi.'_cart_pro_', $product_cart);
-	}
+			if($rr == 0){
+				$product_cart = $product_id.",".$product_cart;
+				}
+			if($rr == 1){
+				$product_cart = $product_cart;
+				}
+
+				$vowels = array(",,");
+				$product_cart = str_replace($vowels, "", $product_cart);
+				$this->cache->set($sessi.'_cart_pro_', $product_cart);
 
 
+			}
+
+
+
+			
 		if ($product_info) {
 			if (isset($this->request->post['quantity']) && ((int)$this->request->post['quantity'] >= $product_info['minimum'])) {
 				$quantity = (int)$this->request->post['quantity'];
@@ -420,14 +340,14 @@ class ControllerCheckoutCart extends Controller {
 			$this->cache->set('_pro_name'.$product_id, $product_info['name']);
 			$this->cache->set('_pro_min'.$product_id, $product_info['minimum']);
 
-			$product_options = $this->model_catalog_product->getProductOptions($this->request->post['product_id']);
+		//	$product_options = $this->model_catalog_product->getProductOptions($this->request->post['product_id']);
 
-			foreach ($product_options as $product_option) {
+		/*	foreach ($product_options as $product_option) {
 				if ($product_option['required'] && empty($option[$product_option['product_option_id']])) {
 					$json['error']['option'][$product_option['product_option_id']] = sprintf($this->language->get('error_required'), $product_option['name']);
 				}
 			}
-
+*/
 			if (isset($this->request->post['recurring_id'])) {
 				$recurring_id = $this->request->post['recurring_id'];
 			} else {
@@ -456,8 +376,8 @@ class ControllerCheckoutCart extends Controller {
 			$this->cache->set($sessi.'_pro_qua'.$product_id, $quantity);
 		}
 			if (!$json) {
-				$this->cart->add($this->request->post['product_id'], $quantity, $option, $recurring_id);
-				$prods = $this->cart->hasProducts();
+				//$this->cart->add($this->request->post['product_id'], $quantity, $option, $recurring_id);
+				//$prods = $this->cart->hasProducts();
 
 				$json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('checkout/cart'));
 
@@ -524,18 +444,17 @@ class ControllerCheckoutCart extends Controller {
 		$this->load->model('catalog/product');
 		$product_info =false;
 		$js = false;
-		if(isset($this->request->get['product_id'])){
+		$product_id = $this->request->get['product_id'];
+		if(isset($product_id)){
 			$product_info = $this->model_catalog_product->getProduct($this->request->get['product_id']);
-			
 			$js = true;
 		}
 
 		$sessi = $this->session->getId();
-		$product_id = $_GET["product_id"];
+		$sessi = 1;
 		preg_match_all("/\d+/", $product_id, $matches);
 		$product_id = $matches[0][0];
 		$product_cart = $this->cache->get($sessi.'_cart_pro_');
-	
 		$products = explode(",", $product_cart);
 		if (!empty($this->request->post['quantity'])) {
             foreach ($this->request->post['quantity'] as $key => $value) {
@@ -544,8 +463,6 @@ if($value==null){
 
 
 }else{
-				$this->cache->del($sessi.'_pro_qua'.$product_id);
-				$this->cache->delete($sessi.'_pro_qua'.$product_id);
 				$this->cache->set($sessi.'_pro_qua'.$product_id, $value);
 				}
 			
@@ -568,7 +485,7 @@ if($value==null){
 		// Update
 		if (!empty($this->request->post['quantity'])) {
             foreach ($this->request->post['quantity'] as $key => $value) {
-
+					/*
                 $products = $this->cart->getProducts();
                 foreach ($products as $product) {
                     if($product['cart_id']==$key){
@@ -591,7 +508,7 @@ if($value==null){
                         }
                     }
                 }
-
+*/
 
             }
 
@@ -608,10 +525,10 @@ if($value==null){
 	}
 
 	public function remove() {
-		header( 'Location: https://google.com', true, 301 );
-		exit();
+		
 		$this->load->language('checkout/cart');
 		$sessi = $this->session->getId();
+		$sessi = 1;
 		$json = array();
 		$product_id = $_GET["product_id"];
 		preg_match_all("/\d+/", $product_id, $matches);
@@ -620,16 +537,18 @@ if($value==null){
 		$product_cart = $this->cache->get($sessi.'_cart_pro_');
 		$products = explode(",", $product_cart);	
 		foreach ($products as $prodss){
-	if($prodss == $product_id){
+			if($prodss == $product_id){
 		$this->cache->del($sessi.'_pro_qua'.$this->request->post['key']);
-		$this->cache->del($sessi.'_pro_qua'.$prodss);
-	}
+		//$this->cache->del($sessi.'_pro_qua'.$prodss);
+				}
 		}
 		foreach ($products as $prodss){
 			if($prodss != $this->request->post['key']){
 				$pros = $prodss.",".$pros;
 			}
 		}
+
+
 
 		$this->cache->set($sessi.'_cart_pro_', $pros);
 
@@ -711,6 +630,7 @@ if($value==null){
 
 	public function total_pr(){
 		$sessi = $this->session->getId();
+		$sessi = 1;
 			$product_cart = $this->cache->get($sessi.'_cart_pro_');
 			$products = explode(",", $product_cart);	
 			$count_produs = 0;
@@ -729,6 +649,7 @@ if($value==null){
 
 	public function total_coun(){
 		$sessi = $this->session->getId();
+		$sessi = 1;
 			$product_cart = $this->cache->get($sessi.'_cart_pro_');
 			$products = explode(",", $product_cart);	
 			$count_produs = 0;
