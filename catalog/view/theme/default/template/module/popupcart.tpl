@@ -13,6 +13,7 @@
 	<div class="body">
 	  <div class="modal-overlay"></div>
 	  <div class="modal-body">
+	  
 	    <div class="modal-close" onclick="$('#popupcart_extended').popup('hide')"><?php if ($products || $vouchers) { ?><?php echo $button_shopping; ?><?php } ?></div>
 	    <div class="form">
 		
@@ -113,6 +114,6 @@
 </div>
 <script>
 $(document).ready(function(){
-	$('#popupcart_extended').popup({transition: 'all 0.3s',	scrolllock: true});
+	$('#popupcart_extended').popup({transition: 'all 1.3s',	scrolllock: true});
 });
 </script>

@@ -759,9 +759,8 @@ class ControllerProductProduct extends Controller {
 		        foreach ($mas_featured as $key => $value) {
 		        	//разбираем фильтр
 		        	$value = $this->explode_bfiler($value);
+					if(array_key_exists('category_id', $value)){
 		        	if(isset($value['category_id'])&&$value['category_id']==$category_id){
-            			// ищем товары в с фильтрами
-            			//$results = $this->find_product_in_filer($value);
             			$results = $this->find_product_in_filer($value);
 						// получаем товары
 						if($results){
@@ -769,7 +768,8 @@ class ControllerProductProduct extends Controller {
 						}
 						break;
 		        	}
-
+				
+				}
 		        }
 
 	        }

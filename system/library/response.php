@@ -23,7 +23,9 @@ class Response {
 	public function setOutput($output) {
 		$this->output = $output;
 	}
-
+	public function setOutputs($output) {
+		$this->outputs = $output;
+	}
 	public function getOutput() {
 		return $this->output;
 	}
@@ -88,7 +90,25 @@ class Response {
 
 		return gzencode($data, (int)$level);
 	}
+	public function outputs() {
 
+		if ($this->output) {
+
+		
+				$this->webpRebuild($this->output);
+				$output = $this->minify($this->output);
+			
+				header("Cache-Control:no-store, no-cache");
+			if (!headers_sent()) {
+				foreach ($this->headers as $header) {
+					header("Cache-Control:no-store, no-cache");
+					header($header, true);
+				}
+			}
+
+			echo $output;
+		}
+	}
 	public function output() {
 
 		if ($this->output) {

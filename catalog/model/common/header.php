@@ -31,4 +31,5 @@ class ModelCommonHeader extends Model {
 
         return $query->rows;
     }
+   
 }

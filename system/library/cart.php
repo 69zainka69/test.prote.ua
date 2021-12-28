@@ -287,7 +287,7 @@ class Cart {
 				$this->remove($cart['cart_id']);
 			}
 		}
-
+ 
 		return $product_data;
 	}
 
@@ -438,4 +438,5 @@ class Cart {
 
 		return $download;
 	}
+
 }

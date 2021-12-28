@@ -16,8 +16,11 @@ class ControllerCheckoutCart extends Controller {
 			'href' => $this->url->link('checkout/cart'),
 			'text' => $this->language->get('heading_title')
 		);
-
-		if ($this->cart->hasProducts() || !empty($this->session->data['vouchers'])) {
+		$sessi = $this->session->getId();
+		//$sessi = 1;
+	
+		$productse = $this->cache->get($sessi.'_cart_pro_');
+		if ($this->cache->get($sessi.'_cart_pro_')) {
 			$data['heading_title'] = $this->language->get('heading_title');
 
 			$data['text_recurring_item'] = $this->language->get('text_recurring_item');
@@ -88,18 +91,17 @@ class ControllerCheckoutCart extends Controller {
 */
 			$products_ids = '';
 			$sessi = $this->session->getId();
-			$sessi = 1;
+			//$sessi = 1;
 		
 			$productse = $this->cache->get($sessi.'_cart_pro_');
 			$products = explode(",", $productse);
 			foreach ($products as $product_id){
-				if($product_id!=null){
+				if(isset($product_id) && $product_id!=null){
 				
-				$pr = $this->cache->get('_pro_prc'.$product_id);
-				$quantity = $qua = $this->cache->get($sessi.'_pro_qua'.$product_id);
+				$quantity = $this->cache->get($sessi.'_pro_qua'.$product_id);
 				$images = $this->cache->get('_pro_img'.$product_id);
 				if ($images) {
-					$image = $this->model_tool_image->resize($images, 100,100);
+					$image = $this->model_tool_image->resize($images, 150,150);
 				} else {
 					$image = '';
 				}
@@ -109,7 +111,6 @@ class ControllerCheckoutCart extends Controller {
 				$name = $this->cache->get('_pro_name'.$product_id);
 				$total_int = $price*$quantity;
 				$total = $price*$quantity." грн.";
-
 
 
 				$data['products'][] = array(
@@ -221,9 +222,6 @@ class ControllerCheckoutCart extends Controller {
 				}
 			}
 
-			//$data['column_left'] = $this->load->controller('common/column_left');
-			//$data['column_right'] = $this->load->controller('common/column_right');
-			//$data['content_top'] = $this->load->controller('common/content_top');
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
@@ -291,36 +289,29 @@ class ControllerCheckoutCart extends Controller {
 		$product_info = $this->model_catalog_product->getProduct($product_id);
 		
 		$sessi = $this->session->getId();
-		$sessi = 'a_';
-		$this->cache->set($sessi.'last_pr_', $product_id);
+		$this->cache->del($sessi.'_last_pr');
+		$this->cache->set($sessi.'_last_pr', $product_id);
 
 		$product_cart = $this->cache->get($sessi.'_cart_pro_');
 		if(isset($product_cart) && $product_cart != null){
 		$products = explode(",", $product_cart);
-		$rr = 0;
+		$rr = 'NO';
+		$qty = 0;
 		foreach($products as $prod){
 				if($prod == $product_id){
-					$rr == 1;
+					$rr = 'YES';
+					$qty = $this->cache->get($sessi.'_pro_qua'.$product_id);
+					$this->cache->set($sessi.'_cart_pro_', $product_cart);
 				}
-		}
-
-			if($rr == 0){
+			}
+			if($rr == 'NO'){
 				$product_cart = $product_id.",".$product_cart;
-				}
-			if($rr == 1){
-				$product_cart = $product_cart;
-				}
-
-				$vowels = array(",,");
-				$product_cart = str_replace($vowels, "", $product_cart);
 				$this->cache->set($sessi.'_cart_pro_', $product_cart);
-
-
+				}
+			}else{
+				$this->cache->set($sessi.'_cart_pro_', $product_id);
 			}
 
-
-
-			
 		if ($product_info) {
 			if (isset($this->request->post['quantity']) && ((int)$this->request->post['quantity'] >= $product_info['minimum'])) {
 				$quantity = (int)$this->request->post['quantity'];
@@ -328,18 +319,15 @@ class ControllerCheckoutCart extends Controller {
 				$quantity = $product_info['minimum'] ? $product_info['minimum'] : 1;
 			}
 
-			if (isset($this->request->post['option'])) {
-				$option = array_filter($this->request->post['option']);
-			} else {
-				$option = array();
-			}
+			$quant = $quantity+$qty;
+			$this->cache->set($sessi.'_pro_qua'.$product_id, $quant);
 
 			$this->cache->set('_pro_img'.$product_id, $product_info['image']);
 			$this->cache->set('_pro_prc'.$product_id, $product_info['price']);
 			$this->cache->set('_pro_mod'.$product_id, $product_info['model']);
 			$this->cache->set('_pro_name'.$product_id, $product_info['name']);
 			$this->cache->set('_pro_min'.$product_id, $product_info['minimum']);
-
+			$this->cache->set('_pro_tax_class_id_'.$product_id, $product_info['tax_class_id']);
 		//	$product_options = $this->model_catalog_product->getProductOptions($this->request->post['product_id']);
 
 		/*	foreach ($product_options as $product_option) {
@@ -368,13 +356,8 @@ class ControllerCheckoutCart extends Controller {
 				}
 			}
 
-			$temp_qua = $this->cache->get($sessi.'_pro_qua'.$product_id);
-			if($temp_qua>0){
-				$quant = $quantity+$temp_qua;
-				$this->cache->set($sessi.'_pro_qua'.$product_id, $quant);
-			}else{
-			$this->cache->set($sessi.'_pro_qua'.$product_id, $quantity);
-		}
+				
+
 			if (!$json) {
 				//$this->cart->add($this->request->post['product_id'], $quantity, $option, $recurring_id);
 				//$prods = $this->cart->hasProducts();
@@ -422,9 +405,10 @@ class ControllerCheckoutCart extends Controller {
 
 					array_multisort($sort_order, SORT_ASC, $total_data);
 				}
-
-				$json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total));
-                                $json['quantity']=$quantity;
+				$tot_pr = $this->total_pr();
+				$total_coun = $this->total_coun();
+				$json['total'] = sprintf($this->language->get('text_items'), $total_coun, $this->currency->format($tot_pr));
+								$json['totals'] = $total_coun;
 			} else {
 				$json['redirect'] = str_replace('&amp;', '&', $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']));
 			}
@@ -446,27 +430,19 @@ class ControllerCheckoutCart extends Controller {
 		$js = false;
 		$product_id = $this->request->get['product_id'];
 		if(isset($product_id)){
-			$product_info = $this->model_catalog_product->getProduct($this->request->get['product_id']);
+			//$product_info = $this->model_catalog_product->getProduct($this->request->get['product_id']);
 			$js = true;
 		}
 
 		$sessi = $this->session->getId();
-		$sessi = 1;
+	
 		preg_match_all("/\d+/", $product_id, $matches);
 		$product_id = $matches[0][0];
 		$product_cart = $this->cache->get($sessi.'_cart_pro_');
-		$products = explode(",", $product_cart);
 		if (!empty($this->request->post['quantity'])) {
             foreach ($this->request->post['quantity'] as $key => $value) {
-if($key == $product_id){
-if($value==null){
-
-
-}else{
-				$this->cache->set($sessi.'_pro_qua'.$product_id, $value);
-				}
-			
-		}
+				$this->cache->set($sessi.'_pro_qua'.$key, $value);
+		
 }
 }
 	
@@ -483,41 +459,13 @@ if($value==null){
 
 
 		// Update
-		if (!empty($this->request->post['quantity'])) {
-            foreach ($this->request->post['quantity'] as $key => $value) {
-					/*
-                $products = $this->cart->getProducts();
-                foreach ($products as $product) {
-                    if($product['cart_id']==$key){
-                        //vdump( $product['minimum']);
-                        //vdump($value);
-                        if($product['minimum']<=$value){
-
-                            $this->cart->update($key, $value);
-                          //  vdump('update1 key='.$key.'  value='.$value);
-
-                            unset($this->session->data['shipping_method']);
-                            unset($this->session->data['shipping_methods']);
-                            unset($this->session->data['payment_method']);
-                            unset($this->session->data['payment_methods']);
-                            unset($this->session->data['reward']);
-                        } else {
-                            //vdump('update key='.$key.'  minimum='.$product['minimum']);
-                            $this->cart->update($key, $product['minimum']);
-                            $json['error'] = $this->language->get('text_minimum').$product_info['minimum'];
-                        }
-                    }
-                }
-*/
-
-            }
 
 
 			if(!$js){
 				$this->response->addHeader('Cache-Control:no-store, no-cache');
 				$this->response->redirect($this->url->link('checkout/cart'));
 			}
-		}
+		
 
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->addHeader('Cache-Control:no-store, no-cache');
@@ -528,7 +476,7 @@ if($value==null){
 		
 		$this->load->language('checkout/cart');
 		$sessi = $this->session->getId();
-		$sessi = 1;
+		
 		$json = array();
 		$product_id = $_GET["product_id"];
 		preg_match_all("/\d+/", $product_id, $matches);
@@ -627,10 +575,10 @@ if($value==null){
 		$this->response->addHeader('Cache-Control:no-store, no-cache');
 		$this->response->setOutput(json_encode($json));
 	}
-
+	
 	public function total_pr(){
 		$sessi = $this->session->getId();
-		$sessi = 1;
+		
 			$product_cart = $this->cache->get($sessi.'_cart_pro_');
 			$products = explode(",", $product_cart);	
 			$count_produs = 0;
@@ -649,14 +597,14 @@ if($value==null){
 
 	public function total_coun(){
 		$sessi = $this->session->getId();
-		$sessi = 1;
+		
 			$product_cart = $this->cache->get($sessi.'_cart_pro_');
 			$products = explode(",", $product_cart);	
 			$count_produs = 0;
 		
 		
 			foreach($products as $prod){
-				if(is_int($prod)){
+				if(isset($prod) && $prod!=null){
 				$qua = $this->cache->get($sessi.'_pro_qua'.$prod);
 				$count_produs = $count_produs+$qua;
 			}
