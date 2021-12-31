@@ -29,7 +29,7 @@ class ControllerModuleBestSeller extends Controller {
 		$data['text_free_delivery'] = $this->language->get('text_free_delivery');
 		$data['text_bestseller'] = $this->language->get('text_bestseller');
 		$data['text_price'] = $this->language->get('text_price');
-
+ 
 		// Order call back setting
 		$this->document->addScript('catalog/view/javascript/instup/jquery.validate.min.js','footer');
 		$this->language->load('module/ordercallback');
@@ -90,7 +90,7 @@ class ControllerModuleBestSeller extends Controller {
 		if ($products) {
 			foreach ($products as $product) {
 				if ($product['image']) {
-					$image = $this->model_tool_image->resize($product['image'], $setting['width'], $setting['height']);
+					$image = $this->model_tool_image->resize($product['image'], 375, 375);
 				} else {
 					$image = $this->model_tool_image->resize('placeholder.png', $setting['width'], $setting['height']);
 				}

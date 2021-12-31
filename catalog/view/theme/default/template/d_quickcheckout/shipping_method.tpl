@@ -46,7 +46,7 @@
   
 <script type="text/html" id="shipping_method_template">
 
-<form name="formss" id="shipping_method_form" <%= parseInt(model.config.display) && model.show_shipping_method ? '' : 'class="hidden"' %>>
+<form name="formss" id="shipping_method_form" <%= parseInt(model.config.display) && model.show_shipping_method ? '' : 'class=""' %>>
     <% if (model.shipping_methods.length != 0 ) { %>
         <div class="panel panel-default">
             <div class="panel-heading">

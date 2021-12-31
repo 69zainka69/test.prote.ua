@@ -31,5 +31,38 @@ class ModelCommonHeader extends Model {
 
         return $query->rows;
     }
-   
+    public function total_pr($sessi){
+		
+			$product_cart = $this->cache->get($sessi.'_cart_pro_');
+			$products = explode(",", $product_cart);	
+			$count_produs = 0;
+		
+			$tot_pr = 0;
+			foreach($products as $prod){
+				$pr = $this->cache->get('_pro_prc'.$prod);
+				$qua = $this->cache->get($sessi.'_pro_qua'.$prod);
+				$count_produs = $count_produs+$qua;
+				$tot_pr = $tot_pr + $pr*$qua;
+			}
+			$tot_pr = $tot_pr." грн.";
+			return($tot_pr);
+	}
+
+
+	public function total_coun($sessi){
+		
+			$product_cart = $this->cache->get($sessi.'_cart_pro_');
+			$products = explode(",", $product_cart);	
+			$count_produs = 0;
+		
+		
+			foreach($products as $prod){
+				if(is_int($prod)){
+				$qua = $this->cache->get($sessi.'_pro_qua'.$prod);
+				$count_produs = $count_produs+$qua;
+			}
+			}
+			
+			return($count_produs);
+	}
 }

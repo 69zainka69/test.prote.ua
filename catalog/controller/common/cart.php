@@ -63,7 +63,19 @@ class ControllerCommonCart extends Controller {
 		$product_cart = $this->cache->get($sessi.'_cart_pro_');
 		$products = explode(",", $product_cart);	
 		$count_produs = 0;
-	
+		$cup = $this->cache->get($sessi.'_cup_proc');
+		if(isset($cup) && $cup!=0 && $cup != null){
+			$tot_pr = 0;
+			foreach($products as $prod){
+				$pr = $this->cache->get('_pro_prc'.$prod);
+				$qua = $this->cache->get($sessi.'_pro_qua'.$prod);
+				$count_produs = $count_produs+$qua;
+				$tot_pr = $tot_pr + $pr*$qua;
+			}
+			$tot_pr = (100-$cup)*$tot_pr / 100;
+			$tot_pr = number_format((float)$tot_pr, 2, '.', '');
+		}else{
+
 		$tot_pr = 0;
 		foreach($products as $prod){
 			$pr = $this->cache->get('_pro_prc'.$prod);
@@ -71,8 +83,13 @@ class ControllerCommonCart extends Controller {
 			$count_produs = $count_produs+$qua;
 			$tot_pr = $tot_pr + $pr*$qua;
 		}
+	}
 		$tot_pr = $tot_pr." грн.";
 	
+
+
+
+
         $data['text_items'] = sprintf($this->language->get('text_items'), $count_produs ,$tot_pr);
 		$data['text_items_mobile'] = sprintf($this->language->get('text_items_mobile'),$this->currency->format($total), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0));
 

@@ -1,10 +1,12 @@
 <?php
 class ControllerCheckoutCheckout extends Controller { 
 	public function index() {
+		$sessi = $this->session->getId();
 		// Validate cart has products and has stock.
-		if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {
+	/*	if (!$this->cache->get($sessi.'_cart_pro_')) {
 			$this->response->redirect($this->url->link('checkout/cart'));
 		}
+*/
     
 		// Validate minimum quantity requirements.
 		$products = $this->cart->getProducts();
@@ -22,9 +24,9 @@ class ControllerCheckoutCheckout extends Controller {
 				}
 			}
 
-			if ($product['minimum'] > $product_total) {
+		/*	if ($product['minimum'] > $product_total) {
 				$this->response->redirect($this->url->link('checkout/cart'));
-			}
+			}*/
 		}
 		$this->session->data['products_cart_ids'] = trim($products_ids,','); // для Google ремаркетинга 
 
@@ -38,9 +40,9 @@ class ControllerCheckoutCheckout extends Controller {
 		$this->document->addStyle('catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css','footer');
 
 		// Required by klarna
-		if ($this->config->get('klarna_account') || $this->config->get('klarna_invoice')) {
+	/*	if ($this->config->get('klarna_account') || $this->config->get('klarna_invoice')) {
 			$this->document->addScript('http://cdn.klarna.com/public/kitt/toc/v1.0/js/klarna.terms.min.js','footer');
-		}
+		}*/
 
 		$data['breadcrumbs'] = array();
 
@@ -84,8 +86,8 @@ class ControllerCheckoutCheckout extends Controller {
 			$data['account'] = '';
 		}
 
-		$data['shipping_required'] = $this->cart->hasShipping();
-
+		//$data['shipping_required'] = $this->cart->hasShipping();
+		$data['shipping_required'] = true;
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
@@ -138,7 +140,42 @@ class ControllerCheckoutCheckout extends Controller {
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+	public function total_pr(){
+		$sessi = $this->session->getId();
+		
+			$product_cart = $this->cache->get($sessi.'_cart_pro_');
+			$products = explode(",", $product_cart);	
+			$count_produs = 0;
+		
+			$tot_pr = 0;
+			foreach($products as $prod){
+				$pr = $this->cache->get('_pro_prc'.$prod);
+				$qua = $this->cache->get($sessi.'_pro_qua'.$prod);
+				$count_produs = $count_produs+$qua;
+				$tot_pr = $tot_pr + $pr*$qua;
+			}
+			$tot_pr = $tot_pr." грн.";
+			return($tot_pr);
+	}
 
+
+	public function total_coun(){
+		$sessi = $this->session->getId();
+		
+			$product_cart = $this->cache->get($sessi.'_cart_pro_');
+			$products = explode(",", $product_cart);	
+			$count_produs = 0;
+		
+		
+			foreach($products as $prod){
+				if(isset($prod) && $prod!=null){
+				$qua = $this->cache->get($sessi.'_pro_qua'.$prod);
+				$count_produs = $count_produs+$qua;
+			}
+			}
+			
+			return($count_produs);
+	}
 	public function customfield() {
 		$json = array();
 

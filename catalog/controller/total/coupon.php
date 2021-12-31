@@ -47,15 +47,29 @@ class ControllerTotalCoupon extends Controller {
 			unset($this->session->data['coupon']);
 		} elseif ($coupon_info) {
 			$this->session->data['coupon'] = $this->request->post['coupon'];
-
+			$coup = $this->request->post['coupon'];
+			$sessi = $this->session->getId();
+			$this->cache->set($sessi.'_cup', $coup);
+			$sSQL="INSERT INTO `prote.ua`.`coup_click` (`id`, `time`, `name`) VALUES (NULL, CURRENT_TIMESTAMP, '$coup')" ;
+			$this->db->query($sSQL);
+			
+			if(isset($coup) && $coup != null){
+				$sSQL="SELECT * FROM `oc_coupon` WHERE `code` LIKE '$coup'" ;
+				$temp_coup = $this->db->query($sSQL);
+				
+					$cuponn = $temp_coup->rows[0]['discount'];
+				
+				$this->cache->set($sessi.'_cup_proc', $cuponn);
+			}
 			$this->session->data['success'] = $this->language->get('text_success');
 
 			$json['redirect'] = $this->url->link('checkout/cart');
 		} else {
 			$json['error'] = $this->language->get('error_coupon');
 		}
-
+  
 		$this->response->addHeader('Content-Type: application/json');
+		$this->response->addHeader('Cache-Control:no-store, no-cache');
 		$this->response->setOutput(json_encode($json));
 	}
 }

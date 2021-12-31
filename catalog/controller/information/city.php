@@ -80,6 +80,9 @@ class ControllerInformationCity extends Controller
 
         if ($coords && !$cityGoogleRes) {
             $res = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?latlng=$coords&key=".GOOGLE_GEOCODING_KEY."&language=$lang");
+            $aa = "https://maps.googleapis.com/maps/api/geocode/json?latlng=$coords&key=".GOOGLE_GEOCODING_KEY."&language=$lang";
+            var_dump($aa);
+
             $res = json_decode($res);
             $city = [];
             if (count($res->results) > 0) {
@@ -95,9 +98,6 @@ class ControllerInformationCity extends Controller
                     }
                 }
             }
-
-
-
             $this->model_geolocation_cache->set($coords, $cityGoogleRes, 20);
         }
 

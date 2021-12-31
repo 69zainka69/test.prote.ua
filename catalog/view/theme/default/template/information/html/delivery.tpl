@@ -84,7 +84,12 @@ h1, .h1{color:#00adee;font-size:24px;font-weight:normal;padding-left:15px;margin
           <div class="title"><?php echo $text_delivery_title3; ?></div>
           <div class="buttons"><a class="button btn-modal" data-modal="modal-delivery-ukrposhta"><?php echo $button_more; ?></a></div>
         </div>
-       
+        <div class="item btn-modal" tabindex="5" data-modal="modal-delivery-nichnyy-ekspres">
+          <div class="svg"><?php echo file_get_contents(DIR_IMAGE.'/ico/delivery/nichnyy-ekspres.svg');?></div>
+          <div class="title"><?php echo $text_nichnyy_ekspres_tite; ?></div>
+          <div class="title"><?php echo $text_delivery_title3; ?></div>
+          <div class="buttons"><a class="button btn-modal" data-modal="modal-delivery-nichnyy-ekspres"><?php echo $button_more; ?></a></div>
+        </div>
         <div class="item col1" tabindex="6">
           <div class="it">
             <div class="h1"><?php echo $text_inshi1; ?></div>
@@ -196,7 +201,18 @@ else {echo 'Получение товара в ближайшем почтома
     </div>
   </div>
 </div>
-
+<div class="modal modal-form modal-delivery-nichnyy-ekspres">
+  <div class="body">
+    <div class="modal-overlay"></div>
+    <div class="modal-body">
+      <div class="modal-close">+</div>
+        <div class="title h1"><?php echo $text_nichnyy_ekspres_tite2; ?></div>
+        <div class="svg"><?php echo file_get_contents(DIR_IMAGE.'/ico/delivery/nichnyy-ekspres.svg');?></div>
+        <div class="title"><?php echo $text_nichnyy_ekspres_description; ?>
+        </div>
+    </div>
+  </div>
+</div>
 
 
 

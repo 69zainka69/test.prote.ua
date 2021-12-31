@@ -17,10 +17,29 @@ class ControllerCheckoutCart extends Controller {
 			'text' => $this->language->get('heading_title')
 		);
 		$sessi = $this->session->getId();
-		//$sessi = 1;
-	
+		
+		$cart_ids = $this->db->query("SELECT * FROM `oc_cart` WHERE `session_id` LIKE '$sessi'");
+		
+		$cnt = count($cart_ids->rows);
+		
+		for($i=0; $i!=$cnt; $i++){
+			$cart_id = $cart_ids->rows[$i]['cart_id'];
+			$this->db->query("DELETE FROM `oc_cart` WHERE `oc_cart`.`cart_id` = $cart_id");
+			$cart_id = null;
+		}
+
+		$products_ids = $this->cache->get($sessi.'_cart_pro_');
+		$products = explode(",", $products_ids);
+		foreach($products as $prod){
+			if(isset($prod) && $prod != null){
+			$product_id = $prod;
+			$quantity = $this->cache->get($sessi.'_pro_qua'.$product_id);
+			$option = array();
+			$recurring_id = 0;
+			$this->cart->add($product_id, $quantity, $option, $recurring_id);
+		}}
 		$productse = $this->cache->get($sessi.'_cart_pro_');
-		if ($this->cache->get($sessi.'_cart_pro_')) {
+		if (isset($productse) && $productse != null) {
 			$data['heading_title'] = $this->language->get('heading_title');
 
 			$data['text_recurring_item'] = $this->language->get('text_recurring_item');
@@ -195,17 +214,20 @@ class ControllerCheckoutCart extends Controller {
 			$tot_pr = $this->total_pr();			
 			
 			$data['totals'] = array();
-
+			
 			foreach ($total_data as $total) {
 				$data['totals'][] = array(
 					'code' => $total['code'],
 					'title' => $total['title'],
-					'text'  => $tot_pr
+					'text'  => number_format((float)$total['value'], 2, '.', ''),
 				);
 			}
-
-
-
+			$data['totals'][0] = array(
+				'code' => 'sub_total',
+				'title' => $total['title'],
+				'text'  => $tot_pr,
+			);
+		
 			//$data['continue'] = $this->url->link('common/home');
 			$data['checkout'] = $this->url->link('checkout/checkout', '', 'SSL');
 			//vdump($data['checkout']);
@@ -274,6 +296,10 @@ class ControllerCheckoutCart extends Controller {
 	}
 
 	public function add() {
+
+
+		
+
 		$this->load->language('checkout/cart');
 		$json = array();
 		if (isset($this->request->post['product_id'])) {
@@ -321,9 +347,23 @@ class ControllerCheckoutCart extends Controller {
 
 			$quant = $quantity+$qty;
 			$this->cache->set($sessi.'_pro_qua'.$product_id, $quant);
+			$prices = $product_info['price'];
 
+			$sSQL="SELECT * FROM `oc_product_special` WHERE `product_id` = $product_id" ;
+			$temp_pr = $this->db->query($sSQL);
+			foreach ($temp_pr as $_pr){
+				if(isset($_pr['price'])){
+				$pricess = $_pr['price'];
+				$date_end = $_pr['date_end'];
+			}
+			}
+			$today = date('Y-m-d'); 
+			if(isset($pricess) && $pricess != null && $date_end >= $today){
+				$prices = $pricess;
+			}
+			$this->cache->del('_pro_prc'.$product_id);
+			$this->cache->set('_pro_prc'.$product_id, $prices);
 			$this->cache->set('_pro_img'.$product_id, $product_info['image']);
-			$this->cache->set('_pro_prc'.$product_id, $product_info['price']);
 			$this->cache->set('_pro_mod'.$product_id, $product_info['model']);
 			$this->cache->set('_pro_name'.$product_id, $product_info['name']);
 			$this->cache->set('_pro_min'.$product_id, $product_info['minimum']);
@@ -436,9 +476,7 @@ class ControllerCheckoutCart extends Controller {
 
 		$sessi = $this->session->getId();
 	
-		preg_match_all("/\d+/", $product_id, $matches);
-		$product_id = $matches[0][0];
-		$product_cart = $this->cache->get($sessi.'_cart_pro_');
+		
 		if (!empty($this->request->post['quantity'])) {
             foreach ($this->request->post['quantity'] as $key => $value) {
 				$this->cache->set($sessi.'_pro_qua'.$key, $value);

@@ -335,8 +335,8 @@ background-image: url(https://prote.ua/image/baner/baner.jpg);
 
  if (strpos($url, 'photo-paper') !== false || strpos($url, 'inks') !== false) {
  ?>
- <div class="baner_category"><a style="width:100%" href="https://prote.ua/skidka-na-fotobumagu.html">
-  </a></div> <?php
+  <div class="baner_category">
+  </div> <?php
  }  ?>
     <div class="catalog-header__print-filter-block">
       <button class="catalog-header__btn-print">

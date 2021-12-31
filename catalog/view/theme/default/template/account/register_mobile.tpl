@@ -747,9 +747,10 @@ $(document).ready(function() {
   });
 
   $('input[name=\'customer_group_id\']:checked').trigger('change');
-}
+
+})
 </script>
-</script>
+
 <?php /* <script><!--
 $('button[id^=\'button-custom-field\']').on('click', function() {
 	var node = this;

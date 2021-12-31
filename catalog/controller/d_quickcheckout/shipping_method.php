@@ -232,11 +232,11 @@
                 $lang = $this->language->get('code');
                 $lang = ($lang == 'uk') ? 'uk' : 'ru';
            
-            
+           
                 if($np_city === '00000000000000') {
-                    if($lang === 'uk') {
+                    if($lang === 'uk' && isset($_COOKIE['city_UA'])) {
                         $npcity_selected = urldecode($_COOKIE['city_UA']);
-                    } elseif($lang === 'ru') {
+                    } elseif($lang === 'ru' && isset($_COOKIE['city_RU'])) {
                         $npcity_selected = urldecode($_COOKIE['city_RU']);
                     }
 

@@ -29,7 +29,7 @@
           const coords = `${position.coords.latitude},${position.coords.longitude}`;
           const response = await fetch(`?route=information/city/saveGeoData&coords=${coords}`);
           const city = await response.json();
-          saveCity(city.ua, city.ru);
+          saveCity('city.ua', 'city.ru');
           loadCurrentCity();
         });
       }
